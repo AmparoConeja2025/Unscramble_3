@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+    <title>Unscramble Learning Center</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script> 
+</head>
+
+  <body class="bg-gray-600 min-h-screen relative">
+    <a href="https://amparoconeja.com" class="home-button" aria-label="Return to Homepage">
+  <img src="Image/my-home-icon.svg" alt="Home">
+</a>
+
+
+
+<!-- RESET BUTTON -->
+<button class="reset-btn" id="resetButton">Reset</button>
+
+<!-- MENU BUTTON -->
+<button class="menu-btn" id="menuButton">Menu</button>
+
+<!-- STATS BUTTON -->
+<button class="stats-btn" id="statsBtn" onclick="showStatsOverlay()">Stats</button>
+
+<!-- MENU OVERLAY (hidden by default) -->
+<div class="menu-overlay" id="menuOverlay" style="display: none;">
+    <div class="menu-content">
+        <div class="menu-header">
+            <h2>Learning Menu</h2>
+            <button class="menu-close-btn" id="menuCloseBtn">×</button>
+        </div>
+        
+        <div class="menu-section">
+            <h3>Choose Category</h3>
+            <div class="category-buttons">
+                <button class="category-btn" data-category="greetings">Greetings</button>
+                <button class="category-btn" data-category="practice">Practice</button>
+                <button class="category-btn" data-category="panic">Panic Phrases</button>
+                <button class="category-btn" data-category="finishers">Finishers</button>
+            </div>
+        </div>
+
+       <div class="menu-section speedrun-section">
+            <button class="speedrun-btn" id="speedrunBtn">⚡ SPEEDRUN CHALLENGE</button>
+        </div>                
+                <div class="mode-toggle-container">
+                    <button class="mode-toggle-btn mode-active" id="categoryModeBtn">Category</button>
+                    <button class="mode-toggle-btn" id="randomModeBtn">Random</button>
+                </div>
+            
+       
+        
+        <div class="menu-section">
+            <button class="menu-action-btn" id="backToGameBtn">Back to Game</button>
+        </div>
+    </div>
+</div>
+
+
+<!-- UNDO BUTTON -->
+<button class="undo-btn" id="undoButton" disabled>↶</button>
+
+<!-- LESSON NAVIGATION -->
+<div class="lesson-nav">
+    <button class="nav-btn" id="prevBtn">← Previous</button>
+    <button class="nav-btn" id="nextBtn">Next →</button>
+    <button class="random-nav-btn" id="randomNavBtn">Random</button>
+</div>
+
+
+<!-- ADAM CHARACTER (Practice/Greetings) -->
+<img src="Image/adam.png" alt="Adam" class="adam-image" id="adamImage" style="cursor: pointer; display: none;" />
+<audio id="adamAudio"></audio>
+
+<!-- JESSICA CHARACTER (Practice/Greetings) -->
+<img src="Image/jessica.png" alt="Jessica" class="jessica-image" id="jessicaImage" style="cursor: pointer; display: none;" />
+<audio id="jessicaAudio"></audio>
+
+<!-- JOHN CHARACTER (Panic) -->
+<img src="Image/john.png" alt="John" class="john-image" id="johnImage" style="cursor: pointer; display: none;" />
+<audio id="johnAudio"></audio>
+
+<!-- BECKY CHARACTER (Panic) -->
+<img src="Image/becky.png" alt="Becky" class="becky-image" id="beckyImage" style="cursor: pointer; display: none;" />
+<audio id="beckyAudio"></audio>
+
+<!-- MARK CHARACTER (Finishers) -->
+<img src="Image/mark.png" alt="Mark" class="mark-image" id="markImage" style="cursor: pointer; display: none;" />
+<audio id="markAudio"></audio>
+
+<!-- LAURA CHARACTER (Finishers) -->
+<img src="Image/laura.png" alt="Laura" class="laura-image" id="lauraImage" style="cursor: pointer; display: none;" />
+<audio id="lauraAudio"></audio>
+
+<!-- HARRY CHARACTER (Greetings) -->
+<img src="Image/harry.png" alt="Harry" class="harry-image" id="harryImage" style="cursor: pointer; display: none;" />
+<audio id="harryAudio"></audio>
+
+<!-- DIANNE CHARACTER (Greetings) -->
+<img src="Image/dianne.png" alt="Dianne" class="dianne-image" id="dianneImage" style="cursor: pointer; display: none;" />
+<audio id="dianneAudio"></audio>
+ 
+<!-- DROP ZONE -->
+<div id="dropZone" class="drop-zone">
+  <!-- words will drop here -->
+</div>
+
+<!-- WORD BANK -->
+<div id="wordBank" class="word-bank">
+  <!-- Words will be inserted here dynamically -->
+</div>
+
+<!-- PROGRESS TRACKING AREA -->
+<div class="progress-area" style="display: none;">
+   <div class="level-badge">
+    <img id="levelBadgeImg" src="Image/bronze.png" alt="Bronze Beginner Badge" style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));">
+</div>
+    
+    <div class="progress-section">
+        <div class="progress-label">
+            <span id="progressText">0/10 to Level 2</span>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progressBar"></div>  
+        </div>
+    </div>
+</div>
+
+<!-- INDEPENDENT LEVEL BADGE -->
+<div class="hidden md:block center-badge">
+    <div class="level-badge">
+        <img id="centerBadgeImg" src="Image/bronze.png" alt="Bronze Beginner Badge" 
+             style="width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(4px 8px rgba(0, 0, 0, 0.3));">
+    </div>
+</div>
+
+<!-- PROGRESS INDICATOR -->
+<div class="progress-indicator">
+    <span id="progressText">0/10 to Level 2</span>
+</div>
+
+<!-- FIREWORKS CELEBRATION ELEMENTS -->
+<div class="fireworks-container" id="fireworksContainer"></div>
+
+<!-- TRY AGAIN ANIMATION ELEMENT -->
+<div class="try-again-text" id="tryAgainText">🤔 Try Again! 💭</div>
+
+<!-- TRANSLATION OVERLAY -->
+<div class="translation-overlay" id="translationOverlay">
+    <div class="translation-header">🎉 Perfect! 🎉</div>
+    <div class="translation-content">
+        <div class="translation-english" id="translationEnglish"></div>
+        <div class="translation-spanish" id="translationSpanish"></div>
+    </div>
+    <button class="translation-close-btn" id="translationCloseBtn">Continue Learning</button>
+</div>
+
+<!-- SPEEDRUN OVERLAY -->
+<div class="speedrun-overlay" id="speedrunOverlay" style="display: none;">
+    <div class="speedrun-content">
+        <!-- Close Button -->
+        <button class="speedrun-close-x" onclick="hideSpeedrunOverlay()">×</button>
+        
+        <!-- Header with Daily Progress -->
+        <div class="speedrun-header">
+            <h2>⚡ SPEEDRUN CHALLENGE</h2>
+            <div class="daily-progress">
+                <span id="speedrunProgress">Daily Runs: 0/8</span>
+                <div class="multiplier-badge" id="currentMultiplier">1x POINTS</div>
+            </div>
+        </div>
+
+        <!-- MOBILE HORIZONTAL LAYOUT WRAPPER -->
+        <div class="speedrun-mobile-row">
+        
+        <!-- Main Timer Display -->
+        <div class="timer-display">
+            <div class="timer-circle">
+                <span id="speedrunTimer">2:00</span>
+            </div>
+        </div>
+        
+        <!-- Current Score -->
+        <div class="speedrun-score">
+            <div class="score-label">CURRENT SCORE</div>
+            <div class="score-value" id="speedrunScore">0</div>
+        </div>
+        
+        <!-- Action Buttons -->
+        <div class="speedrun-actions">
+            <button class="speedrun-start-btn" id="speedrunStartBtn">START CHALLENGE</button>
+            </div>
+        <!-- END MOBILE HORIZONTAL LAYOUT -->
+            <button class="speedrun-quit-btn" id="speedrunQuitBtn" style="display: none;">QUIT CHALLENGE</button>
+        </div>
+    </div>
+</div>
+
+<!-- SPEEDRUN GAME MODE OVERLAY (Blue Tint + Floating Timer) -->
+<div class="speedrun-game-overlay" id="speedrunGameOverlay" style="display: none;">
+    <!-- Blue Tint Background -->
+    <div class="speedrun-blue-tint"></div>
+    
+    <!-- Floating Timer -->
+    <div class="speedrun-floating-timer">
+        <div class="floating-timer-display">
+            <span id="floatingTimer">2:00</span>
+        </div>
+    </div>
+    
+    <!-- Floating Score (Optional) -->
+    <div class="speedrun-floating-score">
+        <div class="floating-score-label">SCORE</div>
+        <div class="floating-score-value" id="floatingScore">0</div>
+    </div>
+</div>
+
+<!-- STATS OVERLAY -->
+<div class="stats-overlay" id="statsOverlay" style="display: none;">
+    <div class="stats-content">
+        <button class="stats-close-x" onclick="hideStatsOverlay()">×</button>
+        <div class="stats-header">
+            <h2>📊 Your Progress</h2>
+            <button class="stats-close-btn" id="statsCloseBtn">×</button>
+        </div>
+        
+        <!-- THREE-COLUMN LAYOUT -->
+        <div class="stats-three-column-grid">
+            <!-- COLUMN 0: DAILY SUMMARY (NEW) -->
+            <div class="stats-column">
+            <div class="header-card daily-header">Daily</div>   
+                
+                <div class="stats-column-content">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Points</div>
+                            <div class="stat-value" id="todayPoints">0</div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- In Daily Summary section -->
+<div class="stat-card">
+    <div class="stat-icon">📖</div>
+    <div class="stat-info">
+        <div class="stat-label">Sentences</div>
+        <div class="stat-value" id="todaySentences">0</div>
+    </div>
+</div>
+            </div>
+            
+            <!-- COLUMN 1: WEEKLY SUMMARY -->
+            <div class="stats-column">
+             <div class="header-card weekly-header">Weekly</div>  
+                <div class="stats-column-content">
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Points</div>
+                            <div class="stat-value" id="weeklyPoints">0</div>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-info">
+                        <div class="stat-label">Sentences</div>
+                        <div class="stat-value" id="weeklySentences">0</div>
+                    </div>
+                </div>
+                
+                    
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📚</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Days Active</div>
+                            <div class="stat-value" id="activeDays">0</div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+            
+            <!-- COLUMN 2: LIFETIME ACHIEVEMENTS -->
+            <div class="stats-column">
+            <div class="header-card lifetime-header">Lifetime</div>   
+                
+                <div class="stats-column-content">
+                    <div class="stat-card">
+                        <div class="stat-icon">💎</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Points</div>
+                            <div class="stat-value" id="lifetimePoints">0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📖</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Sentences</div>
+                            <div class="stat-value" id="lifetimeSentences">0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">📆</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Days Active</div>
+                            <div class="stat-value" id="totalDaysActive">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- COLUMN 3: STREAKS & BADGES -->
+            <div class="stats-column">
+                <div class="header-card streaks-header">Streaks</div>
+                <div class="stats-column-content">
+                    <div class="stat-card">
+                        <div class="stat-icon">🔥</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Current</div>
+                            <div class="stat-value" id="currentStreak">0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card">
+                        <div class="stat-icon">🎯</div>
+                        <div class="stat-info">
+                            <div class="stat-label">Best</div>
+                            <div class="stat-value" id="longestStreak">0</div>
+                        </div>
+                    </div>
+                    
+                    <div class="stat-card badge-showcase">
+                        <div class="current-badge">
+                            <img id="statsBadgeImg" src="Image/bronze.png" alt="Current Badge" class="badge-image">
+                            <div class="badge-title">Current Level</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <button class="stats-action-btn" id="statsBackBtn">Back to Menu</button>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+</html>7
