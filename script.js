@@ -28,16 +28,15 @@ function updateUndoButton() {
 }
 
 function performUndo() {
-    if (!canUndo || !lastAddedWord) return;
-    const wordBank = document.getElementById('wordBank');
     const dropZone = document.getElementById('dropZone');
-    if (lastAddedWord.parentElement === dropZone) {
-        wordBank.appendChild(lastAddedWord);
-        lastAddedWord = null;
-        canUndo = false;
-        updateUndoButton();
-        setupInteraction();
-    }
+    const wordBank = document.getElementById('wordBank');
+    if (dropZone.children.length === 0) return;
+    const lastWord = dropZone.children[dropZone.children.length - 1];
+    lastWord.classList.remove('word-tile-wrong');
+    wordBank.appendChild(lastWord);
+    canUndo = dropZone.children.length > 0;
+    updateUndoButton();
+    setupInteraction();
 }
 
 // FISHER-YATES SHUFFLE
@@ -141,8 +140,8 @@ function animateWordToDropZone(wordTile, dropZone) {
         wordTile.style.opacity = '1';
         wordTile.style.transform = '';
 
-        lastAddedWord = wordTile;
-        canUndo = true;
+       lastAddedWord = wordTile;
+        canUndo = dropZone.children.length > 0;
         updateUndoButton();
 
         // Color flash - green if correct position, orange if not
@@ -150,18 +149,21 @@ function animateWordToDropZone(wordTile, dropZone) {
         const lesson = lessons[currentLessonIndex];
         const isCorrect = wordTile.textContent === lesson.correctOrder[currentPosition];
 
-        if (isCorrect) {
-            wordTile.style.background = '#10b981';
-            wordTile.style.color = 'white';
-        } else {
-            wordTile.style.background = '#ff9500';
-            wordTile.style.color = 'white';
-        }
+    if (isCorrect) {
+    wordTile.style.background = '#10b981';
+    wordTile.style.color = 'white';
+    setTimeout(() => {
+        wordTile.style.background = 'white';
+        wordTile.style.color = 'black';
+    }, 50);
+} else {
+    wordTile.classList.add('word-tile-wrong');
+}
 
         setTimeout(() => {
             wordTile.style.background = 'white';
             wordTile.style.color = 'black';
-        }, 500);
+        }, 50);
 
         // Auto-check when all words placed
         if (dropZone.children.length === lesson.correctOrder.length) {

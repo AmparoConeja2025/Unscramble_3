@@ -393,7 +393,7 @@ button, img, .word-tile {
     min-width: 300px;
     min-height: 44px;
     background: #dad6fa;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),inset 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4),inset 0 2px 4px rgba(0, 0, 0, 0);
     border-radius: 8px;
     padding: 16px 24px;
     display: flex;
@@ -2346,6 +2346,8 @@ button, img, .word-tile {
     70% { transform: translate(-50%, -50%) scale(1.01) rotate(1deg); }
     80% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
     100% { transform: translate(-50%, -50%) scale(1) rotate(0deg); }
+
+    
 }
 /* --- Home Button Styles --- */
 .home-button {
@@ -2373,5 +2375,11 @@ button, img, .word-tile {
   height: 21px;
   display: block;
 }
-
+@keyframes pulse-word {
+    0%, 100% { background: white; color: black; }
+    50% { background: rgba(255, 149, 0, 0.05); color: black; }
+}
+.word-tile-wrong {
+    animation: pulse-word 1.5s ease-in-out infinite;
+}
 /* 7 */
