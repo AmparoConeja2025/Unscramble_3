@@ -264,26 +264,16 @@ button, img, .word-tile {
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
 
-/* JOHN CHARACTER (Panic) */
-.john-image {
-    position: absolute;
-    top: 96px;
-    right: 64px;
-    width: 256px;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
-}
-
-/* JOHN MOBILE - AUTOMATIC */
 @media (max-width: 800px) and (orientation: landscape) {
-    .john-image {
+    .jessica-image {
         width: 120px !important;
         top: 50% !important;
-        right: 20px !important;
+        left: 20px !important;
     }
 }
 
-/* BECKY CHARACTER (Panic) */
-.becky-image {
+/* JOHN CHARACTER */
+.john-image {
     position: absolute;
     top: 96px;
     left: 64px;
@@ -291,7 +281,24 @@ button, img, .word-tile {
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
 
-/* BECKY MOBILE - AUTOMATIC */
+
+@media (max-width: 800px) and (orientation: landscape) {
+    .john-image {
+        width: 120px !important;
+        top: 50% !important;
+        left: 20px !important;
+    }
+}
+
+
+/* BECKY CHARACTER */
+.becky-image {
+    position: absolute;
+    top: 96px;
+    left: 64px;
+    width: 256px;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
+}
 @media (max-width: 800px) and (orientation: landscape) {
     .becky-image {
         width: 120px !important;
@@ -308,17 +315,16 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-
-/* MARK MOBILE - AUTOMATIC */
 @media (max-width: 800px) and (orientation: landscape) {
     .mark-image {
-        width: 125px !important;
+        width: 120px !important;
         top: 50% !important;
-        right: 20px !important;
+        left: 20px !important;
     }
 }
 
-/* LAURA CHARACTER (Finishers) */
+
+/* LAURA CHARACTER */
 .laura-image {
     position: absolute;
     top: 96px;
@@ -326,8 +332,6 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-
-/* LAURA MOBILE - AUTOMATIC */
 @media (max-width: 800px) and (orientation: landscape) {
     .laura-image {
         width: 120px !important;
@@ -336,7 +340,8 @@ button, img, .word-tile {
     }
 }
 
-/* HARRY CHARACTER (Greetings) */
+
+/* HARRY CHARACTER */
 .harry-image {
     position: absolute;
     top: 96px;
@@ -344,17 +349,15 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-
-/* HARRY MOBILE - AUTOMATIC */
 @media (max-width: 800px) and (orientation: landscape) {
     .harry-image {
-        width: 133px !important;
-        top: 48% !important;
-        right: 20px !important;
+        width: 120px !important;
+        top: 50% !important;
+        left: 20px !important;
     }
 }
 
-/* DIANNE CHARACTER (Greetings) */
+/* DIANNE CHARACTER */
 .dianne-image {
     position: absolute;
     top: 96px;
@@ -362,14 +365,15 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-
-/* DIANNE MOBILE - AUTOMATIC */
 @media (max-width: 800px) and (orientation: landscape) {
     .dianne-image {
         width: 120px !important;
         top: 50% !important;
         left: 20px !important;
     }
+}
+.dianne-flipped { /* FLIP CLASS - applies to ALL avatars in story mode (name is legacy from first build) */
+    transform: scaleX(-1);
 }
 
 .jessica-btn {
