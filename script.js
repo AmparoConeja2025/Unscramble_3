@@ -16,6 +16,7 @@ const fireworkColors = ['#FFD700', '#FF6B47', '#4ECDC4', '#45B7D1', '#FF69B4', '
 let currentLessonIndex = 0;
 let lastAddedWord = null;
 let canUndo = false;
+
 function updateUndoButton() {
     const undoBtn = document.getElementById('undoButton');
     if (canUndo && lastAddedWord) {
@@ -35,6 +36,7 @@ function performUndo() {
     lastWord.classList.remove('word-tile-wrong');
     wordBank.appendChild(lastWord);
     canUndo = dropZone.children.length > 0;
+    lastAddedWord = dropZone.children.length > 0 ? dropZone.children[dropZone.children.length - 1] : null;
     updateUndoButton();
     setupInteraction();
 }
@@ -140,37 +142,31 @@ function animateWordToDropZone(wordTile, dropZone) {
         wordTile.style.opacity = '1';
         wordTile.style.transform = '';
 
-       lastAddedWord = wordTile;
+        lastAddedWord = wordTile;
         canUndo = dropZone.children.length > 0;
         updateUndoButton();
 
-        // Color flash - green if correct position, orange if not
+        // Color flash
         const currentPosition = dropZone.children.length - 1;
         const lesson = lessons[currentLessonIndex];
         const isCorrect = wordTile.textContent === lesson.correctOrder[currentPosition];
 
-    if (isCorrect) {
-    wordTile.style.background = '#10b981';
-    wordTile.style.color = 'white';
-    setTimeout(() => {
-        wordTile.style.background = 'white';
-        wordTile.style.color = 'black';
-    }, 50);
-} else {
-    wordTile.classList.add('word-tile-wrong');
-}
-
-        setTimeout(() => {
-            wordTile.style.background = 'white';
-            wordTile.style.color = 'black';
-        }, 50);
+        if (isCorrect) {
+            wordTile.style.background = '#10b981';
+            wordTile.style.color = 'white';
+            setTimeout(() => {
+                wordTile.style.background = 'white';
+                wordTile.style.color = 'black';
+            }, 50);
+        } else {
+            wordTile.classList.add('word-tile-wrong');
+        }
 
         // Auto-check when all words placed
         if (dropZone.children.length === lesson.correctOrder.length) {
             setTimeout(checkAnswer, 500);
         }
     }, 400);
-    
 }
 
 // TAP TO ADD
@@ -202,8 +198,9 @@ function checkAnswer() {
 
     if (isCorrect) {
         explodeFireworks();
-        document.getElementById('dianneImage').classList.remove('dianne-flipped');
-        document.getElementById('dianneImage').onclick = () => {
+        const avatarEl = document.getElementById(lesson.narrator + 'Image');
+        avatarEl.classList.remove('dianne-flipped');
+        avatarEl.onclick = () => {
             document.getElementById('answerAudio').play();
         };
     } else {
@@ -221,6 +218,9 @@ function updateNavButtons() {
     nextBtn.classList.toggle('nav-btn-disabled', currentLessonIndex === lessons.length - 1);
 }
 
+// ALL AVATARS
+const allAvatars = ['dianne', 'adam', 'becky', 'harry', 'mark', 'jessica', 'john', 'laura'];
+
 // LOAD LESSON
 function loadLesson(index) {
     const lesson = lessons[index];
@@ -232,14 +232,26 @@ function loadLesson(index) {
 
     lastAddedWord = null;
     canUndo = false;
+    updateUndoButton();
 
     // Set audio
     document.getElementById('narratorAudio').src = lesson.narratorAudio;
     document.getElementById('answerAudio').src = lesson.answerAudio;
 
-    // Reset Dianne to narrator mode (flipped, plays story)
-    document.getElementById('dianneImage').classList.add('dianne-flipped');
-    document.getElementById('dianneImage').onclick = () => {
+    // Hide all avatars
+    allAvatars.forEach(name => {
+        const el = document.getElementById(name + 'Image');
+        if (el) {
+            el.style.display = 'none';
+            el.classList.remove('dianne-flipped');
+        }
+    });
+
+    // Show correct avatar
+    const avatarEl = document.getElementById(lesson.narrator + 'Image');
+    avatarEl.style.display = 'block';
+    avatarEl.classList.add('dianne-flipped');
+    avatarEl.onclick = () => {
         document.getElementById('narratorAudio').play();
     };
 
@@ -271,6 +283,9 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     }
 });
 
+document.getElementById('resetButton').addEventListener('click', () => {
+    loadLesson(currentLessonIndex);
+});
 
 // Nav hover effects
 document.getElementById('prevBtn').addEventListener('mouseenter', (e) => {

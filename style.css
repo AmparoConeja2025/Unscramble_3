@@ -226,11 +226,17 @@ button, img, .word-tile {
 .adam-image {
     position: absolute;
     top: 96px;
-    right: 64px;
+    left: 64px;
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-
+@media (max-width: 800px) and (orientation: landscape) {
+    .adam-image {
+        width: 120px !important;
+        top: 50% !important;
+        left: 20px !important;
+    }
+}
 .adam-btn {
     position: absolute;
     top: 376px;
