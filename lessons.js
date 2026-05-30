@@ -44,4 +44,47 @@ const lessons = [
     spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar."
 },
     
+{
+    id: 5,
+    narrator: "jessica",
+    category: "people",
+    narratorAudio: "Audio/people-jessica-get-over-story.mp3",
+    answerAudio: "Audio/people-jessica-get-over-answer.mp3",
+    sentence: ["So","it", "took", "her", "a", "week", "to", "get", "over", "it"],
+    correctOrder: ["So","it", "took", "her", "a", "week", "to", "get", "over", "it"],
+    english: "So it took her a week to get over it.",
+    spanish: "Mi mamá por fin se ha recuperado de la gripa que tenía."
+},
+{
+    id: 6,
+    narrator: "becky",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-becky-come-across-story.mp3",
+    answerAudio: "Audio/outabout-becky-come-across-answer.mp3",
+    sentence: ["If", "you", "come", "across", "my", "keys", "let", "me", "know"],
+    correctOrder: ["If", "you", "come", "across", "my", "keys", "let", "me", "know"],
+    english: "If you come across my keys, let me know.",
+    spanish: "He dejado mis llaves en algún lugar, pero no sé dónde. Si las ves, avísame por favor."
+},
+{
+    id: 7,
+    narrator: "john",
+    category: "work",
+    narratorAudio: "Audio/work-john-go-over-story.mp3",
+    answerAudio: "Audio/work-john-go-over-answer.mp3",
+    sentence: ["I'll", "go", "over", "my", "homework", "later"],
+    correctOrder: ["I'll", "go", "over", "my", "homework", "later"],
+    english: "I'll go over my homework later.",
+    spanish: "Tengo que revisar mis tareas, pero no tengo tiempo ahora."
+},{
+    id: 8,
+    narrator: "harry",
+    category: "people",
+    narratorAudio: "Audio/people-harry-put-up-with-story.mp3",
+    answerAudio: "Audio/people-harry-put-up-with-answer.mp3",
+    sentence: ["I", "can't", "put", "up", "with", "it", "any", "longer"],
+    correctOrder: ["I", "can't", "put", "up", "with", "it", "any", "longer"],
+    english: "I can't put up with it any longer.",
+    spanish: "No voy a tolerar más de la mascota de mi vecino ladrando toda la noche."
+},
     ];

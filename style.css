@@ -340,19 +340,19 @@ button, img, .word-tile {
     }
 }
 
-
-/* HARRY CHARACTER */
-.harry-image {
-    position: absolute;
-    top: 96px;
-    right: 64px;
-    width: 256px;
-    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
+/* Harry CHARACTER */
+    .harry-image {
+        position: absolute;
+        top: 96px;
+        left: 64px;
+        width: 256px;
+        filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
 @media (max-width: 800px) and (orientation: landscape) {
     .harry-image {
         width: 120px !important;
-        top: 50% !important;
+        top: 45% !important;
+        right: auto !important;
         left: 20px !important;
     }
 }
