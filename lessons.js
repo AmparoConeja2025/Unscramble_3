@@ -87,4 +87,26 @@ const lessons = [
     english: "I can't put up with it any longer.",
     spanish: "No voy a tolerar más de la mascota de mi vecino ladrando toda la noche."
 },
+
+{
+    id: 9,
+    narrator: "mark",
+    category: "people",
+    narratorAudio: "Audio/people-mark-cut-back-on-story.mp3",
+    answerAudio: "Audio/people-mark-cut-back-on-answer.mp3",
+    sentence: ["She", "needs", "to", "cut", "back", "on", "sweets"],
+    correctOrder: ["She", "needs", "to", "cut", "back", "on", "sweets"],
+    english: "She needs to cut back on sweets.",
+    spanish: "Mi hermana está engordando mucho! Tiene que reducir el consumo de dulces!"
+},  {
+    id: 10,
+    narrator: "dianne",
+    category: "work",
+    narratorAudio: "Audio/work-dianne-run-out-of-story.mp3",
+    answerAudio: "Audio/work-dianne-run-out-of-answer.mp3",
+    sentence: ["I", "ran", "out", "of", "money"],
+    correctOrder: ["I", "ran", "out", "of", "money"],
+    english: "I ran out of money.",
+    spanish: "Iba a comprarme otra hamburguesa, pero se me acabó el dinero."
+},
     ];

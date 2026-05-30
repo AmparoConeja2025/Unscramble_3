@@ -350,8 +350,8 @@ button, img, .word-tile {
 }
 @media (max-width: 800px) and (orientation: landscape) {
     .harry-image {
-        width: 120px !important;
-        top: 45% !important;
+        width: 140px !important;
+        top: 50% !important;
         right: auto !important;
         left: 20px !important;
     }
