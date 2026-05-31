@@ -1,10 +1,10 @@
 
 body {
-  /* This sets the background for the main content area to black. */
+  /* This sets the background for the main content area. */
   background-color: #3e626d; 
   font-family: Arial, sans-serif;
   -webkit-user-select: none;
-   user-select: none;
+  user-select: none;
 }
 
 /* FORCE LANDSCAPE ORIENTATION */
