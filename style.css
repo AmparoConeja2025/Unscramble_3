@@ -417,12 +417,12 @@ button, img, .word-tile {
 /* WORD BANK */
 .word-bank {
     position: absolute;
-    top: 60%;
+    top: 55%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-wrap: wrap;
-    max-width: 98%;
+    max-width: 100%;
     gap: 18px;
     justify-content: center;
 }
@@ -431,13 +431,13 @@ button, img, .word-tile {
 .word-tile {
     background: white;
     color: black;
-    padding: 6px 12px;
+    padding: 7px 13px;
     border-radius: 4px;
     cursor: pointer;
     user-select: none;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
     transition: all 0.2s ease;
-    font-size: 16px;
+    font-size: 17px;
     font-family: Arial, sans-serif;
 }
 

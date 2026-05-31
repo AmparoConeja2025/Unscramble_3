@@ -16,10 +16,10 @@ const lessons = [
         category: "people",
         narratorAudio: "Audio/people-adam-ran-into-story.mp3",
         answerAudio: "Audio/people-adam-ran-into-answer.mp3",
-        sentence: ["I", "ran", "into", "my", "friend", "while", "I", "was", "shopping"],
-        correctOrder: ["I", "ran", "into", "my", "friend", "while", "I", "was", "shopping"],
-        english: "I ran into my friend while I was shopping.",
-        spanish: "Me encontré con mi amigo el otro día en el mercado."
+        sentence: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
+        correctOrder: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
+        english: "I ran into my friend t the store.",
+        spanish: "Me encontré con mi amigo en el mercado el otro día."
     },
     {
         id: 3,
@@ -38,9 +38,9 @@ const lessons = [
     category: "people",
     narratorAudio: "Audio/people-john-look-after-story.mp3",
     answerAudio: "Audio/people-john-look-after-answer.mp3",
-    sentence: ["My", "father", "is", "going", "to", "look", "after", "her"],
-    correctOrder: ["My", "father", "is", "going", "to", "look", "after", "her"],
-    english: "My father is going to look after her.",
+    sentence: ["My", "father", "will", "look", "after", "her"],
+    correctOrder: ["My", "father", "will", "look", "after", "her"],
+    english: "My father will look after her.",
     spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar."
 },
     
@@ -50,10 +50,10 @@ const lessons = [
     category: "people",
     narratorAudio: "Audio/people-jessica-get-over-story.mp3",
     answerAudio: "Audio/people-jessica-get-over-answer.mp3",
-    sentence: ["So","it", "took", "her", "a", "week", "to", "get", "over", "it"],
-    correctOrder: ["So","it", "took", "her", "a", "week", "to", "get", "over", "it"],
-    english: "So it took her a week to get over it.",
-    spanish: "Mi mamá por fin se ha recuperado de la gripa que tenía."
+    sentence: ["I'm","glad","she", "got", "over", "it"],
+    correctOrder: ["I'm","glad","she", "got", "over", "it"],
+    english: "I'm glad sh got over it.",
+    spanish: "Mi mamá por fin se recuperó de la gripa que tenía."
 },
 {
     id: 6,
@@ -61,10 +61,10 @@ const lessons = [
     category: "outabout",
     narratorAudio: "Audio/outabout-becky-come-across-story.mp3",
     answerAudio: "Audio/outabout-becky-come-across-answer.mp3",
-    sentence: ["If", "you", "come", "across", "my", "keys", "let", "me", "know"],
-    correctOrder: ["If", "you", "come", "across", "my", "keys", "let", "me", "know"],
-    english: "If you come across my keys, let me know.",
-    spanish: "He dejado mis llaves en algún lugar, pero no sé dónde. Si las ves, avísame por favor."
+    sentence: ["I", "know", "I'll", "come", "across", "them"],
+    correctOrder: ["I", "know", "I'll", "come", "across", "them"],
+    english: "I know I'll come across them",
+    spanish: "He dejado mis llaves en algún lugar, pero no sé dónde."
 },
 {
     id: 7,
@@ -72,20 +72,21 @@ const lessons = [
     category: "work",
     narratorAudio: "Audio/work-john-go-over-story.mp3",
     answerAudio: "Audio/work-john-go-over-answer.mp3",
-    sentence: ["I'll", "go", "over", "my", "homework", "later"],
-    correctOrder: ["I'll", "go", "over", "my", "homework", "later"],
-    english: "I'll go over my homework later.",
-    spanish: "Tengo que revisar mis tareas, pero no tengo tiempo ahora."
+    sentence: ["I", "need", "to", "go", "over", "my", "answers"],
+    correctOrder: ["I", "need", "to", "go", "over", "my", "answers"],
+    english: "I need to go over my answers.",
+    spanish: "Tengo que revisar mi tarea."
 },{
+
     id: 8,
     narrator: "harry",
     category: "people",
     narratorAudio: "Audio/people-harry-put-up-with-story.mp3",
     answerAudio: "Audio/people-harry-put-up-with-answer.mp3",
-    sentence: ["I", "can't", "put", "up", "with", "it", "any", "longer"],
-    correctOrder: ["I", "can't", "put", "up", "with", "it", "any", "longer"],
-    english: "I can't put up with it any longer.",
-    spanish: "No voy a tolerar más de la mascota de mi vecino ladrando toda la noche."
+    sentence: ["I", "won't", "put", "up", "with", "it",],
+    correctOrder: ["I", "won't", "put", "up", "with", "it",],
+    english: "I won't put up with it.",
+    spanish: "No voy a aguantar el bullicio que hacen los vecinos."
 },
 
 {
@@ -99,6 +100,7 @@ const lessons = [
     english: "She needs to cut back on sweets.",
     spanish: "Mi hermana está engordando mucho! Tiene que reducir el consumo de dulces!"
 },  {
+
     id: 10,
     narrator: "dianne",
     category: "work",
@@ -108,5 +110,17 @@ const lessons = [
     correctOrder: ["I", "ran", "out", "of", "money"],
     english: "I ran out of money.",
     spanish: "Iba a comprarme otra hamburguesa, pero se me acabó el dinero."
+},
+
+{
+    id: 11,
+    narrator: "mark",
+    category: "people",
+    narratorAudio: "Audio/people-mark-get-through-story.mp3",
+    answerAudio: "Audio/people-mark-get-through-answer.mp3",
+    sentence: ["We're", "going", "to", "get", "through", "this"],
+    correctOrder: ["We're", "going", "to", "get", "through", "this"],
+    english: "We're going to get through this.",
+    spanish: "Hay que llegar al final de estos problemas."
 },
     ];
