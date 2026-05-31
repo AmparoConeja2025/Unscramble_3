@@ -123,4 +123,110 @@ const lessons = [
     english: "We're going to get through this.",
     spanish: "Hay que llegar al final de estos problemas."
 },
+
+{
+    id: 12,
+    narrator: "laura",
+    category: "people",
+    narratorAudio: "Audio/people-laura-get-along-story.mp3",
+    answerAudio: "Audio/people-laura-get-along-answer.mp3",
+    sentence: ["We", "don't", "get", "along", "very", "well"],
+    correctOrder: ["We", "don't", "get", "along", "very", "well"],
+    english: "We don't get along very well.",
+    spanish: "Parece que siempre estoy peleando con mi vecina."
+},
+
+{
+    id: 13,
+    narrator: "jessica",
+    category: "people",
+    narratorAudio: "Audio/people-jessica-take-off-story.mp3",
+    answerAudio: "Audio/people-jessica-take-off-answer.mp3",
+    sentence: ["I'm", "going", "to", "take", "off"],
+    correctOrder: ["I'm", "going", "to", "take", "off"],
+    english: "I'm going to take off.",
+    spanish: "Pues, ya me voy, hasta luego."
+},
+
+{
+    id: 14,
+    narrator: "becky",
+    category: "people",
+    narratorAudio: "Audio/people-becky-fall-for-story.mp3",
+    answerAudio: "Audio/people-becky-fall-for-answer.mp3",
+    sentence: ["I'm", "not", "going", "to", "fall", "for", "that"],
+    correctOrder: ["I'm", "not", "going", "to", "fall", "for", "that"],
+    english: "I'm not going to fall for that.",
+    spanish: "Yo no creo lo que mi hermana me decía."
+},
+
+{
+    id: 15,
+    narrator: "john",
+    category: "funculture",
+    narratorAudio: "Audio/funculture-john-come-up-with-story.mp3",
+    answerAudio: "Audio/funculture-john-come-up-with-answer.mp3",
+    sentence: ["We", "need", "to", "come", "up", "with", "some", "ideas"],
+    correctOrder: ["We", "need", "to", "come", "up", "with", "some", "ideas"],
+    english: "We need to come up with some ideas.",
+    spanish: "Necesitamos un plan para el fin de semana."
+},
+
+{
+    id: 16,
+    narrator: "harry",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-harry-look-into-story.mp3",
+    answerAudio: "Audio/outabout-harry-look-into-answer.mp3",
+    sentence: ["I'll", "look", "into", "it"],
+    correctOrder: ["I'll", "look", "into", "it"],
+    english: "I'll look into it.",
+    spanish: "Hay que investigar ese ruido que el carro hace."
+},{
+    id: 17,
+    narrator: "dianne",
+    category: "work",
+    narratorAudio: "Audio/work-dianne-get-away-with-story.mp3",
+    answerAudio: "Audio/work-dianne-get-away-with-answer.mp3",
+    sentence: ["He", "lets", "me", "get", "away", "with", "it"],
+    correctOrder: ["He", "lets", "me", "get", "away", "with", "it"],
+    english: "He lets me get away with it.",
+    spanish: "Llego tarde todo el tiempo y mi jefe no dice nada."
+},
+
+{
+    id: 18,
+    narrator: "mark",
+    category: "people",
+    narratorAudio: "Audio/people-mark-keep-to-herself-story.mp3",
+    answerAudio: "Audio/people-mark-keep-to-herself-answer.mp3",
+    sentence: ["She", "likes", "to", "keep", "to", "herself"],
+    correctOrder: ["She", "likes", "to", "keep", "to", "herself"],
+    english: "She likes to keep to herself.",
+    spanish: "Ella no le gusta socializar mucho."
+},
+
+{
+    id: 19,
+    narrator: "laura",
+    category: "people",
+    narratorAudio: "Audio/people-laura-stick-to-story.mp3",
+    answerAudio: "Audio/people-laura-stick-to-answer.mp3",
+    sentence: ["I", "have", "to", "stick", "to", "my", "diet"],
+    correctOrder: ["I", "have", "to", "stick", "to", "my", "diet"],
+    english: "I have to stick to my diet.",
+    spanish: "Tengo ganas de comerme un dulce, pero no lo voy a comer."
+},
+
+{
+    id: 20,
+    narrator: "john",
+    category: "funculture",
+    narratorAudio: "Audio/funculture-john-feel-like-story.mp3",
+    answerAudio: "Audio/funculture-john-feel-like-answer.mp3",
+    sentence: ["I", "don't", "feel", "like", "going", "out"],
+    correctOrder: ["I", "don't", "feel", "like", "going", "out"],
+    english: "I don't feel like going out.",
+    spanish: "Voy a quedarme en casa."
+},
     ];
