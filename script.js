@@ -288,6 +288,7 @@ function loadLesson(index) {
     const lesson = lessons[index];
     const wordBank = document.getElementById('wordBank');
     const dropZone = document.getElementById('dropZone');
+    document.getElementById('lessonNumber').textContent = index + 1;
 
     wordBank.innerHTML = '';
     dropZone.innerHTML = '';
@@ -349,6 +350,8 @@ document.getElementById('nextBtn').addEventListener('click', () => {
 document.getElementById('resetButton').addEventListener('click', () => {
     loadLesson(currentLessonIndex);
 });
+
+
 
 // Nav hover effects
 document.getElementById('prevBtn').addEventListener('mouseenter', (e) => {

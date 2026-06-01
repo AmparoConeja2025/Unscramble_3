@@ -58,7 +58,7 @@ const lessons = [
     correctOrder: ["I'm","glad","she", "got", "over", "it"],
     english: "I'm glad she got over it.",
     spanish: "Mi mamá por fin se recuperó de la gripa que tenía.",
-     phrasal: ["get", "over"]
+     phrasal: ["got", "over"]
 
 },
 {

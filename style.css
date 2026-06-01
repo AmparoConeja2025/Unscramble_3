@@ -2622,8 +2622,8 @@ button, img, .word-tile {
 /* COMPLETION DOT */
 .completion-dot {
     position: absolute;
-    top: 85px;
-    left: 55px;
+    top: 55px;
+    left: 15px;
     width: 22px;
     height: 22px;
     background: #10b981;
@@ -2636,5 +2636,15 @@ button, img, .word-tile {
     font-weight: 800;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
     z-index: 10;
+}
+
+.lesson-number {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.3);
+    z-index: 5;
 }
 /* 7 */
