@@ -16,6 +16,7 @@
     <button class="reset-btn" id="resetButton">Reset</button>
     <button class="undo-btn" id="undoButton" disabled>↶</button>
     <button class="reset-btn" id="resetButton" onclick="loadLesson(currentLessonIndex)">Reset</button>
+    <button class="help-btn" id="helpButton">?</button>
    
 
     <!-- AVATARS -->
@@ -48,6 +49,57 @@
 
     <!-- TRY AGAIN -->
     <div class="try-again-text" id="tryAgainText">🤔 Try Again! 💭</div>
+
+    <!-- INSTRUCTIONS OVERLAY -->
+<div class="instructions-overlay" id="instructionsOverlay" style="display: none;">
+    <div class="instructions-content">
+        <button class="instructions-close-btn" id="instructionsCloseBtn">✕</button>
+        
+        <h2 class="instructions-title">¿Cómo funciona?</h2>
+        
+        <div class="instructions-step">
+            <span class="instructions-icon">🎧</span>
+            <div class="instructions-text">
+                <strong>Toca el avatar</strong>
+                <p>Escucha la historia en español</p>
+            </div>
+        </div>
+        
+        <div class="instructions-step">
+            <span class="instructions-icon">🔤</span>
+            <div class="instructions-text">
+                <strong>Ordena las palabras</strong>
+                <p>Forma la oración en inglés</p>
+            </div>
+        </div>
+
+        <div class="instructions-step">
+            <span class="instructions-icon">↶</span>
+            <div class="instructions-text">
+                <strong>Botón deshacer</strong>
+                <p>Elimina la última palabra</p>
+            </div>
+        </div>
+
+        <div class="instructions-step">
+            <span class="instructions-icon">↺</span>
+            <div class="instructions-text">
+                <strong>Botón reset</strong>
+                <p>Empieza de nuevo</p>
+            </div>
+        </div>
+
+        <div class="instructions-step">
+            <span class="instructions-icon">✅</span>
+            <div class="instructions-text">
+                <strong>¡Correcto!</strong>
+                <p>Toca el avatar de nuevo para escuchar la respuesta en inglés</p>
+            </div>
+        </div>
+
+        <button class="instructions-understood-btn" id="instructionsUnderstoodBtn">¡Entendido!</button>
+    </div>
+</div>
 
     <script src="lessons.js"></script>
     <script src="script.js"></script>

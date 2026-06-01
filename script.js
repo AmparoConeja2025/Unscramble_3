@@ -312,6 +312,20 @@ document.getElementById('nextBtn').addEventListener('mouseleave', (e) => {
     e.target.classList.remove('nav-btn-hover');
 });
 
+// INSTRUCTIONS OVERLAY
+document.getElementById('helpButton').addEventListener('click', () => {
+    document.getElementById('instructionsOverlay').style.display = 'flex';
+});
+
+document.getElementById('instructionsCloseBtn').addEventListener('click', () => {
+    document.getElementById('instructionsOverlay').style.display = 'none';
+});
+
+document.getElementById('instructionsUnderstoodBtn').addEventListener('click', () => {
+    document.getElementById('instructionsOverlay').style.display = 'none';
+});
+
+
 // INITIALIZE
 loadLesson(0);
 document.getElementById('undoButton').addEventListener('click', performUndo);
