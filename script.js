@@ -401,7 +401,65 @@ document.getElementById('instructionsCloseBtn').addEventListener('click', () => 
     document.getElementById('instructionsOverlay').style.display = 'none';
 });
 
+document.getElementById('endBtn').addEventListener('click', () => {
+    currentLessonIndex = lessons.length - 1;
+    loadLesson(currentLessonIndex);
+});
 
+// LONG PRESS NAVIGATION
+let longPressInterval = null;
+
+document.getElementById('prevBtn').addEventListener('mousedown', () => {
+    longPressInterval = setInterval(() => {
+        if (currentLessonIndex > 0) {
+            currentLessonIndex--;
+            loadLesson(currentLessonIndex);
+        }
+    }, 500);
+});
+
+document.getElementById('nextBtn').addEventListener('mousedown', () => {
+    longPressInterval = setInterval(() => {
+        if (isRandomMode) {
+            currentLessonIndex = getRandomLessonIndex();
+        } else {
+            if (currentLessonIndex < lessons.length - 1) {
+                currentLessonIndex++;
+            }
+        }
+        loadLesson(currentLessonIndex);
+    }, 500);
+});
+
+document.addEventListener('mouseup', () => {
+    clearInterval(longPressInterval);
+});
+
+document.addEventListener('touchend', () => {
+    clearInterval(longPressInterval);
+});
+
+document.getElementById('prevBtn').addEventListener('touchstart', () => {
+    longPressInterval = setInterval(() => {
+        if (currentLessonIndex > 0) {
+            currentLessonIndex--;
+            loadLesson(currentLessonIndex);
+        }
+    }, 500);
+});
+
+document.getElementById('nextBtn').addEventListener('touchstart', () => {
+    longPressInterval = setInterval(() => {
+        if (isRandomMode) {
+            currentLessonIndex = getRandomLessonIndex();
+        } else {
+            if (currentLessonIndex < lessons.length - 1) {
+                currentLessonIndex++;
+            }
+        }
+        loadLesson(currentLessonIndex);
+    }, 500);
+});
 
 // INITIALIZE
 loadLesson(0);

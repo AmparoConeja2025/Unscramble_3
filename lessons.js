@@ -265,4 +265,17 @@ const lessons = [
     spanish: "Voy a quedarme en casa.",
     phrasal: ["feel", "like"]
 },
+
+{
+    id: 21,
+    narrator: "dianne",
+    category: "funculture",
+    narratorAudio: "Audio/funculture-dianne-look-forward-story.mp3",
+    answerAudio: "Audio/funculture-dianne-look-forward-answer.mp3",
+    sentence: ["I'm", "looking", "forward", "to", "Friday"],
+    correctOrder: ["I'm", "looking", "forward", "to", "Friday"],
+    english: "I'm looking forward to Friday.",
+    spanish: "El viernes es un día feriado.",
+    phrasal: ["looking", "forward", "to"]
+},
     ];
