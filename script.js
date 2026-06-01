@@ -279,9 +279,30 @@ document.getElementById('statsButton').addEventListener('click', showStats);
 document.getElementById('statsCloseBtn3').addEventListener('click', () => {
     document.getElementById('statsOverlay3').style.display = 'none';
 });
-document.getElementById('statsUnderstoodBtn3').addEventListener('click', () => {
+
+// RANDOM/SEQUENTIAL MODE
+let isRandomMode = false;
+
+function getRandomLessonIndex() {
+    return Math.floor(Math.random() * lessons.length);
+}
+
+document.getElementById('sequentialBtn3').addEventListener('click', () => {
+    isRandomMode = false;
+    document.getElementById('sequentialBtn3').classList.add('mode-active-3');
+    document.getElementById('randomBtn3').classList.remove('mode-active-3');
+});
+
+document.getElementById('randomBtn3').addEventListener('click', () => {
+    isRandomMode = true;
+    document.getElementById('randomBtn3').classList.add('mode-active-3');
+    document.getElementById('sequentialBtn3').classList.remove('mode-active-3');
+    const randomIndex = getRandomLessonIndex();
+    currentLessonIndex = randomIndex;
+    loadLesson(currentLessonIndex);
     document.getElementById('statsOverlay3').style.display = 'none';
 });
+
 
 // LOAD LESSON
 function loadLesson(index) {
@@ -341,10 +362,14 @@ document.getElementById('prevBtn').addEventListener('click', () => {
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
-    if (currentLessonIndex < lessons.length - 1) {
-        currentLessonIndex++;
-        loadLesson(currentLessonIndex);
+    if (isRandomMode) {
+        currentLessonIndex = getRandomLessonIndex();
+    } else {
+        if (currentLessonIndex < lessons.length - 1) {
+            currentLessonIndex++;
+        }
     }
+    loadLesson(currentLessonIndex);
 });
 
 document.getElementById('resetButton').addEventListener('click', () => {
