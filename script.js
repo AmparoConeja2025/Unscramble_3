@@ -244,6 +244,14 @@ function getStats() {
     };
 }
 
+function updateCompletionDot() {
+    const today = new Date().toDateString();
+    const data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
+    const lessonKey = `lesson_${currentLessonIndex}_${today}`;
+    const dot = document.getElementById('completionDot');
+    dot.style.display = data[lessonKey] ? 'flex' : 'none';
+}
+
 function recordCompletion() {
     const today = new Date().toDateString();
     let data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
@@ -320,6 +328,7 @@ function loadLesson(index) {
 
     updateNavButtons();
     setupInteraction();
+    updateCompletionDot();
 }
 
 // EVENT LISTENERS
