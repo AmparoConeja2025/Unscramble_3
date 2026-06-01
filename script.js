@@ -362,7 +362,12 @@ document.getElementById('prevBtn').addEventListener('click', () => {
 });
 
 document.getElementById('nextBtn').addEventListener('click', () => {
-    if (isRandomMode) {
+    if (isFreshMode) {
+        const freshLessons = getFreshLessons();
+        if (freshLessons.length > 0) {
+            currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
+        }
+    } else if (isRandomMode) {
         currentLessonIndex = getRandomLessonIndex();
     } else {
         if (currentLessonIndex < lessons.length - 1) {
@@ -371,7 +376,6 @@ document.getElementById('nextBtn').addEventListener('click', () => {
     }
     loadLesson(currentLessonIndex);
 });
-
 document.getElementById('resetButton').addEventListener('click', () => {
     loadLesson(currentLessonIndex);
 });
@@ -420,14 +424,19 @@ document.getElementById('prevBtn').addEventListener('mousedown', () => {
 
 document.getElementById('nextBtn').addEventListener('mousedown', () => {
     longPressInterval = setInterval(() => {
-        if (isRandomMode) {
-            currentLessonIndex = getRandomLessonIndex();
-        } else {
-            if (currentLessonIndex < lessons.length - 1) {
-                currentLessonIndex++;
-            }
-        }
-        loadLesson(currentLessonIndex);
+        if (isFreshMode) {
+    const freshLessons = getFreshLessons();
+    if (freshLessons.length > 0) {
+        currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
+    }
+} else if (isRandomMode) {
+    currentLessonIndex = getRandomLessonIndex();
+} else {
+    if (currentLessonIndex < lessons.length - 1) {
+        currentLessonIndex++;
+    }
+}
+loadLesson(currentLessonIndex);
     }, 500);
 });
 
@@ -450,15 +459,54 @@ document.getElementById('prevBtn').addEventListener('touchstart', () => {
 
 document.getElementById('nextBtn').addEventListener('touchstart', () => {
     longPressInterval = setInterval(() => {
-        if (isRandomMode) {
-            currentLessonIndex = getRandomLessonIndex();
-        } else {
-            if (currentLessonIndex < lessons.length - 1) {
-                currentLessonIndex++;
-            }
-        }
-        loadLesson(currentLessonIndex);
+       if (isFreshMode) {
+    const freshLessons = getFreshLessons();
+    if (freshLessons.length > 0) {
+        currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
+    }
+} else if (isRandomMode) {
+    currentLessonIndex = getRandomLessonIndex();
+} else {
+    if (currentLessonIndex < lessons.length - 1) {
+        currentLessonIndex++;
+    }
+}
+loadLesson(currentLessonIndex);
     }, 500);
+});
+
+// FRESH ONLY MODE
+let isFreshMode = false;
+
+function getFreshLessons() {
+    const today = new Date().toDateString();
+    const data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
+    return lessons.reduce((acc, lesson, index) => {
+        if (!data[`lesson_${index}_${today}`]) acc.push(index);
+        return acc;
+    }, []);
+}
+
+document.getElementById('freshBtn3').addEventListener('click', () => {
+    isFreshMode = true;
+    isRandomMode = false;
+    document.getElementById('freshBtn3').classList.add('mode-active-3');
+    document.getElementById('randomBtn3').classList.remove('mode-active-3');
+    document.getElementById('sequentialBtn3').classList.remove('mode-active-3');
+    const freshLessons = getFreshLessons();
+    if (freshLessons.length > 0) {
+        currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
+        loadLesson(currentLessonIndex);
+    }
+    document.getElementById('statsOverlay3').style.display = 'none';
+});
+
+document.getElementById('sequentialBtn3').addEventListener('click', () => {
+    isFreshMode = false;
+});
+
+document.getElementById('randomBtn3').addEventListener('click', () => {
+    isFreshMode = false;
 });
 
 // INITIALIZE

@@ -2686,6 +2686,6 @@ button, img, .word-tile {
     z-index: 9999;
     background: none;
     border: none;
-    padding: 0;
+    padding: 10;
 }
 /* 7 */
