@@ -364,9 +364,6 @@ document.getElementById('instructionsCloseBtn').addEventListener('click', () => 
     document.getElementById('instructionsOverlay').style.display = 'none';
 });
 
-document.getElementById('instructionsUnderstoodBtn').addEventListener('click', () => {
-    document.getElementById('instructionsOverlay').style.display = 'none';
-});
 
 
 // INITIALIZE
