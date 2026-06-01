@@ -931,6 +931,23 @@ button, img, .word-tile {
         box-shadow: 0 6px 20px rgba(245, 158, 11, 0.7);
         transform: scale(1.05);
     }
+    
+}
+
+@keyframes pulse-phrasal {
+    0%, 100% { 
+        background: white; 
+        color: black; 
+    }
+    50% { 
+        background: rgba(16, 185, 129, 0.15); 
+        color: black; 
+    }
+}
+
+.word-tile-phrasal {
+    animation: pulse-phrasal 1.5s ease-in-out infinite !important;
+    background: rgba(211, 81, 41, 0.603) !important;
 }
 
 /* SPEEDRUN GAME MODE - BLUE OVERLAY SYSTEM */

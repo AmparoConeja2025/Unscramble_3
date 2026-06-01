@@ -195,14 +195,25 @@ function checkAnswer() {
     const dropZone = document.getElementById('dropZone');
     const userOrder = Array.from(dropZone.children).map(w => w.textContent);
     const isCorrect = userOrder.every((word, i) => word === lesson.correctOrder[i]);
+    
 
     if (isCorrect) {
         explodeFireworks();
-        const avatarEl = document.getElementById(lesson.narrator + 'Image');
+        const narrator = lesson.narrator;
+        const avatarEl = document.getElementById(narrator + 'Image');
         avatarEl.classList.remove('dianne-flipped');
         avatarEl.onclick = () => {
             document.getElementById('answerAudio').play();
         };
+        
+        // Highlight phrasal verb words
+setTimeout(() => {
+    Array.from(dropZone.children).forEach(tile => {
+        if (lesson.phrasal.includes(tile.textContent)) {
+            tile.classList.add('word-tile-phrasal');
+        }
+    });
+}, 1000);
     } else {
         showTryAgain();
     }

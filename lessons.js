@@ -8,7 +8,8 @@ const lessons = [
         sentence: ["I", "told", "her", "not", "to", "come", "over"],
         correctOrder: ["I", "told", "her", "not", "to", "come", "over"],
         english: "I told her not to come over.",
-        spanish: "Mi mejor amiga quería visitarme en mi casa, pero le dije que no."
+        spanish: "Mi mejor amiga quería visitarme en mi casa, pero le dije que no.",
+        phrasal: ["come", "over"]
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ const lessons = [
         sentence: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
         correctOrder: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
         english: "I ran into my friend t the store.",
-        spanish: "Me encontré con mi amigo en el mercado el otro día."
+        spanish: "Me encontré con mi amigo en el mercado el otro día.",
+        phrasal: ["ran", "into"]
     },
     {
         id: 3,
@@ -30,7 +32,8 @@ const lessons = [
         sentence: ["I", "guess", "I'll", "have", "to", "go", "without"],
         correctOrder: ["I", "guess", "I'll", "have", "to", "go", "without"],
         english: "I guess I'll have to go without.",
-        spanish: "No tengo dinero para comprar el almuerzo."
+        spanish: "No tengo dinero para comprar el almuerzo.",
+        phrasal: ["go", "without"]
     },
     {
     id: 4,
@@ -41,7 +44,8 @@ const lessons = [
     sentence: ["My", "father", "will", "look", "after", "her"],
     correctOrder: ["My", "father", "will", "look", "after", "her"],
     english: "My father will look after her.",
-    spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar."
+    spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar.",
+    phrasal: ["look", "after"]
 },
     
 {
@@ -52,8 +56,10 @@ const lessons = [
     answerAudio: "Audio/people-jessica-get-over-answer.mp3",
     sentence: ["I'm","glad","she", "got", "over", "it"],
     correctOrder: ["I'm","glad","she", "got", "over", "it"],
-    english: "I'm glad sh got over it.",
-    spanish: "Mi mamá por fin se recuperó de la gripa que tenía."
+    english: "I'm glad she got over it.",
+    spanish: "Mi mamá por fin se recuperó de la gripa que tenía.",
+     phrasal: ["get", "over"]
+
 },
 {
     id: 6,
@@ -64,7 +70,9 @@ const lessons = [
     sentence: ["I", "know", "I'll", "come", "across", "them"],
     correctOrder: ["I", "know", "I'll", "come", "across", "them"],
     english: "I know I'll come across them",
-    spanish: "He dejado mis llaves en algún lugar, pero no sé dónde."
+    spanish: "He dejado mis llaves en algún lugar, pero no sé dónde.",
+    phrasal: ["come", "across"]
+
 },
 {
     id: 7,
@@ -75,7 +83,9 @@ const lessons = [
     sentence: ["I", "need", "to", "go", "over", "my", "answers"],
     correctOrder: ["I", "need", "to", "go", "over", "my", "answers"],
     english: "I need to go over my answers.",
-    spanish: "Tengo que revisar mi tarea."
+    spanish: "Tengo que revisar mi tarea.",
+    phrasal: ["go", "over"]
+
 },{
 
     id: 8,
@@ -86,7 +96,10 @@ const lessons = [
     sentence: ["I", "won't", "put", "up", "with", "it",],
     correctOrder: ["I", "won't", "put", "up", "with", "it",],
     english: "I won't put up with it.",
-    spanish: "No voy a aguantar el bullicio que hacen los vecinos."
+    spanish: "No voy a aguantar el bullicio que hacen los vecinos.",
+    phrasal: ["put", "up", "with"]
+
+
 },
 
 {
@@ -98,7 +111,9 @@ const lessons = [
     sentence: ["She", "needs", "to", "cut", "back", "on", "sweets"],
     correctOrder: ["She", "needs", "to", "cut", "back", "on", "sweets"],
     english: "She needs to cut back on sweets.",
-    spanish: "Mi hermana está engordando mucho! Tiene que reducir el consumo de dulces!"
+    spanish: "Mi hermana está engordando mucho! Tiene que reducir el consumo de dulces!",
+    phrasal: ["cut", "back", "on"]
+
 },  {
 
     id: 10,
@@ -109,7 +124,9 @@ const lessons = [
     sentence: ["I", "ran", "out", "of", "money"],
     correctOrder: ["I", "ran", "out", "of", "money"],
     english: "I ran out of money.",
-    spanish: "Iba a comprarme otra hamburguesa, pero se me acabó el dinero."
+    spanish: "Iba a comprarme otra hamburguesa, pero se me acabó el dinero.",
+    phrasal: ["ran", "out", "of"]
+
 },
 
 {
@@ -121,7 +138,9 @@ const lessons = [
     sentence: ["We're", "going", "to", "get", "through", "this"],
     correctOrder: ["We're", "going", "to", "get", "through", "this"],
     english: "We're going to get through this.",
-    spanish: "Hay que llegar al final de estos problemas."
+    spanish: "Hay que llegar al final de estos problemas.",
+    phrasal: ["get", "through"]
+
 },
 
 {
@@ -133,7 +152,9 @@ const lessons = [
     sentence: ["We", "don't", "get", "along", "very", "well"],
     correctOrder: ["We", "don't", "get", "along", "very", "well"],
     english: "We don't get along very well.",
-    spanish: "Parece que siempre estoy peleando con mi vecina."
+    spanish: "Parece que siempre estoy peleando con mi vecina.",
+    phrasal: ["get", "along"]
+
 },
 
 {
@@ -145,7 +166,9 @@ const lessons = [
     sentence: ["I'm", "going", "to", "take", "off"],
     correctOrder: ["I'm", "going", "to", "take", "off"],
     english: "I'm going to take off.",
-    spanish: "Pues, ya me voy, hasta luego."
+    spanish: "Pues, ya me voy, hasta luego.",
+    phrasal: ["take", "off"]
+
 },
 
 {
@@ -157,7 +180,9 @@ const lessons = [
     sentence: ["I'm", "not", "going", "to", "fall", "for", "that"],
     correctOrder: ["I'm", "not", "going", "to", "fall", "for", "that"],
     english: "I'm not going to fall for that.",
-    spanish: "Yo no creo lo que mi hermana me decía."
+    spanish: "Yo no creo lo que mi hermana me decía.",
+    phrasal: ["fall", "for"]
+
 },
 
 {
@@ -169,7 +194,9 @@ const lessons = [
     sentence: ["We", "need", "to", "come", "up", "with", "some", "ideas"],
     correctOrder: ["We", "need", "to", "come", "up", "with", "some", "ideas"],
     english: "We need to come up with some ideas.",
-    spanish: "Necesitamos un plan para el fin de semana."
+    spanish: "Necesitamos un plan para el fin de semana.",
+    phrasal: ["come", "up", "with"]
+
 },
 
 {
@@ -181,7 +208,9 @@ const lessons = [
     sentence: ["I'll", "look", "into", "it"],
     correctOrder: ["I'll", "look", "into", "it"],
     english: "I'll look into it.",
-    spanish: "Hay que investigar ese ruido que el carro hace."
+    spanish: "Hay que investigar ese ruido que el carro hace.",
+    phrasal: ["look", "into"]
+
 },{
     id: 17,
     narrator: "dianne",
@@ -191,7 +220,9 @@ const lessons = [
     sentence: ["He", "lets", "me", "get", "away", "with", "it"],
     correctOrder: ["He", "lets", "me", "get", "away", "with", "it"],
     english: "He lets me get away with it.",
-    spanish: "Llego tarde todo el tiempo y mi jefe no dice nada."
+    spanish: "Llego tarde todo el tiempo y mi jefe no dice nada.",
+    phrasal: ["get", "away", "with"]
+
 },
 
 {
@@ -203,7 +234,9 @@ const lessons = [
     sentence: ["She", "likes", "to", "keep", "to", "herself"],
     correctOrder: ["She", "likes", "to", "keep", "to", "herself"],
     english: "She likes to keep to herself.",
-    spanish: "Ella no le gusta socializar mucho."
+    spanish: "Ella no le gusta socializar mucho.",
+    phrasal: ["keep", "to"]
+
 },
 
 {
@@ -215,7 +248,9 @@ const lessons = [
     sentence: ["I", "have", "to", "stick", "to", "my", "diet"],
     correctOrder: ["I", "have", "to", "stick", "to", "my", "diet"],
     english: "I have to stick to my diet.",
-    spanish: "Tengo ganas de comerme un dulce, pero no lo voy a comer."
+    spanish: "Tengo ganas de comerme un dulce, pero no lo voy a comer.",
+    phrasal: ["stick", "to"]
+
 },
 
 {
@@ -227,6 +262,7 @@ const lessons = [
     sentence: ["I", "don't", "feel", "like", "going", "out"],
     correctOrder: ["I", "don't", "feel", "like", "going", "out"],
     english: "I don't feel like going out.",
-    spanish: "Voy a quedarme en casa."
+    spanish: "Voy a quedarme en casa.",
+    phrasal: ["feel", "like"]
 },
     ];
