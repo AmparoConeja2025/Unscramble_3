@@ -159,7 +159,7 @@ function animateWordToDropZone(wordTile, dropZone) {
                 wordTile.style.color = 'black';
             }, 50);
         } else {
-            wordTile.classList.add('word-tile-wrong');
+              wordTile.classList.add('word-tile-wrong');
         }
 
         // Auto-check when all words placed
@@ -199,12 +199,14 @@ function checkAnswer() {
 
     if (isCorrect) {
         explodeFireworks();
+         recordCompletion();
         const narrator = lesson.narrator;
         const avatarEl = document.getElementById(narrator + 'Image');
         avatarEl.classList.remove('dianne-flipped');
         avatarEl.onclick = () => {
             document.getElementById('answerAudio').play();
         };
+
         
         // Highlight phrasal verb words
 setTimeout(() => {
@@ -231,6 +233,47 @@ function updateNavButtons() {
 
 // ALL AVATARS
 const allAvatars = ['dianne', 'adam', 'becky', 'harry', 'mark', 'jessica', 'john', 'laura'];
+
+// STATS TRACKING
+function getStats() {
+    const today = new Date().toDateString();
+    const data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
+    return {
+        todayCount: data[today] || 0,
+        totalCount: data.total || 0
+    };
+}
+
+function recordCompletion() {
+    const today = new Date().toDateString();
+    let data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
+    
+    // Check if this lesson was already completed today
+    const lessonKey = `lesson_${currentLessonIndex}_${today}`;
+    if (data[lessonKey]) return; // Already done today!
+    
+    // Mark as completed today
+    data[lessonKey] = true;
+    data[today] = (data[today] || 0) + 1;
+    data.total = (data.total || 0) + 1;
+    localStorage.setItem('unscramble3Stats', JSON.stringify(data));
+}
+
+function showStats() {
+    const stats = getStats();
+    document.getElementById('todayCount').textContent = stats.todayCount;
+    document.getElementById('totalCount').textContent = stats.totalCount;
+    document.getElementById('statsOverlay3').style.display = 'flex';
+}
+
+// STATS EVENT LISTENERS
+document.getElementById('statsButton').addEventListener('click', showStats);
+document.getElementById('statsCloseBtn3').addEventListener('click', () => {
+    document.getElementById('statsOverlay3').style.display = 'none';
+});
+document.getElementById('statsUnderstoodBtn3').addEventListener('click', () => {
+    document.getElementById('statsOverlay3').style.display = 'none';
+});
 
 // LOAD LESSON
 function loadLesson(index) {

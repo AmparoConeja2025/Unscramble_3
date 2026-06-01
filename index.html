@@ -17,6 +17,8 @@
     <button class="undo-btn" id="undoButton" disabled>↶</button>
     <button class="reset-btn" id="resetButton" onclick="loadLesson(currentLessonIndex)">Reset</button>
     <button class="help-btn" id="helpButton">?</button>
+    <button class="stats-btn" id="statsButton">Stats</button>
+
    
 
     <!-- AVATARS -->
@@ -98,6 +100,28 @@
         </div>
 
         <button class="instructions-understood-btn" id="instructionsUnderstoodBtn">¡Entendido!</button>
+    </div>
+</div>
+
+<!-- STATS OVERLAY -->
+<div class="stats-overlay-3" id="statsOverlay3" style="display: none;">
+    <div class="stats-content-3">
+        <button class="stats-close-btn-3" id="statsCloseBtn3">✕</button>
+        
+        <h2 class="stats-title-3">📊 Tu Progreso</h2>
+        
+        <div class="stats-grid-3">
+            <div class="stats-card-3">
+                <div class="stats-number-3" id="todayCount">0</div>
+                <div class="stats-label-3">Hoy</div>
+            </div>
+            <div class="stats-card-3">
+                <div class="stats-number-3" id="totalCount">0</div>
+                <div class="stats-label-3">Total</div>
+            </div>
+        </div>
+
+        <button class="stats-understood-btn-3" id="statsUnderstoodBtn3">¡Cerrar!</button>
     </div>
 </div>
 
