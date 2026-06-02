@@ -303,5 +303,96 @@ const lessons = [
     phrasal: ["count", "on"],
     english: "You can count on him.",
     spanish: "Te aseguro que el hombre es muy honesto."
+},  
+
+{
+    id: 24,
+    narrator: "adam",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-adam-end-up-story.mp3",
+    answerAudio: "Audio/outabout-adam-end-up-answer.mp3",
+    sentence: ["We", "ended", "up", "at", "the", "beach"],
+    correctOrder: ["We", "ended", "up", "at", "the", "beach"],
+    phrasal: ["ended", "up"],
+    english: "We ended up at the beach.",
+    spanish: "¿Y dónde fueron después de la fiesta?"
+},
+
+{
+    id: 25,
+    narrator: "dianne",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-dianne-show-up-story.mp3",
+    answerAudio: "Audio/outabout-dianne-show-up-answer.mp3",
+    sentence: ["What", "time", "are", "you", "going", "to", "show", "up"],
+    correctOrder: ["What", "time", "are", "you", "going", "to", "show", "up"],
+    phrasal: ["show", "up"],
+    english: "What time are you going to show up?",
+    spanish: "A lo mejor voy a llegar un poco tarde."
+},
+
+{
+    id: 26,
+    narrator: "mark",
+    category: "people",
+    narratorAudio: "Audio/people-mark-settle-down-story.mp3",
+    answerAudio: "Audio/people-mark-settle-down-answer.mp3",
+    sentence: ["He", "needs", "to", "settle", "down"],
+    correctOrder: ["He", "needs", "to", "settle", "down"],
+    phrasal: ["settle", "down"],
+    english: "He needs to settle down.",
+    spanish: "Mi amigo siempre anda bien emocionado."
+},
+
+{
+    id: 27,
+    narrator: "laura",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-laura-hang-out-story.mp3",
+    answerAudio: "Audio/outabout-laura-hang-out-answer.mp3",
+    sentence: ["I", "want", "to", "hang", "out", "with", "my", "friends"],
+    correctOrder: ["I", "want", "to", "hang", "out", "with", "my", "friends"],
+    phrasal: ["hang", "out"],
+    english: "I want to hang out with my friends.",
+    spanish: "Me siento un poco sola hoy."
+},
+
+{
+    id: 28,
+    narrator: "jessica",
+    category: "people",
+    narratorAudio: "Audio/people-jessica-come-down-with-story.mp3",
+    answerAudio: "Audio/people-jessica-come-down-with-answer.mp3",
+    sentence: ["Because", "I'm", "coming", "down", "with", "a", "cold"],
+    correctOrder: ["Because", "I'm", "coming", "down", "with", "a", "cold"],
+    phrasal: ["coming", "down", "with"],
+    english: "Because I'm coming down with a cold.",
+    spanish: "Hoy no me siento bien."
+},
+
+{
+    id: 29,
+    narrator: "becky",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-becky-catch-up-with-story.mp3",
+    answerAudio: "Audio/outabout-becky-catch-up-with-answer.mp3",
+    sentence: ["I", "need", "to", "catch", "up", "with", "them"],
+    correctOrder: ["I", "need", "to", "catch", "up", "with", "them"],
+    phrasal: ["catch", "up", "with"],
+    english: "I need to catch up with them.",
+    spanish: "El grupo se me adelantaron mucho."
+},
+
+{
+    id: 30,
+    narrator: "john",
+    category: "people",
+    narratorAudio: "Audio/people-john-get-rid-of-story.mp3",
+    answerAudio: "Audio/people-john-get-rid-of-answer.mp3",
+    sentence: ["I", "want", "to", "get", "rid", "of", "them"],
+    correctOrder: ["I", "want", "to", "get", "rid", "of", "them"],
+    phrasal: ["get", "rid", "of"],
+    english: "I want to get rid of them.",
+    spanish: "Hay muchas hormigas en la cocina."
 },
     ];
