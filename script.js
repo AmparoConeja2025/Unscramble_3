@@ -225,10 +225,10 @@ setTimeout(() => {
 function updateNavButtons() {
     const prevBtn = document.getElementById('prevBtn');
     const nextBtn = document.getElementById('nextBtn');
-    prevBtn.disabled = currentLessonIndex === 0;
-    nextBtn.disabled = currentLessonIndex === lessons.length - 1;
-    prevBtn.classList.toggle('nav-btn-disabled', currentLessonIndex === 0);
-    nextBtn.classList.toggle('nav-btn-disabled', currentLessonIndex === lessons.length - 1);
+    prevBtn.disabled = false;
+    nextBtn.disabled = false;
+    prevBtn.classList.remove('nav-btn-disabled');
+    nextBtn.classList.remove('nav-btn-disabled');
 }
 
 // ALL AVATARS
