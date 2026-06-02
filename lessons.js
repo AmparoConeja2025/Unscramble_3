@@ -278,4 +278,30 @@ const lessons = [
     spanish: "El viernes es un día feriado.",
     phrasal: ["looking", "forward", "to"]
 },
+
+{
+    id: 22,
+    narrator: "laura",
+    category: "people",
+    narratorAudio: "Audio/people-laura-drop-by-story.mp3",
+    answerAudio: "Audio/people-laura-drop-by-answer.mp3",
+    sentence: ["You", "can", "drop", "by", "my", "house", "any", "time"],
+    correctOrder: ["You", "can", "drop", "by", "my", "house", "any", "time"],
+    phrasal: ["drop", "by"],
+    english: "You can drop by my house any time.",
+    spanish: "Puedes visitarme cuando quieras."
+},
+
+{
+    id: 23,
+    narrator: "john",
+    category: "people",
+    narratorAudio: "Audio/people-john-count-on-story.mp3",
+    answerAudio: "Audio/people-john-count-on-answer.mp3",
+    sentence: ["You", "can", "count", "on", "him"],
+    correctOrder: ["You", "can", "count", "on", "him"],
+    phrasal: ["count", "on"],
+    english: "You can count on him.",
+    spanish: "Te aseguro que el hombre es muy honesto."
+},
     ];

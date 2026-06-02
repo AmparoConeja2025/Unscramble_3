@@ -466,13 +466,7 @@ document.getElementById('freshBtn3').addEventListener('click', () => {
     isFreshMode = !isFreshMode;
     document.getElementById('freshBtn3').classList.toggle('mode-active-3', isFreshMode);
 });
-document.getElementById('sequentialBtn3').addEventListener('click', () => {
-    isFreshMode = false;
-});
 
-document.getElementById('randomBtn3').addEventListener('click', () => {
-    isFreshMode = false;
-});
 
 // INITIALIZE
 loadLesson(0);
