@@ -420,28 +420,13 @@ let longPressInterval = null;
 
 document.getElementById('prevBtn').addEventListener('mousedown', () => {
     longPressInterval = setInterval(() => {
-        if (currentLessonIndex > 0) {
-            currentLessonIndex--;
-            loadLesson(currentLessonIndex);
-        }
+        document.getElementById('prevBtn').click();
     }, 500);
 });
 
 document.getElementById('nextBtn').addEventListener('mousedown', () => {
     longPressInterval = setInterval(() => {
-        if (isFreshMode) {
-    const freshLessons = getFreshLessons();
-    if (freshLessons.length > 0) {
-        currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
-    }
-} else if (isRandomMode) {
-    currentLessonIndex = getRandomLessonIndex();
-} else {
-    if (currentLessonIndex < lessons.length - 1) {
-        currentLessonIndex++;
-    }
-}
-loadLesson(currentLessonIndex);
+        document.getElementById('nextBtn').click();
     }, 500);
 });
 
@@ -455,28 +440,13 @@ document.addEventListener('touchend', () => {
 
 document.getElementById('prevBtn').addEventListener('touchstart', () => {
     longPressInterval = setInterval(() => {
-        if (currentLessonIndex > 0) {
-            currentLessonIndex--;
-            loadLesson(currentLessonIndex);
-        }
+        document.getElementById('prevBtn').click();
     }, 500);
 });
 
 document.getElementById('nextBtn').addEventListener('touchstart', () => {
     longPressInterval = setInterval(() => {
-       if (isFreshMode) {
-    const freshLessons = getFreshLessons();
-    if (freshLessons.length > 0) {
-        currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
-    }
-} else if (isRandomMode) {
-    currentLessonIndex = getRandomLessonIndex();
-} else {
-    if (currentLessonIndex < lessons.length - 1) {
-        currentLessonIndex++;
-    }
-}
-loadLesson(currentLessonIndex);
+        document.getElementById('nextBtn').click();
     }, 500);
 });
 
