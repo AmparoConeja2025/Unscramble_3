@@ -300,7 +300,6 @@ document.getElementById('randomBtn3').addEventListener('click', () => {
     const randomIndex = getRandomLessonIndex();
     currentLessonIndex = randomIndex;
     loadLesson(currentLessonIndex);
-    document.getElementById('statsOverlay3').style.display = 'none';
 });
 
 
@@ -355,27 +354,33 @@ function loadLesson(index) {
 
 // EVENT LISTENERS
 document.getElementById('prevBtn').addEventListener('click', () => {
-    if (currentLessonIndex > 0) {
-        currentLessonIndex--;
-        loadLesson(currentLessonIndex);
-    }
-});
+    const pool = isFreshMode ? getFreshLessons() : lessons.map((_, i) => i);
+    if (pool.length === 0) return; // dead end: no fresh lessons left
 
-document.getElementById('nextBtn').addEventListener('click', () => {
-    if (isFreshMode) {
-        const freshLessons = getFreshLessons();
-        if (freshLessons.length > 0) {
-            currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
-        }
-    } else if (isRandomMode) {
-        currentLessonIndex = getRandomLessonIndex();
+    if (isRandomMode) {
+        currentLessonIndex = pool[Math.floor(Math.random() * pool.length)];
     } else {
-        if (currentLessonIndex < lessons.length - 1) {
-            currentLessonIndex++;
-        }
+        const prev = [...pool].reverse().find(i => i < currentLessonIndex);
+        if (prev === undefined) return; // dead end: no earlier lesson in pool
+        currentLessonIndex = prev;
     }
     loadLesson(currentLessonIndex);
 });
+
+document.getElementById('nextBtn').addEventListener('click', () => {
+    const pool = isFreshMode ? getFreshLessons() : lessons.map((_, i) => i);
+    if (pool.length === 0) return; // dead end: no fresh lessons left
+
+    if (isRandomMode) {
+        currentLessonIndex = pool[Math.floor(Math.random() * pool.length)];
+    } else {
+        const next = pool.find(i => i > currentLessonIndex);
+        if (next === undefined) return; // dead end: no later lesson in pool
+        currentLessonIndex = next;
+    }
+    loadLesson(currentLessonIndex);
+});
+
 document.getElementById('resetButton').addEventListener('click', () => {
     loadLesson(currentLessonIndex);
 });
@@ -488,19 +493,9 @@ function getFreshLessons() {
 }
 
 document.getElementById('freshBtn3').addEventListener('click', () => {
-    isFreshMode = true;
-    isRandomMode = false;
-    document.getElementById('freshBtn3').classList.add('mode-active-3');
-    document.getElementById('randomBtn3').classList.remove('mode-active-3');
-    document.getElementById('sequentialBtn3').classList.remove('mode-active-3');
-    const freshLessons = getFreshLessons();
-    if (freshLessons.length > 0) {
-        currentLessonIndex = freshLessons[Math.floor(Math.random() * freshLessons.length)];
-        loadLesson(currentLessonIndex);
-    }
-    document.getElementById('statsOverlay3').style.display = 'none';
+    isFreshMode = !isFreshMode;
+    document.getElementById('freshBtn3').classList.toggle('mode-active-3', isFreshMode);
 });
-
 document.getElementById('sequentialBtn3').addEventListener('click', () => {
     isFreshMode = false;
 });
