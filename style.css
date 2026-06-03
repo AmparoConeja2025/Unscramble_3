@@ -612,7 +612,7 @@ button, img, .word-tile {
 /* Translation Overlay - Mobile Override */
 @media (max-width: 800px) and (orientation: landscape) {
     .translation-overlay {
-        top: 50%;
+        bottom: 5%;
         left: 47%;
         transform: translate(-50%, -50%) scale(0);
         min-width: 280px;
@@ -2687,5 +2687,51 @@ button, img, .word-tile {
     background: none;
     border: none;
     padding: 10;
+}
+
+/* TRANSLATION PANEL */
+.translation-panel {
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 16px;
+    text-align: center;
+    width: 50%;
+    max-width: 700px;
+    opacity: 0;
+    transition: opacity 0.5s ease-in;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    position: fixed;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.translation-panel.show {
+    opacity: 1;
+}
+
+.translation-english {
+    font-size: 17px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.translation-spanish {
+    font-size: 18px;
+    font-weight: 400;
+    color: #dcfce7;
+    line-height: 1.4;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.translation-english em,
+.translation-spanish em {
+    font-style: italic;
+    font-weight: 700;
 }
 /* 7 */

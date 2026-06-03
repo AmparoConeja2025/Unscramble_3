@@ -523,7 +523,9 @@ const lessons = [
     correctOrder: ["I", "asked", "him", "to", "move", "over"],
     phrasal: ["move", "over"],
     english: "I asked him to move over.",
-    spanish: "El hombre estaba sentado muy cerca de mí."
+    spanish: "El hombre estaba sentado muy cerca de mí.",
+    translation: "Le pedí que se moviera.",
+    phrasalSpanish: ["se", "moviera"]
 },
 
     ];

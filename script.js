@@ -28,6 +28,37 @@ function updateUndoButton() {
     }
 }
 
+// TRANSLATION PANEL — show with italicized phrasal verbs
+function showTranslationPanel(lesson) {
+    if (!lesson.translation || !lesson.phrasalSpanish) return; // no data, skip silently
+    
+    const panel = document.getElementById('translationPanel');
+    const englishEl = document.getElementById('translationEnglish');
+    const spanishEl = document.getElementById('translationSpanish');
+    
+    // Build italicized English
+    englishEl.innerHTML = lesson.english.replace(/\b\w+\b/g, (word) => {
+        const cleaned = word.replace(/[.,!?]/g, '');
+        return lesson.phrasal.includes(cleaned) ? `<em>${word}</em>` : word;
+    });
+    
+    // Build italicized Spanish
+    spanishEl.innerHTML = lesson.translation.replace(/\b\w+\b/g, (word) => {
+        const cleaned = word.replace(/[.,!?]/g, '');
+        return lesson.phrasalSpanish.includes(cleaned) ? `<em>${word}</em>` : word;
+    });
+    
+    // Show with fade
+    panel.style.display = 'block';
+    requestAnimationFrame(() => panel.classList.add('show'));
+}
+
+function hideTranslationPanel() {
+    const panel = document.getElementById('translationPanel');
+    panel.classList.remove('show');
+    panel.style.display = 'none';
+}
+
 function performUndo() {
     const dropZone = document.getElementById('dropZone');
     const wordBank = document.getElementById('wordBank');
@@ -215,7 +246,9 @@ setTimeout(() => {
             tile.classList.add('word-tile-phrasal');
         }
     });
+    showTranslationPanel(lesson);
 }, 1000);
+
     } else {
         showTryAgain();
     }
@@ -312,6 +345,7 @@ function loadLesson(index) {
 
     wordBank.innerHTML = '';
     dropZone.innerHTML = '';
+    hideTranslationPanel();
 
     lastAddedWord = null;
     canUndo = false;
