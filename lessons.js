@@ -395,4 +395,135 @@ const lessons = [
     english: "I want to get rid of them.",
     spanish: "Hay muchas hormigas en la cocina."
 },
+
+{
+    id: 31,
+    narrator: "dianne",
+    category: "people",
+    narratorAudio: "Audio/people-dianne-catch-on-story.mp3",
+    answerAudio: "Audio/people-dianne-catch-on-answer.mp3",
+    sentence: ["She's", "starting", "to", "catch", "on"],
+    correctOrder: ["She's", "starting", "to", "catch", "on"],
+    phrasal: ["catch", "on"],
+    english: "She's starting to catch on.",
+    spanish: "Ella está aprendiendo cómo funciona el inglés."
+},
+
+{
+    id: 32,
+    narrator: "mark",
+    category: "outabout",
+    narratorAudio: "Audio/outabout-mark-check-out-story.mp3",
+    answerAudio: "Audio/outabout-mark-check-out-answer.mp3",
+    sentence: ["We", "have", "to", "check", "out", "by", "noon"],
+    correctOrder: ["We", "have", "to", "check", "out", "by", "noon"],
+    phrasal: ["check", "out"],
+    english: "We have to check out by noon.",
+    spanish: "Hay que empacar las maletas muy rápido."
+},
+
+{
+    id: 33,
+    narrator: "laura",
+    category: "people",
+    narratorAudio: "Audio/people-laura-give-out-story.mp3",
+    answerAudio: "Audio/people-laura-give-out-answer.mp3",
+    sentence: ["They", "got", "tired", "and", "gave", "out"],
+    correctOrder: ["They", "got", "tired", "and", "gave", "out"],
+    phrasal: ["gave", "out"],
+    english: "They got tired and gave out.",
+    spanish: "No pudieron terminar sus tareas anoche."
+},
+
+{
+    id: 34,
+    narrator: "john",
+    category: "people",
+    narratorAudio: "Audio/people-john-come-back-story.mp3",
+    answerAudio: "Audio/people-john-come-back-answer.mp3",
+    sentence: ["I", "hope", "she", "comes", "back", "soon"],
+    correctOrder: ["I", "hope", "she", "comes", "back", "soon"],
+    phrasal: ["comes", "back"],
+    english: "I hope she comes back soon.",
+    spanish: "Mi novia salió de la casa hace tres horas."
+},
+
+{
+    id: 35,
+    narrator: "jessica",
+    category: "people",
+    narratorAudio: "Audio/people-jessica-check-up-on-story.mp3",
+    answerAudio: "Audio/people-jessica-check-up-on-answer.mp3",
+    sentence: ["I", "need", "to", "check", "up", "on", "her"],
+    correctOrder: ["I", "need", "to", "check", "up", "on", "her"],
+    phrasal: ["check", "up", "on"],
+    english: "I need to check up on her.",
+    spanish: "Mi mamita me dijo que no se sentía bien."
+},
+
+{
+    id: 36,
+    narrator: "becky",
+    category: "people",
+    narratorAudio: "Audio/people-becky-turn-up-story.mp3",
+    answerAudio: "Audio/people-becky-turn-up-answer.mp3",
+    sentence: ["I", "hope", "they", "turn", "up", "soon"],
+    correctOrder: ["I", "hope", "they", "turn", "up", "soon"],
+    phrasal: ["turn", "up"],
+    english: "I hope they turn up soon.",
+    spanish: "¿No encuentras tus llaves?"
+},
+
+{
+    id: 37,
+    narrator: "harry",
+    category: "people",
+    narratorAudio: "Audio/people-harry-throw-up-story.mp3",
+    answerAudio: "Audio/people-harry-throw-up-answer.mp3",
+    sentence: ["I", "think", "I'm", "going", "to", "throw", "up"],
+    correctOrder: ["I", "think", "I'm", "going", "to", "throw", "up"],
+    phrasal: ["throw", "up"],
+    english: "I think I'm going to throw up.",
+    spanish: "Mi estómago se siente muy feo."
+},
+
+{
+    id: 38,
+    narrator: "adam",
+    category: "people",
+    narratorAudio: "Audio/people-adam-stand-up-story.mp3",
+    answerAudio: "Audio/people-adam-stand-up-answer.mp3",
+    sentence: ["They", "need", "to", "stand", "up", "for", "a", "while"],
+    correctOrder: ["They", "need", "to", "stand", "up", "for", "a", "while"],
+    phrasal: ["stand", "up"],
+    english: "They need to stand up for a while.",
+    spanish: "Los niños están cansados de estar sentados."
+},
+
+{
+    id: 39,
+    narrator: "dianne",
+    category: "people",
+    narratorAudio: "Audio/people-dianne-stand-around-story.mp3",
+    answerAudio: "Audio/people-dianne-stand-around-answer.mp3",
+    sentence: ["He", "loves", "to", "stand", "around", "all", "day"],
+    correctOrder: ["He", "loves", "to", "stand", "around", "all", "day"],
+    phrasal: ["stand", "around"],
+    english: "He loves to stand around all day.",
+    spanish: "Jose siempre está desocupado."
+},
+
+{
+    id: 40,
+    narrator: "mark",
+    category: "people",
+    narratorAudio: "Audio/people-mark-move-over-story.mp3",
+    answerAudio: "Audio/people-mark-move-over-answer.mp3",
+    sentence: ["I", "asked", "him", "to", "move", "over"],
+    correctOrder: ["I", "asked", "him", "to", "move", "over"],
+    phrasal: ["move", "over"],
+    english: "I asked him to move over.",
+    spanish: "El hombre estaba sentado muy cerca de mí."
+},
+
     ];
