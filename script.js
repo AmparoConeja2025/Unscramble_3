@@ -35,6 +35,8 @@ function showTranslationPanel(lesson) {
     const panel = document.getElementById('translationPanel');
     const englishEl = document.getElementById('translationEnglish');
     const spanishEl = document.getElementById('translationSpanish');
+    const equivalentsEl = document.getElementById('translationEquivalents');
+
     
     // Build italicized English
     englishEl.innerHTML = lesson.english.replace(/\b\w+\b/g, (word) => {
@@ -47,6 +49,14 @@ function showTranslationPanel(lesson) {
         const cleaned = word.replace(/[.,!?]/g, '');
         return lesson.phrasalSpanish.includes(cleaned) ? `<em>${word}</em>` : word;
     });
+
+    // Populate equivalents line (or hide if empty)
+    if (lesson.equivalents) {
+        equivalentsEl.textContent = lesson.equivalents.replace(/;\s*/g, ' • ');
+        equivalentsEl.style.display = 'block';
+    } else {
+        equivalentsEl.style.display = 'none';
+    }
     
     // Show with fade
     panel.style.display = 'block';

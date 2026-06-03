@@ -524,8 +524,9 @@ const lessons = [
     phrasal: ["move", "over"],
     english: "I asked him to move over.",
     spanish: "El hombre estaba sentado muy cerca de mí.",
-    translation: "Le pedí que se moviera.",
-    phrasalSpanish: ["se", "moviera"]
+    translation: "Le pedí que se moviera a un lado.",
+    phrasalSpanish: ["se", "moviera", "a", "un", "lado"],
+    equivalents: "apartarse; hacerse a un lado; quitarse de allí"
 },
 
     ];
