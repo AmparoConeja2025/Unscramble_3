@@ -526,6 +526,7 @@ const lessons = [
     spanish: "El hombre estaba sentado muy cerca de mí.",
     translation: "Le pedí que se moviera a un lado.",
     phrasalSpanish: ["se", "moviera", "a", "un", "lado"],
+    phrasalInfinitive: "to move over",
     equivalents: "apartarse; hacerse a un lado; quitarse de allí"
 },
 

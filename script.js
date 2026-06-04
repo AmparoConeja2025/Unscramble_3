@@ -30,27 +30,28 @@ function updateUndoButton() {
 
 // TRANSLATION PANEL — show with italicized phrasal verbs
 function showTranslationPanel(lesson) {
-    if (!lesson.translation || !lesson.phrasalSpanish) return; // no data, skip silently
+    if (!lesson.translation || !lesson.phrasalSpanish) return;
     
     const panel = document.getElementById('translationPanel');
-    const englishEl = document.getElementById('translationEnglish');
     const spanishEl = document.getElementById('translationSpanish');
+    const infinitiveEl = document.getElementById('translationInfinitive');
     const equivalentsEl = document.getElementById('translationEquivalents');
-
     
-    // Build italicized English
-    englishEl.innerHTML = lesson.english.replace(/\b\w+\b/g, (word) => {
-        const cleaned = word.replace(/[.,!?]/g, '');
-        return lesson.phrasal.includes(cleaned) ? `<em>${word}</em>` : word;
-    });
-    
-    // Build italicized Spanish
+    // Build italicized Spanish translation
     spanishEl.innerHTML = lesson.translation.replace(/\b\w+\b/g, (word) => {
         const cleaned = word.replace(/[.,!?]/g, '');
         return lesson.phrasalSpanish.includes(cleaned) ? `<em>${word}</em>` : word;
     });
-
-    // Populate equivalents line (or hide if empty)
+    
+    // Populate infinitive line (naked and raw)
+    if (lesson.phrasalInfinitive) {
+        infinitiveEl.textContent = lesson.phrasalInfinitive;
+        infinitiveEl.style.display = 'block';
+    } else {
+        infinitiveEl.style.display = 'none';
+    }
+    
+    // Populate equivalents line (semicolons → bullets, or hide if empty)
     if (lesson.equivalents) {
         equivalentsEl.textContent = lesson.equivalents.replace(/;\s*/g, ' • ');
         equivalentsEl.style.display = 'block';
