@@ -7,9 +7,15 @@ const lessons = [
         answerAudio: "Audio/people-dianne-best-friend-answer.mp3",
         sentence: ["I", "told", "her", "not", "to", "come", "over"],
         correctOrder: ["I", "told", "her", "not", "to", "come", "over"],
+        phrasal: ["come", "over"],
         english: "I told her not to come over.",
         spanish: "Mi mejor amiga quería visitarme en mi casa, pero le dije que no.",
-        phrasal: ["come", "over"]
+        translation: "Le dije que no viniera.",
+        phrasalSpanish: ["se", "moviera", "a", "un", "lado"],
+        phrasalInfinitive: "to come over",
+        equivalents: "venir; venir a visitar; visitar"
+
+        
     },
     {
         id: 2,
@@ -19,9 +25,15 @@ const lessons = [
         answerAudio: "Audio/people-adam-ran-into-answer.mp3",
         sentence: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
         correctOrder: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
-        english: "I ran into my friend t the store.",
+        phrasal: ["ran", "into"],
+        english: "I ran into my friend at the store.",
         spanish: "Me encontré con mi amigo en el mercado el otro día.",
-        phrasal: ["ran", "into"]
+        translation: "Me encontré con mi amigo en el mercado.",
+        phrasalSpanish: ["me", "encontré","con"],
+        phrasalInfinitive: "to run into",
+        equivalents: "encontrarse con;  toparse con;  tropezarse con"
+
+
     },
     {
         id: 3,
@@ -363,11 +375,11 @@ const lessons = [
     category: "people",
     narratorAudio: "Audio/people-jessica-come-down-with-story.mp3",
     answerAudio: "Audio/people-jessica-come-down-with-answer.mp3",
-    sentence: ["Because", "I'm", "coming", "down", "with", "a", "cold"],
-    correctOrder: ["Because", "I'm", "coming", "down", "with", "a", "cold"],
+    sentence: ["I'm", "coming", "down", "with", "a", "cold"],
+    correctOrder: [ "I'm", "coming", "down", "with", "a", "cold"],
     phrasal: ["coming", "down", "with"],
-    english: "Because I'm coming down with a cold.",
-    spanish: "Hoy no me siento bien."
+    english: "I'm coming down with a cold.",
+    spanish: "Hoy no me siento bien, creo que me estoy enfermando."
 },
 
 {

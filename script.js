@@ -38,11 +38,11 @@ function showTranslationPanel(lesson) {
     const equivalentsEl = document.getElementById('translationEquivalents');
     
     // Build italicized Spanish translation
-    spanishEl.innerHTML = lesson.translation.replace(/\b\w+\b/g, (word) => {
-        const cleaned = word.replace(/[.,!?]/g, '');
-        return lesson.phrasalSpanish.includes(cleaned) ? `<em>${word}</em>` : word;
-    });
-    
+    spanishEl.innerHTML = lesson.translation.replace(/[\p{L}]+/gu, (word) => {
+    const cleaned = word.replace(/[.,!?]/g, '').toLowerCase();
+    const phrasalLower = lesson.phrasalSpanish.map(w => w.toLowerCase());
+    return phrasalLower.includes(cleaned) ? `<em>${word}</em>` : word;
+});
     // Populate infinitive line (naked and raw)
     if (lesson.phrasalInfinitive) {
         infinitiveEl.textContent = lesson.phrasalInfinitive;

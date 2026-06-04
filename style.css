@@ -136,11 +136,11 @@ button, img, .word-tile {
 .undo-btn-active {
     opacity: 1;
     transform: scale(1);
-    background: linear-gradient(135deg, #059669 0%, #047857 100%);
+    background: #91c2f9 ;
 }
 
 .undo-btn-hover-active {
-    background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+    background: linear-gradient(135deg, #044e78 0%, #065f46 100%);
     transform: translateY(-2px) scale(1);
 }
 
@@ -2409,11 +2409,10 @@ button, img, .word-tile {
 /* --- Home Button Styles --- */
 .home-button {
   position: fixed;
-  /* Positions in the upper-right, safely away from system bars */
   top: 70px;
   left: calc(17px + env(safe-area-inset-left));
   z-index: 100;
-  background-color: rgb(41, 163, 153);
+  background-color: rgb(146, 196, 252) ;
   padding: 9px;
   border-radius: 50%;
   box-shadow: 0 2px 5px rgba(0,0,0,0.3);
@@ -2423,7 +2422,7 @@ button, img, .word-tile {
 .home-button:hover,
 .home-button:active {
   transform: scale(1.1);
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: #93c5fd;
 }
 
 .home-button img {
