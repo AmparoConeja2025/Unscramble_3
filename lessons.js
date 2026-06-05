@@ -222,7 +222,11 @@ const lessons = [
     correctOrder: ["I'm", "going", "to", "take", "off"],
     english: "I'm going to take off.",
     spanish: "Pues, ya me voy, hasta luego.",
-    phrasal: ["take", "off"]
+    phrasal: ["take", "off"],
+    translation: "Voy a irme.",
+    phrasalSpanish: ["irme"],
+    phrasalInfinitive: "to take off",
+    equivalents: "irse; marcharse; salir"
 
 },
 
@@ -236,7 +240,10 @@ const lessons = [
     correctOrder: ["I'm", "not", "going", "to", "fall", "for", "that"],
     english: "I'm not going to fall for that.",
     spanish: "Yo no creo lo que mi hermana me decía.",
-    phrasal: ["fall", "for"]
+    phrasal: ["fall", "for"],translation: "No voy a caer en eso.",
+    phrasalSpanish: ["caer", "en"],
+    phrasalInfinitive: "to fall for",
+    equivalents: "caer en; tragárselo; creérselo"
 
 },
 
@@ -250,7 +257,11 @@ const lessons = [
     correctOrder: ["We", "need", "to", "come", "up", "with", "some", "ideas"],
     english: "We need to come up with some ideas.",
     spanish: "Necesitamos un plan para el fin de semana.",
-    phrasal: ["come", "up", "with"]
+    phrasal: ["come", "up", "with"],
+    translation: "Necesitamos encontrar algunas ideas.",
+    phrasalSpanish: ["encontrar"],
+    phrasalInfinitive: "to come up with",
+    equivalents: "encontrar; conseguir"
 
 },
 
@@ -264,7 +275,11 @@ const lessons = [
     correctOrder: ["I'll", "look", "into", "it"],
     english: "I'll look into it.",
     spanish: "Hay que investigar ese ruido que el carro hace.",
-    phrasal: ["look", "into"]
+    phrasal: ["look", "into"],
+    translation: "Lo voy a investigar.",
+    phrasalSpanish: ["investigar"],
+    phrasalInfinitive: "to look into",
+    equivalents: "investigar; averiguar; indagar"
 
 },{
     id: 17,
@@ -276,7 +291,11 @@ const lessons = [
     correctOrder: ["He", "lets", "me", "get", "away", "with", "it"],
     english: "He lets me get away with it.",
     spanish: "Llego tarde todo el tiempo y mi jefe no dice nada.",
-    phrasal: ["get", "away", "with"]
+    phrasal: ["get", "away", "with"],
+    translation: "Me deja salirme con la mía.",
+    phrasalSpanish: ["salirme", "con", "la", "mía"],
+    phrasalInfinitive: "to get away with",
+    equivalents: "salirse con la suya; salir impune; librarse"
 
 },
 
@@ -290,7 +309,11 @@ const lessons = [
     correctOrder: ["She", "likes", "to", "keep", "to", "herself"],
     english: "She likes to keep to herself.",
     spanish: "Ella no le gusta socializar mucho.",
-    phrasal: ["keep", "to"]
+    phrasal: ["keep", "to"],
+    translation: "Le gusta ser solitario.",
+    phrasalSpanish: ["ser", "solitario"],
+    phrasalInfinitive: "to keep to oneself",
+    equivalents: "ser reservado; ser solitario; no socializar"  
 
 },
 
@@ -304,7 +327,11 @@ const lessons = [
     correctOrder: ["I", "have", "to", "stick", "to", "my", "diet"],
     english: "I have to stick to my diet.",
     spanish: "Tengo ganas de comerme un dulce, pero no lo voy a comer.",
-    phrasal: ["stick", "to"]
+    phrasal: ["stick", "to"],
+    translation: "Tengo que apegarme a mi dieta.",
+    phrasalSpanish: ["apegarme"],
+    phrasalInfinitive: "to stick to",
+    equivalents: "apegarse a; ceñirse a; mantenerse en"
 
 },
 
@@ -318,7 +345,11 @@ const lessons = [
     correctOrder: ["I", "don't", "feel", "like", "going", "out"],
     english: "I don't feel like going out.",
     spanish: "Voy a quedarme en casa.",
-    phrasal: ["feel", "like"]
+    phrasal: ["feel", "like"],
+    translation: "No me apetece salir.",
+    phrasalSpanish: ["apetece"],
+    phrasalInfinitive: "to feel like",
+    equivalents: "tener ganas de; apetecerle"
 },
 
 {
@@ -331,7 +362,11 @@ const lessons = [
     correctOrder: ["I'm", "looking", "forward", "to", "Friday"],
     english: "I'm looking forward to Friday.",
     spanish: "El viernes es un día feriado.",
-    phrasal: ["looking", "forward", "to"]
+    phrasal: ["looking", "forward", "to"],
+    translation: "Tengo muchas ganas de que llegue el viernes.",
+    phrasalSpanish: ["tengo", "muchas", "ganas", "de"],
+    phrasalInfinitive: "to look forward to",
+    equivalents: "esperar con ansias; tener ganas de; estar emocionado por"
 },
 
 {
@@ -344,7 +379,11 @@ const lessons = [
     correctOrder: ["You", "can", "drop", "by", "my", "house", "any", "time"],
     phrasal: ["drop", "by"],
     english: "You can drop by my house any time.",
-    spanish: "Puedes visitarme cuando quieras."
+    spanish: "Puedes visitarme cuando quieras.",
+    translation: "Puedes pasarte por mi casa cuando quieras.",
+    phrasalSpanish: ["pasarte", "por"],
+    phrasalInfinitive: "to drop by",
+    equivalents: "pasar por; pasar a saludar; visitar un rato"
 },
 
 {
@@ -357,7 +396,12 @@ const lessons = [
     correctOrder: ["You", "can", "count", "on", "him"],
     phrasal: ["count", "on"],
     english: "You can count on him.",
-    spanish: "Te aseguro que el hombre es muy honesto."
+    spanish: "Te aseguro que el hombre es muy honesto.",
+    translation: "Puedes depender de él.",
+    phrasalSpanish: ["depender"],
+    phrasalInfinitive: "to count on",
+    equivalents: "contar con; confiar en; depender de"
+
 },  
 
 {
@@ -370,7 +414,11 @@ const lessons = [
     correctOrder: ["We", "ended", "up", "at", "the", "beach"],
     phrasal: ["ended", "up"],
     english: "We ended up at the beach.",
-    spanish: "¿Y dónde fueron después de la fiesta?"
+    spanish: "¿Y dónde fueron después de la fiesta?",
+    translation: "Al final acabamos en la playa.",
+    phrasalSpanish: ["acabamos"],
+    phrasalInfinitive: "to end up",
+    equivalents: "terminar; acabar; ir a parar"
 },
 
 {
@@ -383,7 +431,12 @@ const lessons = [
     correctOrder: ["What", "time", "are", "you", "going", "to", "show", "up"],
     phrasal: ["show", "up"],
     english: "What time are you going to show up?",
-    spanish: "A lo mejor voy a llegar un poco tarde."
+    spanish: "A lo mejor voy a llegar un poco tarde.",
+    translation: "¿A qué hora vas a llegar?",
+    phrasalSpanish: ["llegar"],
+    phrasalInfinitive: "to show up",
+    equivalents: "llegar; aparecer; presentarse"
+    
 },
 
 {
@@ -396,7 +449,11 @@ const lessons = [
     correctOrder: ["He", "needs", "to", "settle", "down"],
     phrasal: ["settle", "down"],
     english: "He needs to settle down.",
-    spanish: "Mi amigo siempre anda bien emocionado."
+    spanish: "Mi amigo siempre anda bien emocionado.",
+    translation: "Necesita calmarse.",
+    phrasalSpanish: ["calmarse"],
+    phrasalInfinitive: "to settle down",
+    equivalents: "calmarse; tranquilizarse; sentar cabeza"
 },
 
 {
@@ -409,7 +466,12 @@ const lessons = [
     correctOrder: ["I", "want", "to", "hang", "out", "with", "my", "friends"],
     phrasal: ["hang", "out"],
     english: "I want to hang out with my friends.",
-    spanish: "Me siento un poco sola hoy."
+    spanish: "Me siento un poco sola hoy.",
+    translation: "Quiero juntarme con mis amigos.",
+    phrasalSpanish: ["juntarme"],
+    phrasalInfinitive: "to hang out with",
+    equivalents: "pasar tiempo con; salir con; juntarse con"
+
 },
 
 {
@@ -422,7 +484,11 @@ const lessons = [
     correctOrder: [ "I'm", "coming", "down", "with", "a", "cold"],
     phrasal: ["coming", "down", "with"],
     english: "I'm coming down with a cold.",
-    spanish: "Hoy no me siento bien, creo que me estoy enfermando."
+    spanish: "Hoy no me siento bien, creo que me estoy enfermando.",
+    translation: "Me estoy enfermando.",
+    phrasalSpanish: ["me", "estoy", "enfermando"],
+    phrasalInfinitive: "to come down with",
+    equivalents: "enfermarse de; agarrar; contagiarse de"
 },
 
 {
@@ -435,7 +501,11 @@ const lessons = [
     correctOrder: ["I", "need", "to", "catch", "up", "with", "them"],
     phrasal: ["catch", "up", "with"],
     english: "I need to catch up with them.",
-    spanish: "El grupo se me adelantaron mucho."
+    spanish: "El grupo se me adelantaron mucho.",
+    translation: "Hay que alcanzar con ellos.",
+    phrasalSpanish: ["alcanzar"],
+    phrasalInfinitive: "to catch up with",
+    equivalents: "alcanzar; ponerse al día con; emparejar"
 },
 
 {
@@ -448,7 +518,11 @@ const lessons = [
     correctOrder: ["I", "want", "to", "get", "rid", "of", "them"],
     phrasal: ["get", "rid", "of"],
     english: "I want to get rid of them.",
-    spanish: "Hay muchas hormigas en la cocina."
+    spanish: "Hay muchas hormigas en la cocina.",
+    translation: "Quiero deshacerme de ellos.",
+    phrasalSpanish: ["deshacerme"],
+    phrasalInfinitive: "to get rid of",
+    equivalents: "deshacerse de; librarse de; quitarse de encima"
 },
 
 {
@@ -461,7 +535,11 @@ const lessons = [
     correctOrder: ["She's", "starting", "to", "catch", "on"],
     phrasal: ["catch", "on"],
     english: "She's starting to catch on.",
-    spanish: "Ella está aprendiendo cómo funciona el inglés."
+    spanish: "Ella está aprendiendo cómo funciona el inglés.",
+    translation: "Está empezando a agarrar la onda.",
+    phrasalSpanish: ["agarrar", "la", "onda"],
+    phrasalInfinitive: "to catch on",
+    equivalents: "entender; captar; agarrar la onda"
 },
 
 {
@@ -474,7 +552,11 @@ const lessons = [
     correctOrder: ["We", "have", "to", "check", "out", "by", "noon"],
     phrasal: ["check", "out"],
     english: "We have to check out by noon.",
-    spanish: "Hay que empacar las maletas muy rápido."
+    spanish: "Hay que empacar las maletas muy rápido.",
+    translation: "Tenemos que dejar la habitación antes del mediodía.",
+    phrasalSpanish: ["dejar", "la", "habitación"],
+    phrasalInfinitive: "to check out",
+    equivalents: "hacer el check-out; salir del hotel; pagar y salir"
 },
 
 {
@@ -487,7 +569,12 @@ const lessons = [
     correctOrder: ["They", "got", "tired", "and", "gave", "out"],
     phrasal: ["gave", "out"],
     english: "They got tired and gave out.",
-    spanish: "No pudieron terminar sus tareas anoche."
+    spanish: "No pudieron terminar sus tareas anoche.",
+    translation: "Se cansaron y se rendieron.",
+    phrasalSpanish: ["se", "rendieron"],
+    phrasalInfinitive: "to give out",
+    equivalents: "agotarse; rendirse; no dar más"
+
 },
 
 {
@@ -500,7 +587,11 @@ const lessons = [
     correctOrder: ["I", "hope", "she", "comes", "back", "soon"],
     phrasal: ["comes", "back"],
     english: "I hope she comes back soon.",
-    spanish: "Mi novia salió de la casa hace tres horas."
+    spanish: "Mi novia salió de la casa hace tres horas.",
+    translation: "Espero que regrese pronto.",
+    phrasalSpanish: ["regrese"],
+    phrasalInfinitive: "to come back",
+    equivalents: "volver; regresar; retornar"
 },
 
 {
@@ -513,7 +604,11 @@ const lessons = [
     correctOrder: ["I", "need", "to", "check", "up", "on", "her"],
     phrasal: ["check", "up", "on"],
     english: "I need to check up on her.",
-    spanish: "Mi mamita me dijo que no se sentía bien."
+    spanish: "Mi mamita me dijo que no se sentía bien.",
+    translation: "Necesito ver cómo está.",
+    phrasalSpanish: ["ver", "cómo", "está"],
+    phrasalInfinitive: "to check up on",
+    equivalents: "ver cómo está; estar pendiente de; comprobar"
 },
 
 {
@@ -526,7 +621,11 @@ const lessons = [
     correctOrder: ["I", "hope", "they", "turn", "up", "soon"],
     phrasal: ["turn", "up"],
     english: "I hope they turn up soon.",
-    spanish: "¿No encuentras tus llaves?"
+    spanish: "¿No encuentras tus llaves?",
+    translation: "Espero que aparezcan pronto.",
+    phrasalSpanish: ["aparezcan"],
+    phrasalInfinitive: "to turn up",
+    equivalents: "aparecer; salir; presentarse"
 },
 
 {
@@ -539,7 +638,11 @@ const lessons = [
     correctOrder: ["I", "think", "I'm", "going", "to", "throw", "up"],
     phrasal: ["throw", "up"],
     english: "I think I'm going to throw up.",
-    spanish: "Mi estómago se siente muy feo."
+    spanish: "Mi estómago se siente muy feo.",
+    translation: "Creo que voy a vomitar.",
+    phrasalSpanish: ["vomitar"],
+    phrasalInfinitive: "to throw up",
+    equivalents: "vomitar; devolver; echar el estómago"
 },
 
 {
@@ -552,7 +655,11 @@ const lessons = [
     correctOrder: ["They", "need", "to", "stand", "up", "for", "a", "while"],
     phrasal: ["stand", "up"],
     english: "They need to stand up for a while.",
-    spanish: "Los niños están cansados de estar sentados."
+    spanish: "Los niños están cansados de estar sentados.",
+    translation: "Necesitan pararse un rato.",
+    phrasalSpanish: ["pararse"],
+    phrasalInfinitive: "to stand up",
+    equivalents: "pararse; levantarse; ponerse de pie"
 },
 
 {
@@ -565,7 +672,11 @@ const lessons = [
     correctOrder: ["He", "loves", "to", "stand", "around", "all", "day"],
     phrasal: ["stand", "around"],
     english: "He loves to stand around all day.",
-    spanish: "Jose siempre está desocupado."
+    spanish: "Jose siempre está desocupado.",
+    translation: "Le gusta estar parado todo el día.",
+    phrasalSpanish: ["estar", "parado"],
+    phrasalInfinitive: "to stand around",
+    equivalents: "quedarse parado; estar de ocioso; haraganear"
 },
 
 {

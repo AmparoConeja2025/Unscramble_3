@@ -28,6 +28,7 @@ function updateUndoButton() {
     }
 }
 
+
 // TRANSLATION PANEL — show with italicized phrasal verbs
 function showTranslationPanel(lesson) {
     if (!lesson.translation || !lesson.phrasalSpanish) return;
@@ -36,6 +37,7 @@ function showTranslationPanel(lesson) {
     const spanishEl = document.getElementById('translationSpanish');
     const infinitiveEl = document.getElementById('translationInfinitive');
     const equivalentsEl = document.getElementById('translationEquivalents');
+    
     
     // Build italicized Spanish translation
     spanishEl.innerHTML = lesson.translation.replace(/[\p{L}]+/gu, (word) => {

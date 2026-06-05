@@ -1676,31 +1676,40 @@ button, img, .word-tile {
     margin-bottom: 25px;
 }
 
+
 .translation-infinitive {
-    font-size: 15px;
+    font-size: 22px;
+    margin-top: -8px;
+    margin-bottom: 13px;
+    text-align:left;
     font-weight: 500;
-    color: #ffffff;
-    line-height: 1.3;
-    margin: 8px 0;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    color: #decf90;
+    line-height: 1.0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.translation-infinitive::before {
+    content: "• ";
 }
 
 .translation-spanish {
-    font-size: 20px;
+    font-size: 18px;
+    text-align:right;
+    font-weight: 500;
     color: #dcfce7;
-    font-style: italic;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
     line-height: 1.4;
 }
 
 .translation-equivalents {
     font-size: 15px;
+    text-align:right;
     font-weight: 400;
     color: #a7f3d0;
     line-height: 1.3;
     margin-top: 4px;
     font-style: italic;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .translation-close-btn {
@@ -2698,7 +2707,7 @@ button, img, .word-tile {
 .translation-panel {
     background: linear-gradient(135deg, #10b981 0%, #059669 100%);
     color: white;
-    padding: 14px 24px;
+    padding: 18px 24px 10px;
     border-radius: 16px;
     text-align: center;
     width: 50%;
@@ -2726,8 +2735,8 @@ button, img, .word-tile {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
 .translation-spanish {
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 18px;
+    font-weight: 500;
     color: #dcfce7;
     line-height: 1.15;
     margin-bottom: 5px;
