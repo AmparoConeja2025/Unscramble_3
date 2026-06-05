@@ -11,7 +11,7 @@ const lessons = [
         english: "I told her not to come over.",
         spanish: "Mi mejor amiga quería visitarme en mi casa, pero le dije que no.",
         translation: "Le dije que no viniera.",
-        phrasalSpanish: ["se", "moviera", "a", "un", "lado"],
+        phrasalSpanish: ["viniera"],
         phrasalInfinitive: "to come over",
         equivalents: "venir; venir a visitar; visitar"
 
@@ -45,7 +45,14 @@ const lessons = [
         correctOrder: ["I", "guess", "I'll", "have", "to", "go", "without"],
         english: "I guess I'll have to go without.",
         spanish: "No tengo dinero para comprar el almuerzo.",
-        phrasal: ["go", "without"]
+        phrasal: ["go", "without"],
+        translation: "Supongo que tendré que pasar sin ello.",
+        phrasalSpanish: ["pasar", "sin"],
+        phrasalInfinitive: "to go without",
+        equivalents: "pasársela sin; arreglárselas sin; quedarse sin"
+        
+        
+        
     },
     {
     id: 4,
@@ -57,7 +64,11 @@ const lessons = [
     correctOrder: ["My", "father", "will", "look", "after", "her"],
     english: "My father will look after her.",
     spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar.",
-    phrasal: ["look", "after"]
+    phrasal: ["look", "after"],
+    translation: "Mi papá la va a cuidar.",
+    phrasalSpanish: ["cuidar"],
+    phrasalInfinitive: "to look after",
+    equivalents: "cuidar a; encargarse de; velar por"
 },
     
 {
@@ -70,7 +81,11 @@ const lessons = [
     correctOrder: ["I'm","glad","she", "got", "over", "it"],
     english: "I'm glad she got over it.",
     spanish: "Mi mamá por fin se recuperó de la gripa que tenía.",
-     phrasal: ["got", "over"]
+    phrasal: ["got", "over"],
+    translation: "Me alegro de que lo haya superado.",
+    phrasalSpanish: ["superado"],
+    phrasalInfinitive: "to get over",
+    equivalents: "superar; recuperarse de; sobreponerse a"
 
 },
 {
@@ -83,7 +98,11 @@ const lessons = [
     correctOrder: ["I", "know", "I'll", "come", "across", "them"],
     english: "I know I'll come across them",
     spanish: "He dejado mis llaves en algún lugar, pero no sé dónde.",
-    phrasal: ["come", "across"]
+    phrasal: ["come", "across"],
+    translation: "Yo sé que las voy a encontrar.",
+    phrasalSpanish: ["encontrar"],
+    phrasalInfinitive: "to come across",
+    equivalents: "encontrar; dar con; toparse con"
 
 },
 {
@@ -96,7 +115,11 @@ const lessons = [
     correctOrder: ["I", "need", "to", "go", "over", "my", "answers"],
     english: "I need to go over my answers.",
     spanish: "Tengo que revisar mi tarea.",
-    phrasal: ["go", "over"]
+    phrasal: ["go", "over"],
+    translation: "Necesito repasar mis respuestas.",
+    phrasalSpanish: ["repasar"],
+    phrasalInfinitive: "to go over",
+    equivalents: "revisar; repasar; analizar"
 
 },{
 
@@ -109,7 +132,11 @@ const lessons = [
     correctOrder: ["I", "won't", "put", "up", "with", "it",],
     english: "I won't put up with it.",
     spanish: "No voy a aguantar el bullicio que hacen los vecinos.",
-    phrasal: ["put", "up", "with"]
+    phrasal: ["put", "up", "with"],
+    translation: "No lo voy a aguantar.",
+    phrasalSpanish: ["aguantar"],
+    phrasalInfinitive: "to put up with",
+    equivalents: "aguantar; soportar; tolerar"
 
 
 },
@@ -124,7 +151,11 @@ const lessons = [
     correctOrder: ["She", "needs", "to", "cut", "back", "on", "sweets"],
     english: "She needs to cut back on sweets.",
     spanish: "Mi hermana está engordando mucho! Tiene que reducir el consumo de dulces!",
-    phrasal: ["cut", "back", "on"]
+    phrasal: ["cut", "back", "on"],
+    translation: "Necesita reducir su consumo de dulces.",
+    phrasalSpanish: ["reducir", "consumo"],
+    phrasalInfinitive: "to cut back on",
+    equivalents: "reducir; disminuir; recortar"
 
 },  {
 
@@ -137,7 +168,11 @@ const lessons = [
     correctOrder: ["I", "ran", "out", "of", "money"],
     english: "I ran out of money.",
     spanish: "Iba a comprarme otra hamburguesa, pero se me acabó el dinero.",
-    phrasal: ["ran", "out", "of"]
+    phrasal: ["ran", "out", "of"],
+    translation: "Se me acabó el dinero.",
+    phrasalSpanish: ["me", "acabó"],
+    phrasalInfinitive: "to run out of",
+    equivalents: "acabársele; quedarse sin; agotársele"
 
 },
 
@@ -151,7 +186,11 @@ const lessons = [
     correctOrder: ["We're", "going", "to", "get", "through", "this"],
     english: "We're going to get through this.",
     spanish: "Hay que llegar al final de estos problemas.",
-    phrasal: ["get", "through"]
+    phrasal: ["get", "through"],
+    translation: "Vamos a superar esto.",
+    phrasalSpanish: ["superar"],
+    phrasalInfinitive: "to get through",
+    equivalents: "superar; atravesar; salir adelante"
 
 },
 
@@ -165,7 +204,11 @@ const lessons = [
     correctOrder: ["We", "don't", "get", "along", "very", "well"],
     english: "We don't get along very well.",
     spanish: "Parece que siempre estoy peleando con mi vecina.",
-    phrasal: ["get", "along"]
+    phrasal: ["get", "along"],
+    translation: "No nos llevamos muy bien.",
+    phrasalSpanish: ["nos", "llevamos"],
+    phrasalInfinitive: "to get along with",
+    equivalents: "llevarse bien con; congeniar con"
 
 },
 

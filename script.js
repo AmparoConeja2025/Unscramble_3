@@ -486,13 +486,13 @@ document.addEventListener('touchend', () => {
 document.getElementById('prevBtn').addEventListener('touchstart', () => {
     longPressInterval = setInterval(() => {
         document.getElementById('prevBtn').click();
-    }, 500);
+    }, 200);
 });
 
 document.getElementById('nextBtn').addEventListener('touchstart', () => {
     longPressInterval = setInterval(() => {
         document.getElementById('nextBtn').click();
-    }, 500);
+    }, 200);
 });
 
 // FRESH ONLY MODE

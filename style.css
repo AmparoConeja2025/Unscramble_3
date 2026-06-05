@@ -22,10 +22,7 @@ body {
     }
   }
 
-  /* ELIMINATE ALL TOUCH ZOOM */
-* {
-  touch-action: manipulation;
-}
+ 
 
 /* EXTRA PROTECTION FOR AVATARS */
 img {
