@@ -553,7 +553,7 @@ const lessons = [
     phrasal: ["check", "out"],
     english: "We have to check out by noon.",
     spanish: "Hay que empacar las maletas muy rápido.",
-    translation: "Tenemos que dejar la habitación antes del mediodía.",
+    translation: "Hay que salir del hotel antes del mediodía.",
     phrasalSpanish: ["dejar", "la", "habitación"],
     phrasalInfinitive: "to check out",
     equivalents: "hacer el check-out; salir del hotel; pagar y salir"
@@ -674,9 +674,7 @@ const lessons = [
     english: "He loves to stand around all day.",
     spanish: "Jose siempre está desocupado.",
     translation: "Le gusta estar parado todo el día.",
-    phrasalSpanish: ["estar", "parado"],
-    phrasalInfinitive: "to stand around",
-    equivalents: "quedarse parado; estar de ocioso; haraganear"
+ 
 },
 
 {

@@ -6,8 +6,8 @@ function enterFullscreen() {
     });
   }
 }
-document.addEventListener('click', enterFullscreen, { once: true });
-document.addEventListener('touchstart', enterFullscreen, { once: true });
+//document.addEventListener('click', enterFullscreen, { once: true });
+//document.addEventListener('touchstart', enterFullscreen, { once: true });
 
 // FIREWORK COLORS
 const fireworkColors = ['#FFD700', '#FF6B47', '#4ECDC4', '#45B7D1', '#FF69B4', '#32CD32', '#FF4500', '#9370DB', '#00CED1', '#FFB6C1'];

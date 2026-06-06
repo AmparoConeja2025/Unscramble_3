@@ -249,9 +249,9 @@ button, img, .word-tile {
 }
 @media (max-width: 800px) and (orientation: landscape) {
     .adam-image {
-        width: 120px !important;
-        top: 50% !important;
-        left: 20px !important;
+        width: 140px !important;
+        top: 46% !important;
+        left: 15px !important;
     }
 }
 .adam-btn {
@@ -283,7 +283,7 @@ button, img, .word-tile {
 
 @media (max-width: 800px) and (orientation: landscape) {
     .jessica-image {
-        width: 120px !important;
+        width: 135px !important;
         top: 50% !important;
         left: 20px !important;
     }
@@ -301,9 +301,9 @@ button, img, .word-tile {
 
 @media (max-width: 800px) and (orientation: landscape) {
     .john-image {
-        width: 120px !important;
-        top: 50% !important;
-        left: 20px !important;
+        width: 123px !important;
+        top: 51% !important;
+        left: 23px !important;
     }
 }
 
@@ -334,9 +334,9 @@ button, img, .word-tile {
 }
 @media (max-width: 800px) and (orientation: landscape) {
     .mark-image {
-        width: 120px !important;
-        top: 50% !important;
-        left: 20px !important;
+        width: 128px !important;
+        top: 54% !important;
+        left: 21px !important;
     }
 }
 
@@ -351,7 +351,7 @@ button, img, .word-tile {
 }
 @media (max-width: 800px) and (orientation: landscape) {
     .laura-image {
-        width: 120px !important;
+        width: 135px !important;
         top: 50% !important;
         left: 20px !important;
     }
@@ -370,7 +370,7 @@ button, img, .word-tile {
         width: 140px !important;
         top: 50% !important;
         right: auto !important;
-        left: 20px !important;
+        left: 17px !important;
     }
 }
 
@@ -384,9 +384,9 @@ button, img, .word-tile {
 }
 @media (max-width: 800px) and (orientation: landscape) {
     .dianne-image {
-        width: 120px !important;
+        width: 130px !important;
         top: 50% !important;
-        left: 20px !important;
+        left: 15px !important;
     }
 }
 .dianne-flipped { /* FLIP CLASS - applies to ALL avatars in story mode (name is legacy from first build) */
@@ -2657,7 +2657,7 @@ button, img, .word-tile {
     bottom: 10px;
     left: 10px;
     font-family: Arial, sans-serif;
-    font-size: 11px;
+    font-size: 9px;
     color: rgba(255, 255, 255, 0.3);
     z-index: 5;
 }
