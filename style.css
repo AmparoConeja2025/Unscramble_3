@@ -2722,7 +2722,7 @@ button, img, .word-tile {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     position: fixed;
     bottom: 13%;
-    left: 50%;
+    left: 55%;
     transform: translateX(-50%);
     z-index: 100;
 }
