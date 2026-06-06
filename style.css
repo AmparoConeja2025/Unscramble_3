@@ -54,7 +54,7 @@ button, img, .word-tile {
     color: #374151;
     font-size: 12px;
     font-weight: 600;
-    padding: 4px 8px;
+    padding: 7px 8px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -73,7 +73,7 @@ button, img, .word-tile {
     color: #374151;
     font-size: 12px;
     font-weight: 600;
-    padding: 4px 11px;
+    padding: 7px 11px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
@@ -105,12 +105,12 @@ button, img, .word-tile {
 /* UNDO BUTTON */
 .undo-btn {
     position: absolute;
-    top: 73px;
+    top: 70px;
     right: 12px;
     background: linear-gradient(135deg, #964733 0%, #960535 100%);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-    color: white;
-    font-size: 16px;
+    color: rgb(0, 0, 0);
+    font-size: 12px;
     font-weight: 900;
     padding: 8px;
     border-radius: 50%;
@@ -2542,7 +2542,7 @@ button, img, .word-tile {
     color: #374151;
     font-size: 12px;
     font-weight: 600;
-    padding: 4px 8px;
+    padding: 7px 8px;
     border-radius: 6px;
     border: none;
     cursor: pointer;
