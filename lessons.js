@@ -672,7 +672,7 @@ const lessons = [
     correctOrder: ["He", "loves", "to", "stand", "around", "all", "day"],
     phrasal: ["stand", "around"],
     english: "He loves to stand around all day.",
-    spanish: "Jose siempre está desocupado.",
+    spanish: "Jose siempre está desocupado.", 
     translation: "Le gusta estar parado todo el día.",
  
 },
