@@ -18,14 +18,15 @@ let lastAddedWord = null;
 let canUndo = false;
 
 function updateUndoButton() {
-    const undoBtn = document.getElementById('undoButton');
-    if (canUndo && lastAddedWord) {
-        undoBtn.disabled = false;
-        undoBtn.classList.add('undo-btn-active');
-    } else {
-        undoBtn.disabled = true;
-        undoBtn.classList.remove('undo-btn-active');
-    }
+    document.querySelectorAll('.undo-btn').forEach(undoBtn => {
+        if (canUndo && lastAddedWord) {
+            undoBtn.disabled = false;
+            undoBtn.classList.add('undo-btn-active');
+        } else {
+            undoBtn.disabled = true;
+            undoBtn.classList.remove('undo-btn-active');
+        }
+    });
 }
 
 
@@ -517,4 +518,4 @@ document.getElementById('freshBtn3').addEventListener('click', () => {
 
 // INITIALIZE
 loadLesson(0);
-document.getElementById('undoButton').addEventListener('click', performUndo);
+document.querySelectorAll('.undo-btn').forEach(btn => btn.addEventListener('click', performUndo));

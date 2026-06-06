@@ -130,6 +130,11 @@ button, img, .word-tile {
     justify-content: center;
 }
 
+.undo-btn-left {
+    left: 12px;
+    right: auto;
+}
+
 .undo-btn-active {
     opacity: 1;
     transform: scale(1);
