@@ -701,12 +701,12 @@ const lessons = [
         category: "people",
         narratorAudio: "Audio/laura-041-story.mp3",
         answerAudio: "Audio/laura-041-answer.mp3",
-        sentence: ["This", "recipe", "calls", "for", "five", "different", "things"],
-        correctOrder: ["This", "recipe", "calls", "for", "five", "different", "things"],
+        sentence: ["This", "recipe", "calls", "for", "five", "ingredients"],
+        correctOrder: ["This", "recipe", "calls", "for", "five", "ingredients"],
         phrasal: ["calls", "for"],
-        english: "This recipe calls for five different things.",
+        english: "This recipe calls for five ingredients.",
         spanish: "Necesito ir al mercado porque quiero hacer un pastel.",
-        translation: "Esta receta requiere cinco ingredientes diferentes.",
+        translation: "Esta receta requiere cinco ingredientes.",
         phrasalSpanish: ["requiere"],
         phrasalInfinitive: "to call for",
         equivalents: "requerir; exigir; pedir; necesitar"
@@ -725,7 +725,7 @@ const lessons = [
         translation: "Quiero terminar con esta relación.",
         phrasalSpanish: ["Quiero", "terminar", "con"],
         phrasalInfinitive: "to want out of",
-        equivalents: "querer salirse de; querer librarse de; querer escapar de"
+        equivalents: "querer salirse de; querer escapar de"
     },
     {
         id: 43,
@@ -741,7 +741,7 @@ const lessons = [
         translation: "Quizás el precio baje.",
         phrasalSpanish: ["baje"],
         phrasalInfinitive: "to come down",
-        equivalents: "bajarse"
+        equivalents: "bajarse; recudirse; diminuir; decender"
     },
     {
         id: 44,
@@ -773,7 +773,7 @@ const lessons = [
         translation: "Voy a quedarme despierto hasta tarde.",
         phrasalSpanish: ["quedarme", "despierto"],
         phrasalInfinitive: "to stay up",
-        equivalents: "quedarse despierto; trasnochar; desvelarse; no acostarse"
+        equivalents: "quedarse despierto; trasnochar; desvelarse;"
     },
     {
         id: 46,
@@ -786,10 +786,83 @@ const lessons = [
         phrasal: ["stay", "out"],
         english: "I told them to stay out.",
         spanish: "No quiero que los niños se metan en la piscina.",
-        translation: "Les dije que se mantuvieran fuera.",
-        phrasalSpanish: ["se", "mantuvieran", "fuera"],
+        translation: "Les dije que se quedaran fuera.",
+        phrasalSpanish: ["se", "quedaran", "fuera"],
         phrasalInfinitive: "to stay out",
         equivalents: "quedarse fuera"
+    },
+
+    
+    {
+        id: 47,
+        narrator: "adam",
+        category: "people",
+        narratorAudio: "Audio/adam-047-story.mp3",
+        answerAudio: "Audio/adam-047-answer.mp3",
+        sentence: ["Something", "is", "not", "adding", "up", "here"],
+        correctOrder: ["Something", "is", "not", "adding", "up", "here"],
+        phrasal: ["adding", "up"],
+        english: "Something is not adding up here.",
+        spanish: "Hay algo que suena raro con lo que dice.",
+        translation: "Aquí hay algo que no cuadra.",
+        phrasalSpanish: ["cuadra"],
+        phrasalInfinitive: "to add up",
+        equivalents: "cuadrar; tener sentido; encajar; concordar"
+    },
+
+
+    {
+        id: 48,
+        narrator: "jessica",
+        category: "people",
+        narratorAudio: "Audio/jessica-048-story.mp3",
+        answerAudio: "Audio/jessica-048-answer.mp3",
+        sentence: ["I", "think", "they", "should", "break", "up"],
+        correctOrder: ["I", "think", "they", "should", "break", "up"],
+        phrasal: ["break", "up"],
+        english: "I think they should break up.",
+        spanish: "Mi amiga y su novio siempre están discutiendo.",
+        translation: "Creo que deberían separarse.",
+        phrasalSpanish: ["separarse"],
+        phrasalInfinitive: "to break up",
+        equivalents: "separarse; terminar; romper; dejarlo"
+    },
+
+    
+    {
+        id: 49,
+        narrator: "harry",
+        category: "people",
+        narratorAudio: "Audio/harry-049-story.mp3",
+        answerAudio: "Audio/harry-049-answer.mp3",
+        sentence: ["I", "hope", "it", "clears", "up", "later"],
+        correctOrder: ["I", "hope", "it", "clears", "up", "later"],
+        phrasal: ["clears", "up"],
+        english: "I hope it clears up later.",
+        spanish: "Que día tan lluvioso. Este clima está horrible.",
+        translation: "Espero que escampe más tarde.",
+        phrasalSpanish: ["escampe"],
+        phrasalInfinitive: "to clear up",
+        equivalents: "escampar; aclarar; despejarse; calmarse"
+    },
+
+    
+    {
+        id: 50,
+        narrator: "adam",
+        category: "people",
+        narratorAudio: "Audio/adam-050-story.mp3",
+        answerAudio: "Audio/adam-050-answer.mp3",
+        sentence: ["I'm", "going", "to", "dress", "up", "for", "this", "party"],
+        correctOrder: ["I'm", "going", "to", "dress", "up", "for", "this", "party"],
+        phrasal: ["dress", "up"],
+        english: "I'm going to dress up for this party.",
+        spanish: "Siempre me arreglo cuando salgo.",
+        translation: "Voy a ponerme elegante para esta fiesta.",
+        phrasalSpanish: ["ponerme", "elegante"],
+        phrasalInfinitive: "to dress up",
+        equivalents: "arreglarse; ponerse elegante; vestirse de gala"
     }
+    
 
     ];
