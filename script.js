@@ -515,6 +515,35 @@ document.getElementById('freshBtn3').addEventListener('click', () => {
     document.getElementById('freshBtn3').classList.toggle('mode-active-3', isFreshMode);
 });
 
+// QA: On-screen logger (temporary, for debugging)
+// QA: Hidden audio replay function (reusable atom for future replay feature)
+function playAnswerAudio() {
+    const audio = document.getElementById('answerAudio');
+    if (audio) {
+        audio.currentTime = 0;
+        audio.play();
+    }
+}
+
+// QA: Unlock answer audio on first user interaction (iOS Safari/Chrome)
+let audioUnlocked = false;
+function unlockAudio() {
+    if (audioUnlocked) return;
+    audioUnlocked = true;
+    const audio = document.getElementById('answerAudio');
+    if (audio) {
+        audio.play().then(() => {
+            audio.pause();
+            audio.currentTime = 0;
+        }).catch(() => { audioUnlocked = false; });
+    }
+}
+document.addEventListener('touchstart', unlockAudio, { once: true });
+document.addEventListener('click', unlockAudio, { once: true });
+
+// QA: Wire up the hidden replay button
+document.getElementById('qaReplayBtn').addEventListener('click', playAnswerAudio);
+
 
 // INITIALIZE
 loadLesson(0);
