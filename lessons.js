@@ -862,6 +862,76 @@ const lessons = [
         phrasalSpanish: ["ponerme", "elegante"],
         phrasalInfinitive: "to dress up",
         equivalents: "arreglarse; ponerse elegante; vestirse de gala"
+    },
+
+    
+    {
+        id: 51,
+        narrator: "harry",
+        category: "people",
+        narratorAudio: "Audio/harry-051-story.mp3",
+        answerAudio: "Audio/harry-051-answer.mp3",
+        sentence: ["He", "won't", "face", "up", "to", "it"],
+        correctOrder: ["He", "won't", "face", "up", "to", "it"],
+        phrasal: ["face", "up", "to"],
+        english: "He won't face up to it.",
+        spanish: "El problema que tiene es que está tomando demasiado.",
+        translation: "No lo va a afrontar.",
+        phrasalSpanish: ["afrontar"],
+        phrasalInfinitive: "to face up to",
+        equivalents: "afrontar; enfrentar; encarar; asumir"
+    },
+
+    
+    {
+        id: 52,
+        narrator: "mark",
+        category: "people",
+        narratorAudio: "Audio/mark-052-story.mp3",
+        answerAudio: "Audio/mark-052-answer.mp3",
+        sentence: ["I'm", "really", "starting", "to", "fall", "behind"],
+        correctOrder: ["I'm", "really", "starting", "to", "fall", "behind"],
+        phrasal: ["fall", "behind"],
+        english: "I'm really starting to fall behind.",
+        spanish: "Estoy postergando mucho en hacer mis tareas.",
+        translation: "Realmente me estoy quedando atrás.",
+        phrasalSpanish: ["quedando", "atrás"],
+        phrasalInfinitive: "to fall behind",
+        equivalents: "quedarse atrás; atrasarse; retrasarse"
+    },
+
+    {
+        id: 53,
+        narrator: "jessica",
+        category: "people",
+        narratorAudio: "Audio/jessica-053-story.mp3",
+        answerAudio: "Audio/jessica-053-answer.mp3",
+        sentence: ["I", "don't", "fit", "in", "with", "them"],
+        correctOrder: ["I", "don't", "fit", "in", "with", "them"],
+        phrasal: ["fit", "in", "with"],
+        english: "I don't fit in with them.",
+        spanish: "Me siento un poco incómoda en ese grupo.",
+        translation: "No encajo con ellos.",
+        phrasalSpanish: ["encajo"],
+        phrasalInfinitive: "to fit in with",
+        equivalents: "encajar; adaptarse; integrarse; hacer clic"
+    },
+
+    {
+        id: 54,
+        narrator: "becky",
+        category: "people",
+        narratorAudio: "Audio/becky-054-story.mp3",
+        answerAudio: "Audio/becky-054-answer.mp3",
+        sentence: ["I", "don't", "want", "him", "to", "find", "out"],
+        correctOrder: ["I", "don't", "want", "him", "to", "find", "out"],
+        phrasal: ["find", "out"],
+        english: "I don't want him to find out.",
+        spanish: "Te voy a contar algo pero no puedes decir nada a mi jefe.",
+        translation: "No quiero que se entere.",
+        phrasalSpanish: ["se", "entere"],
+        phrasalInfinitive: "to find out",
+        equivalents: "enterarse; descubrir; darse cuenta; averiguar"
     }
     
 
