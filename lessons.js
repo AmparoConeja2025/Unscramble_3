@@ -670,7 +670,7 @@ const lessons = [
     answerAudio: "Audio/dianne-039-answer.mp3",
     sentence: ["He", "loves", "to", "stand", "around", "all", "day"],
     correctOrder: ["He", "loves", "to", "stand", "around", "all", "day"],
-    phrasal: ["stand", "around"],
+    phrasal: ["to","stand", "around"],
     english: "He loves to stand around all day.",
     spanish: "Jose siempre está desocupado.", 
     translation: "Le gusta estar parado todo el día.",
@@ -932,7 +932,60 @@ const lessons = [
         phrasalSpanish: ["se", "entere"],
         phrasalInfinitive: "to find out",
         equivalents: "enterarse; descubrir; darse cuenta; averiguar"
-    }
+    },
+
+
+    {
+        id: 55,
+        narrator: "harry",
+        category: "people",
+        narratorAudio: "Audio/harry-055-story.mp3",
+        answerAudio: "Audio/harry-055-answer.mp3",
+        sentence: ["Someone", "needs", "to", "fill", "in", "for", "me"],
+        correctOrder: ["Someone", "needs", "to", "fill", "in", "for", "me"],
+        phrasal: ["fill", "in", "for"],
+        english: "Someone needs to fill in for me.",
+        spanish: "No puedo trabajar el sábado, pero el jefe quiere que encuentre un reemplazo.",
+        translation: "Alguien me tiene que sustituir.",
+        phrasalSpanish: ["sustituir"],
+        phrasalInfinitive: "to fill in for",
+        equivalents: "reemplazar; sustituir; cubrir; suplir"
+    },
+
     
+    {
+        id: 56,
+        narrator: "adam",
+        category: "people",
+        narratorAudio: "Audio/adam-056-story.mp3",
+        answerAudio: "Audio/adam-056-answer.mp3",
+        sentence: ["I'm", "sure", "he's", "trying", "to", "get", "over", "on", "me"],
+        correctOrder: ["I'm", "sure", "he's", "trying", "to", "get", "over", "on", "me"],
+        phrasal: ["get", "over", "on"],
+        english: "I'm sure he's trying to get over on me.",
+        spanish: "No, es que el hombre quiere venderme algo barato.",
+        translation: "Estoy seguro de que me quiere engañar.",
+        phrasalSpanish: ["engañar"],
+        phrasalInfinitive: "to get over on",
+        equivalents: "engañar; aprovecharse de; dar gato por liebre"
+    
+    },
+    
+    {
+        id: 57,
+        narrator: "jessica",
+        category: "people",
+        narratorAudio: "Audio/jessica-057-story.mp3",
+        answerAudio: "Audio/jessica-057-answer.mp3",
+        sentence: ["I", "don't", "want", "to", "go", "over", "my", "limit"],
+        correctOrder: ["I", "don't", "want", "to", "go", "over", "my", "limit"],
+        phrasal: ["go", "over"],
+        english: "I don't want to go over my limit.",
+        spanish: "Es que ya no puedo comprar cosas con mi tarjeta de crédito.",
+        translation: "No quiero sobrepasar mi límite.",
+        phrasalSpanish: ["sobrepasar"],
+        phrasalInfinitive: "to go over",
+        equivalents: "sobrepasar; pasarse de; exceder; rebasar"
+    }
 
     ];

@@ -243,8 +243,10 @@ function checkAnswer() {
     
 
     if (isCorrect) {
+        canUndo = false;
+        updateUndoButton();
         explodeFireworks();
-         recordCompletion();
+        recordCompletion();
         const narrator = lesson.narrator;
         const avatarEl = document.getElementById(narrator + 'Image');
         avatarEl.classList.remove('dianne-flipped');
