@@ -781,14 +781,14 @@ const lessons = [
         category: "people",
         narratorAudio: "Audio/becky-046-story.mp3",
         answerAudio: "Audio/becky-046-answer.mp3",
-        sentence: ["I", "told", "them", "to", "stay", "out"],
-        correctOrder: ["I", "told", "them", "to", "stay", "out"],
-        phrasal: ["stay", "out"],
+        sentence: ["I", "told", "them", "to", "stay", "out", "of", "the", "water", ],
+        correctOrder: ["I", "told", "them", "to", "stay", "out", "of", "the", "water",],
+        phrasal: ["stay", "out", "of",],
         english: "I told them to stay out.",
         spanish: "No quiero que los niños se metan en la piscina.",
-        translation: "Les dije que se quedaran fuera.",
+        translation: "Les dije que se quedaran fuera del agua.",
         phrasalSpanish: ["se", "quedaran", "fuera"],
-        phrasalInfinitive: "to stay out",
+        phrasalInfinitive: "to stay out of",
         equivalents: "quedarse fuera"
     },
 
@@ -970,7 +970,7 @@ const lessons = [
         equivalents: "engañar; aprovecharse de; dar gato por liebre"
     
     },
-    
+
     {
         id: 57,
         narrator: "jessica",

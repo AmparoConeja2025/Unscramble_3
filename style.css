@@ -138,7 +138,8 @@ button, img, .word-tile {
 .undo-btn-active {
     opacity: 1;
     transform: scale(1);
-    background: #91c2f9 ;
+    background: #91c2f9;
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.3s ease;
 }
 
 .undo-btn-hover-active {
