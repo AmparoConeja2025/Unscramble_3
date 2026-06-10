@@ -261,7 +261,7 @@ const lessons = [
     translation: "Necesitamos encontrar algunas ideas.",
     phrasalSpanish: ["encontrar"],
     phrasalInfinitive: "to come up with",
-    equivalents: "encontrar; conseguir"
+    equivalents: "encontrar; conseguir; producir"
 
 },
 

@@ -616,7 +616,7 @@ button, img, .word-tile {
 @media (max-width: 800px) and (orientation: landscape) {
     .translation-overlay {
         bottom: 5%;
-        left: 47%;
+        left: 48%;
         transform: translate(-50%, -50%) scale(0);
         min-width: 280px;
         max-width: 85vw;
