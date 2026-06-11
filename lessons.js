@@ -308,8 +308,8 @@ const lessons = [
     english: "She likes to keep to herself.",
     spanish: "Ella no le gusta socializar mucho.",
     phrasal: ["keep", "to"],
-    translation: "Le gusta ser solitario.",
-    phrasalSpanish: ["ser", "solitario"],
+    translation: "Le gusta ser solitaria.",
+    phrasalSpanish: ["ser", "solitaria"],
     phrasalInfinitive: "to keep to oneself",
     equivalents: "ser reservado; ser solitario; no socializar"  
 
@@ -364,7 +364,7 @@ const lessons = [
     translation: "Tengo muchas ganas de que llegue el viernes.",
     phrasalSpanish: ["tengo", "muchas", "ganas", "de"],
     phrasalInfinitive: "to look forward to",
-    equivalents: "esperar con ansias; tener ganas de; estar emocionado por"
+    equivalents: "tener ganas de; estar emocionado por"
 },
 
 {
@@ -396,7 +396,7 @@ const lessons = [
     english: "You can count on him.",
     spanish: "Te aseguro que el hombre es muy honesto.",
     translation: "Puedes depender de él.",
-    phrasalSpanish: ["depender"],
+    phrasalSpanish: ["depender","de"],
     phrasalInfinitive: "to count on",
     equivalents: "contar con; confiar en; depender de"
 
