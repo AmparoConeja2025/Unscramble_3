@@ -38,22 +38,20 @@ const lessons = [
     {
         id: 3,
         narrator: "laura",
-        category: "work",
+        category: "People",
         narratorAudio: "Audio/laura-003-story.mp3",
         answerAudio: "Audio/laura-003-answer.mp3",
-        sentence: ["I", "guess", "I'll", "have", "to", "go", "without"],
-        correctOrder: ["I", "guess", "I'll", "have", "to", "go", "without"],
-        english: "I guess I'll have to go without.",
-        spanish: "No tengo dinero para comprar el almuerzo.",
-        phrasal: ["go", "without"],
-        translation: "Supongo que tendré que pasar sin ello.",
-        phrasalSpanish: ["pasar", "sin"],
-        phrasalInfinitive: "to go without",
-        equivalents: "pasársela sin; arreglárselas sin; quedarse sin"
-        
-        
-        
-    },
+        sentence: ["I'm", "going", "to", "break", "up", "with", "him"],
+        correctOrder: ["I'm", "going", "to", "break", "up", "with", "him"],
+        phrasal: ["break", "up", "with"],
+        english: "I'm going to break up with him.",
+        spanish: "Ya no aguanto más las mentiras de mi novio.",
+        translation: "Voy a terminar con él.",
+        phrasalSpanish: ["terminar"],
+        phrasalInfinitive: "to break up with",
+        equivalents: "terminar; romper con; cortar con"
+        },
+
     {
     id: 4,
     narrator: "john",

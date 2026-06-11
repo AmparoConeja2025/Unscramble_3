@@ -528,16 +528,20 @@ function playAnswerAudio() {
 }
 
 // QA: Unlock answer audio on first user interaction (iOS Safari/Chrome)
-let audioUnlocked = false;
 function unlockAudio() {
     if (audioUnlocked) return;
     audioUnlocked = true;
     const audio = document.getElementById('answerAudio');
     if (audio) {
+        audio.muted = true;  // 🔇 Silence the unlock
         audio.play().then(() => {
             audio.pause();
             audio.currentTime = 0;
-        }).catch(() => { audioUnlocked = false; });
+            audio.muted = false;  // 🔊 Restore for real playback
+        }).catch(() => {
+            audio.muted = false;
+            audioUnlocked = false;
+        });
     }
 }
 document.addEventListener('touchstart', unlockAudio, { once: true });
