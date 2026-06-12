@@ -13,7 +13,7 @@ const lessons = [
         translation: "Le dije que no viniera.",
         phrasalSpanish: ["viniera"],
         phrasalInfinitive: "to come over",
-        equivalents: "venir; venir a visitar; visitar"
+        equivalents: "venir; pasarse por; acercarse a"
 
         
     },
@@ -27,11 +27,11 @@ const lessons = [
         correctOrder: ["I", "ran", "into", "my", "friend", "at", "the", "store",],
         phrasal: ["ran", "into"],
         english: "I ran into my friend at the store.",
-        spanish: "Me encontré con mi amigo en el mercado el otro día.",
-        translation: "Me encontré con mi amigo en el mercado.",
-        phrasalSpanish: ["me", "encontré","con"],
+        spanish: "Me topé con mi amigo en el mercado el otro día.",
+        translation: "Me topé con mi amigo en el mercado.",
+        phrasalSpanish: ["me", "topé","con"],
         phrasalInfinitive: "to run into",
-        equivalents: "encontrarse con;  toparse con;  tropezarse con"
+        equivalents: " toparse con; tropezarse con "
 
 
     },
@@ -47,9 +47,9 @@ const lessons = [
         english: "I'm going to break up with him.",
         spanish: "Ya no aguanto más las mentiras de mi novio.",
         translation: "Voy a terminar con él.",
-        phrasalSpanish: ["terminar"],
+        phrasalSpanish: ["terminar", "con"],
         phrasalInfinitive: "to break up with",
-        equivalents: "terminar; romper con; cortar con"
+        equivalents: "terminar con; romper con; cortar con"
         },
 
     {
@@ -78,10 +78,10 @@ const lessons = [
     sentence: ["I'm","glad","she", "got", "over", "it"],
     correctOrder: ["I'm","glad","she", "got", "over", "it"],
     english: "I'm glad she got over it.",
-    spanish: "Mi mamá por fin se recuperó de la gripa que tenía.",
+    spanish: "Mi mamá tenía el gripe la semana pasada.",
     phrasal: ["got", "over"],
-    translation: "Me alegro de que lo haya superado.",
-    phrasalSpanish: ["superado"],
+    translation: "Me alegra que ella lo superara.",
+    phrasalSpanish: ["superara"],
     phrasalInfinitive: "to get over",
     equivalents: "superar; recuperarse de; sobreponerse a"
 
@@ -95,12 +95,12 @@ const lessons = [
     sentence: ["I", "know", "I'll", "come", "across", "them"],
     correctOrder: ["I", "know", "I'll", "come", "across", "them"],
     english: "I know I'll come across them",
-    spanish: "He dejado mis llaves en algún lugar, pero no sé dónde.",
+    spanish: "He dejado mis llaves en algún lugar, pero no sé donde.",
     phrasal: ["come", "across"],
     translation: "Yo sé que las voy a encontrar.",
     phrasalSpanish: ["encontrar"],
     phrasalInfinitive: "to come across",
-    equivalents: "encontrar; dar con; toparse con"
+    equivalents: "encontrar; toparse con; dar con;"
 
 },
 {
@@ -117,7 +117,7 @@ const lessons = [
     translation: "Necesito repasar mis respuestas.",
     phrasalSpanish: ["repasar"],
     phrasalInfinitive: "to go over",
-    equivalents: "revisar; repasar; analizar"
+    equivalents: "repasar; revisar; analizar"
 
 },{
 
@@ -153,7 +153,7 @@ const lessons = [
     translation: "Necesita reducir su consumo de dulces.",
     phrasalSpanish: ["reducir", "consumo"],
     phrasalInfinitive: "to cut back on",
-    equivalents: "reducir; disminuir; recortar"
+    equivalents: "reducir; recortar; disminuir "
 
 },  {
 
@@ -188,7 +188,7 @@ const lessons = [
     translation: "Vamos a superar esto.",
     phrasalSpanish: ["superar"],
     phrasalInfinitive: "to get through",
-    equivalents: "superar; atravesar; salir adelante"
+    equivalents: "superar; salir adelante; atravesar "
 
 },
 
@@ -219,10 +219,10 @@ const lessons = [
     sentence: ["I'm", "going", "to", "take", "off"],
     correctOrder: ["I'm", "going", "to", "take", "off"],
     english: "I'm going to take off.",
-    spanish: "Pues, ya me voy, hasta luego.",
+    spanish: "Hasta luego. Cuídate",
     phrasal: ["take", "off"],
-    translation: "Voy a irme.",
-    phrasalSpanish: ["irme"],
+    translation: "Me voy",
+    phrasalSpanish: ["Me", "voy"],
     phrasalInfinitive: "to take off",
     equivalents: "irse; marcharse; salir"
 
@@ -306,12 +306,12 @@ const lessons = [
     sentence: ["She", "likes", "to", "keep", "to", "herself"],
     correctOrder: ["She", "likes", "to", "keep", "to", "herself"],
     english: "She likes to keep to herself.",
-    spanish: "Ella no le gusta socializar mucho.",
+    spanish: "Le gusta mantenerse aparte.",
     phrasal: ["keep", "to"],
-    translation: "Le gusta ser solitaria.",
-    phrasalSpanish: ["ser", "solitaria"],
+    translation: "Le gusta mantenerse aparte.",
+    phrasalSpanish: ["mantenerse", "aparte"],
     phrasalInfinitive: "to keep to oneself",
-    equivalents: "ser reservado; ser solitario; no socializar"  
+    equivalents: "mantenerse aparte; no mezclarse"  
 
 },
 
@@ -339,13 +339,13 @@ const lessons = [
     category: "funculture",
     narratorAudio: "Audio/john-020-story.mp3",
     answerAudio: "Audio/john-020-answer.mp3",
-    sentence: ["I", "don't", "feel", "like", "going", "out"],
-    correctOrder: ["I", "don't", "feel", "like", "going", "out"],
-    english: "I don't feel like going out.",
+    sentence: ["I", "don't", "feel", "like", "leaving"],
+    correctOrder: ["I", "don't", "feel", "like", "leaving"],
+    english: "I don't feel like leaving.",
     spanish: "Voy a quedarme en casa.",
     phrasal: ["feel", "like"],
-    translation: "No me apetece salir.",
-    phrasalSpanish: ["apetece"],
+    translation: "No tengo ganas de irme.",
+    phrasalSpanish: ["tengo", "ganas", "de"],
     phrasalInfinitive: "to feel like",
     equivalents: "tener ganas de; apetecerle"
 },
