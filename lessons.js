@@ -361,10 +361,10 @@ const lessons = [
     english: "I'm looking forward to Friday.",
     spanish: "El viernes es un día feriado.",
     phrasal: ["looking", "forward", "to"],
-    translation: "Tengo muchas ganas de que llegue el viernes.",
-    phrasalSpanish: ["tengo", "muchas", "ganas", "de"],
+    translation: "Espero con ansias el viernes",
+    phrasalSpanish: ["Espero", "con", "ansias"],
     phrasalInfinitive: "to look forward to",
-    equivalents: "tener ganas de; estar emocionado por"
+    equivalents: "esperar con ansias; tener ganas de que" 
 },
 
 {
@@ -377,11 +377,11 @@ const lessons = [
     correctOrder: ["You", "can", "drop", "by", "my", "house", "any", "time"],
     phrasal: ["drop", "by"],
     english: "You can drop by my house any time.",
-    spanish: "Puedes visitarme cuando quieras.",
+    spanish: "No es necesario que me avises de que vas a venir.",
     translation: "Puedes pasarte por mi casa cuando quieras.",
     phrasalSpanish: ["pasarte", "por"],
     phrasalInfinitive: "to drop by",
-    equivalents: "pasar por; pasar a saludar; visitar un rato"
+    equivalents: "pasarse por; pasar a saludar; caer por"
 },
 
 {
@@ -396,7 +396,7 @@ const lessons = [
     english: "You can count on him.",
     spanish: "Te aseguro que el hombre es muy honesto.",
     translation: "Puedes depender de él.",
-    phrasalSpanish: ["depender","de"],
+    phrasalSpanish: ["confiar","en"],
     phrasalInfinitive: "to count on",
     equivalents: "contar con; confiar en; depender de"
 
@@ -416,7 +416,7 @@ const lessons = [
     translation: "Al final acabamos en la playa.",
     phrasalSpanish: ["acabamos"],
     phrasalInfinitive: "to end up",
-    equivalents: "terminar; acabar; ir a parar"
+    equivalents: "acabar; terminar; ir a parar"
 },
 
 {
@@ -425,15 +425,15 @@ const lessons = [
     category: "outabout",
     narratorAudio: "Audio/dianne-025-story.mp3",
     answerAudio: "Audio/dianne-025-answer.mp3",
-    sentence: ["What", "time", "are", "you", "going", "to", "show", "up","?"],
-    correctOrder: ["What", "time", "are", "you", "going", "to", "show", "up","?"],
+    sentence: ["I'm", "not", "going", "to", "show", "up", "on", "time"],
+    correctOrder: ["I'm", "not", "going", "to", "show", "up", "on", "time"],
     phrasal: ["show", "up"],
-    english: "What time are you going to show up?",
-    spanish: "A lo mejor voy a llegar un poco tarde.",
-    translation: "¿A qué hora vas a llegar?",
+    english: "I'm not going to show up on time",
+    spanish: "Salí de la casa 20 minutos tarde.",
+    translation: "¿No voy a llegar a tiempo.",
     phrasalSpanish: ["llegar"],
     phrasalInfinitive: "to show up",
-    equivalents: "llegar; aparecer; presentarse"
+    equivalents: "llegar; aparecer; presentarse; asomar"
     
 },
 
@@ -451,7 +451,7 @@ const lessons = [
     translation: "Necesita calmarse.",
     phrasalSpanish: ["calmarse"],
     phrasalInfinitive: "to settle down",
-    equivalents: "calmarse; tranquilizarse; sentar cabeza"
+    equivalents: "calmarse; tranquilizarse"
 },
 
 {
@@ -468,7 +468,7 @@ const lessons = [
     translation: "Quiero juntarme con mis amigos.",
     phrasalSpanish: ["juntarme"],
     phrasalInfinitive: "to hang out with",
-    equivalents: "pasar tiempo con; salir con; juntarse con"
+    equivalents: "juntarse con; pasar tiempo con"
 
 },
 
@@ -482,11 +482,11 @@ const lessons = [
     correctOrder: [ "I'm", "coming", "down", "with", "a", "cold"],
     phrasal: ["coming", "down", "with"],
     english: "I'm coming down with a cold.",
-    spanish: "Hoy no me siento bien, creo que me estoy enfermando.",
-    translation: "Me estoy enfermando.",
-    phrasalSpanish: ["me", "estoy", "enfermando"],
+    spanish: "Hoy no me siento bien, creo que me estoy enfermando de gripe.",
+    translation: "Me estoy enfermando de gripe.",
+    phrasalSpanish: ["me", "estoy", "enfermando", "de"],
     phrasalInfinitive: "to come down with",
-    equivalents: "enfermarse de; agarrar; contagiarse de"
+    equivalents: "enfermarse de; estar con; contagiarse de"
 },
 
 {
@@ -500,10 +500,10 @@ const lessons = [
     phrasal: ["catch", "up", "with"],
     english: "I need to catch up with them.",
     spanish: "El grupo se me adelantaron mucho.",
-    translation: "Hay que alcanzar con ellos.",
-    phrasalSpanish: ["alcanzar"],
+    translation: "Necesito alcanzarlos.",
+    phrasalSpanish: ["alcanzarlos"],
     phrasalInfinitive: "to catch up with",
-    equivalents: "alcanzar; ponerse al día con; emparejar"
+    equivalents: "alcanzar; ponerse al día con"
 },
 
 {
@@ -518,7 +518,7 @@ const lessons = [
     english: "I want to get rid of them.",
     spanish: "Hay muchas hormigas en la cocina.",
     translation: "Quiero deshacerme de ellos.",
-    phrasalSpanish: ["deshacerme"],
+    phrasalSpanish: ["deshacerme", "de"],
     phrasalInfinitive: "to get rid of",
     equivalents: "deshacerse de; librarse de; quitarse de encima"
 },
@@ -537,7 +537,7 @@ const lessons = [
     translation: "Está empezando a agarrar la onda.",
     phrasalSpanish: ["agarrar", "la", "onda"],
     phrasalInfinitive: "to catch on",
-    equivalents: "entender; captar; agarrar la onda"
+    equivalents: "agarrar la onda; captar; aprender"
 },
 
 {
@@ -551,10 +551,10 @@ const lessons = [
     phrasal: ["check", "out"],
     english: "We have to check out by noon.",
     spanish: "Hay que empacar las maletas muy rápido.",
-    translation: "Hay que salir del hotel antes del mediodía.",
-    phrasalSpanish: ["dejar", "la", "habitación"],
+    translation: "Hay que salir del hotel antes de las doce.",
+    phrasalSpanish: ["salir", "del", "hotel"],
     phrasalInfinitive: "to check out",
-    equivalents: "hacer el check-out; salir del hotel; pagar y salir"
+    equivalents: "salir del hotel; hacer el check-out; pagar y salir"
 },
 
 {
@@ -568,10 +568,10 @@ const lessons = [
     phrasal: ["gave", "out"],
     english: "They got tired and gave out.",
     spanish: "No pudieron terminar sus tareas anoche.",
-    translation: "Se cansaron y se rendieron.",
-    phrasalSpanish: ["se", "rendieron"],
+    translation: "Se cansaron y no dieron más.",
+    phrasalSpanish: ["no", "dieron", "más"],
     phrasalInfinitive: "to give out",
-    equivalents: "agotarse; rendirse; no dar más"
+    equivalents: "no dar más; agotarse; rendirse"
 
 },
 
