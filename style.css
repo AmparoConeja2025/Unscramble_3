@@ -2774,4 +2774,91 @@ button, img, .word-tile {
     font-style: italic;
     font-weight: 700;
 }
-/* 7 */
+
+/* ============================================
+   SUPPLEMENTAL OVERLAY — matches Help page styling
+   ============================================ */
+
+.supplemental-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #2d4a4a 0%, #3da882 100%);
+  z-index: 1000;
+  display: none;
+  overflow-y: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.supplemental-overlay.active {
+  display: block;
+}
+
+.supplemental-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.supplemental-content {
+  max-width: 900px;
+  margin: 60px auto 20px;
+  padding: 10px;
+}
+
+.supplemental-card {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  color: white;
+}
+
+.supplemental-en {
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.supplemental-es {
+  font-size: 1em;
+  font-weight: normal;
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
+.supplemental-en strong {
+  color: #f5d76e;
+}
+
+.to-supplemental-btn {
+  margin-top: 12px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  color: white;
+  font-size: 0.95em;
+  cursor: pointer;
+  display: none;
+}
+
+.to-supplemental-btn.visible {
+  display: inline-block;
+}
