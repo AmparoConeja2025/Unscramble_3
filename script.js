@@ -554,3 +554,52 @@ document.getElementById('qaReplayBtn').addEventListener('click', playAnswerAudio
 // INITIALIZE
 loadLesson(0);
 document.querySelectorAll('.undo-btn').forEach(btn => btn.addEventListener('click', performUndo));
+
+// ============================================
+// SUPPLEMENTAL — popup overlay with additional examples
+// ============================================
+
+function showSupplemental() {
+  const overlay = document.getElementById('supplementalOverlay');
+  // Content was already populated when the lesson loaded; just show it
+  overlay.classList.add('active');
+}
+
+function hideSupplemental() {
+  document.getElementById('supplementalOverlay').classList.remove('active');
+}
+
+function updateSupplementalButton(lesson) {
+  const btn = document.getElementById('supplementalBtn');
+  const container = document.getElementById('supplementalContent');
+  
+  // Hide button if lesson has no supplemental content
+  if (!lesson.supplemental || lesson.supplemental.length === 0) {
+    btn.classList.remove('visible');
+    container.innerHTML = '';
+    return;
+  }
+  
+  // Populate the supplemental overlay with this lesson's cards
+  container.innerHTML = '';
+  lesson.supplemental.forEach(item => {
+    const card = document.createElement('div');
+    card.className = 'supplemental-card';
+    
+    const enLine = document.createElement('div');
+    enLine.className = 'supplemental-en';
+    // Convert **word** markdown to <strong>word</strong> for phrasal verb bolding
+    enLine.innerHTML = item.en.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    
+    const esLine = document.createElement('div');
+    esLine.className = 'supplemental-es';
+    esLine.textContent = item.es;
+    
+    card.appendChild(enLine);
+    card.appendChild(esLine);
+    container.appendChild(card);
+  });
+  
+  // Show the button
+  btn.classList.add('visible');
+}
