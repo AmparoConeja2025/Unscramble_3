@@ -13,7 +13,21 @@ const lessons = [
         translation: "Le dije que no viniera.",
         phrasalSpanish: ["viniera"],
         phrasalInfinitive: "to come over",
-        equivalents: "venir; pasarse por; acercarse a"
+        equivalents: "venir; pasarse por; acercarse a",
+        supplemental: [
+        {
+        en: "Steve and his girlfriend **are coming over** for lunch tomorrow.",
+        es: "Steve y su novia se van a pasar a comer mañana."
+        },
+        {
+        en: "**Come over here** and look at this.",
+        es: "Acércate y mira esto."
+        },
+        {
+        en: "She **came over** to borrow some sugar.",
+        es: "Ella se pasó por mi casa a pedir azúcar prestada."
+        }
+    ]
 
         
     },
@@ -188,7 +202,21 @@ const lessons = [
     translation: "Vamos a superar esto.",
     phrasalSpanish: ["superar"],
     phrasalInfinitive: "to get through",
-    equivalents: "superar; salir adelante; atravesar "
+    equivalents: "superar; salir adelante; atravesar",
+    supplemental: [
+    {
+        en: "We're going to **get through** this together.",
+        es: "Vamos a superar esto juntos."
+    },
+    {
+        en: "I don't know how I'll **get through** the week.",
+        es: "No sé cómo voy a superar la semana."
+    },
+    {
+        en: "Her friends helped her **get through** the difficult time.",
+        es: "Sus amigos la ayudaron a salir adelante."
+    }
+]
 
 },
 

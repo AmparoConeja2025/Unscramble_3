@@ -2831,16 +2831,20 @@ button, img, .word-tile {
 
 .supplemental-en {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: bold;
   margin-bottom: 4px;
   line-height: 1.4;
   color: white;
 }
+.supplemental-en strong {
+  color: #f5d76e;
+  font-weight: bold;
+}
 
 .supplemental-es {
   font-family: Arial, sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   font-weight: normal;
   opacity: 0.95;
   line-height: 1.4;
@@ -2850,8 +2854,8 @@ button, img, .word-tile {
   position: absolute;
   top: 10px;
   right: 10px;
-  width: 32px;
-  height: 32px;
+  width: 24px;
+  height: 24px;
   padding: 0;
   background: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.3);
