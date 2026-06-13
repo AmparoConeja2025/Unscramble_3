@@ -1148,7 +1148,21 @@ const lessons = [
         translation: "¿Puedes llevarme a conocer la ciudad?",
         phrasalSpanish: ["llevarme", "a", "conocer"],
         phrasalInfinitive: "to show around",
-        equivalents: "llevar a conocer; guiar; enseñar; pasearme por"
+        equivalents: "llevar a conocer; guiar; enseñar; pasearme por",
+        supplemental: [
+    {
+      en: "She **showed me around** the office on my first day.",
+      es: "Ella me llevó a conocer la oficina mi primer día."
+    },
+    {
+      en: "Can someone **show us around** the museum?",
+      es: "¿Puede alguien llevarnos a conocer el museo?"
+    },
+    {
+      en: "I'll **show you around** the neighborhood later.",
+      es: "Te llevaré a conocer el barrio más tarde."
+    }
+  ]
         },
 
         {
