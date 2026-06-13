@@ -63,6 +63,7 @@ function showTranslationPanel(lesson) {
     }
     
     // Show with fade
+    updateSupplementalButton(lesson);
     panel.style.display = 'block';
     requestAnimationFrame(() => panel.classList.add('show'));
 }
