@@ -2798,16 +2798,18 @@ button, img, .word-tile {
 }
 
 .supplemental-close {
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  width: 44px;
-  height: 44px;
-  background: rgba(255, 255, 255, 0.15);
+  width: 30px;
+  height: 30px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: none;
   border-radius: 50%;
   color: white;
-  font-size: 24px;
+  font-size: 12px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -2817,14 +2819,14 @@ button, img, .word-tile {
 
 .supplemental-content {
   max-width: 900px;
-  margin: 60px auto 20px;
+  margin: 20px auto;
   padding: 10px;
 }
 
 .supplemental-card {
   background: rgba(255, 255, 255, 0.12);
   border-radius: 16px;
-  padding: 20px 24px;
+  padding: 17px 24px;
   margin-bottom: 16px;
   color: white;
 }

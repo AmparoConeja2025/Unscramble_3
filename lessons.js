@@ -45,7 +45,21 @@ const lessons = [
         translation: "Me topé con mi amigo en el mercado.",
         phrasalSpanish: ["me", "topé","con"],
         phrasalInfinitive: "to run into",
-        equivalents: " toparse con; tropezarse con "
+        equivalents: " toparse con; tropezarse con",
+        supplemental: [
+        {
+        en: "We **ran into** a problem with your order.",
+        es: "Nos topamos con un problema con tu pedido."
+        },
+        {
+        en: "",
+        es: ""
+        },
+        {
+        en: "",
+        es: ""
+        }
+    ]
 
 
     },
