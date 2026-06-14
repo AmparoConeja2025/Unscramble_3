@@ -52,12 +52,16 @@ const lessons = [
         es: "Nos topamos con un problema con tu pedido."
         },
         {
-        en: "",
-        es: ""
+        en: "They **ran into** bad weather on their trip",
+        es: "Se toparon con mal tiempo en su viaje."
         },
         {
-        en: "",
-        es: ""
+        en: "She's always **running into** her friends at the mall.",
+        es: "Ella siempre se tropieza con sus amigos en el centro comercial."
+        },
+        {
+        en: "You're going **to run into** trouble with her.",
+        es: "Te vas a topar con problemas con ella."
         }
     ]
 
