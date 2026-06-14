@@ -582,6 +582,7 @@ function updateSupplementalButton(lesson) {
   }
   
   // Populate the supplemental overlay with this lesson's cards
+  document.getElementById('supplementalInfinitive').textContent = lesson.phrasalInfinitive || '';
   container.innerHTML = '';
   lesson.supplemental.forEach(item => {
     const card = document.createElement('div');

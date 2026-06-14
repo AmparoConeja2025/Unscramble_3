@@ -2819,7 +2819,7 @@ button, img, .word-tile {
 
 .supplemental-content {
   max-width: 900px;
-  margin: 20px auto;
+  margin: 0px auto;
   padding: 10px;
 }
 
@@ -2876,6 +2876,24 @@ button, img, .word-tile {
 
 .to-supplemental-btn.visible {
   display: flex;
+}
+
+.supplemental-infinitive {
+  position: static;
+  font-family: Arial, sans-serif;
+  font-size: 1.65em;
+  font-weight: bold;
+  color: #f5d76e;
+  line-height: 1.2;
+  max-width: 900px;
+  margin: -2px auto 0px;
+  padding: 0 10px;
+}
+
+.supplemental-infinitive::before {
+  content: "• ";
+  color: #f5d76e;
+  margin-right: 2px;
 }
 
 /* Disable iOS pull-to-refresh and rubber-band overscroll */
