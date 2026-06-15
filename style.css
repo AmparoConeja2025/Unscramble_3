@@ -2646,6 +2646,7 @@ button, img, .word-tile {
     right: 200px;
     width: 12px;
     height: 12px;
+    cursor: pointer;
     background: #10b981;
     border-radius: 50%;
     display: flex;
