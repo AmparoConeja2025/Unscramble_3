@@ -604,4 +604,41 @@ function updateSupplementalButton(lesson) {
   
   // Show the button
   btn.classList.add('visible');
+
+}
+
+// ============================================
+// AUTO-SOLVE — programmatically solve a lesson
+// Only fires for lessons already completed today (green dot visible)
+// ============================================
+
+function autoSolve() {
+  // Eligibility check — must have manually solved this lesson today
+  const today = new Date().toDateString();
+  const data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
+  const lessonKey = `lesson_${currentLessonIndex}_${today}`;
+  if (!data[lessonKey]) return; // not earned — silently no-op
+  
+  // Reset to clean state first (in case puzzle is mid-solve or solved already)
+  loadLesson(currentLessonIndex);
+  
+  // Small delay to let the reset settle, then programmatically click tiles in correct order
+  setTimeout(() => {
+    const lesson = lessons[currentLessonIndex];
+    const wordBank = document.getElementById('wordBank');
+    if (!lesson || !wordBank) return;
+    
+    lesson.correctOrder.forEach((targetWord, index) => {
+      setTimeout(() => {
+        // Find the first available tile in word bank matching this word
+        const tiles = wordBank.querySelectorAll('.word-tile');
+        for (const tile of tiles) {
+          if (tile.textContent === targetWord && tile.parentElement === wordBank) {
+            tile.click(); // triggers existing animateWordToDropZone
+            break;
+          }
+        }
+      }, index * 120); // 120ms stagger — quick but watchable
+    });
+  }, 150);
 }
