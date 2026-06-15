@@ -27,6 +27,7 @@ const lessons = [
         en: "She **came over** to borrow some sugar.",
         es: "Ella se pasó por mi casa a pedir azúcar prestada."
         }
+        
     ]
 
         
@@ -101,6 +102,10 @@ const lessons = [
         en: "She **broke up with** him after the fight.",
         es: "Rompió con él después de la pelea."
         },
+        {
+        en: "I **broke up with** my girlfriend a year ago.",
+        es: "Corté con mi novia hace un año."
+        },
 
         ]
 
@@ -153,7 +158,26 @@ const lessons = [
     translation: "Me alegra que ella lo superara.",
     phrasalSpanish: ["superara"],
     phrasalInfinitive: "to get over",
-    equivalents: "superar; recuperarse de; sobreponerse a"
+    equivalents: "superar; recuperarse de; sobreponerse a",
+
+    supplemental: [
+    {
+        en: "She **got over** the flu in three days.",
+        es: "Ella superó la gripe en tres días."
+    },
+    {
+        en: "It took me a week **to get over** that cold.",
+        es: "Me tomó una semana recuperarme de ese resfriado."
+    },
+    {
+        en: "He finally **got over** the illness after months of treatment.",
+        es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento."
+    },
+    {
+        en: "Just **get over** it!",
+        es: "¡Ya supératelo!"
+    }
+]
 
 },
 {
@@ -170,7 +194,27 @@ const lessons = [
     translation: "Yo sé que las voy a encontrar.",
     phrasalSpanish: ["encontrar"],
     phrasalInfinitive: "to come across",
-    equivalents: "encontrar; toparse con; dar con;"
+    equivalents: "encontrar; toparse con; dar con;",
+
+    supplemental: [
+    {
+        en: "I **came across** this book at the used bookstore.",
+        es: "Encontré este libro en la librería de segunda."
+    },
+    {
+        en: "I **came across** an old friend at the mall.",
+        es: "Me topé con un viejo amigo en el centro comercial."
+    },
+    {
+        en: "She finally **came across** the perfect recipe online.",
+        es: "Finalmente dio con la receta perfecta en internet."
+    },
+    {
+        en: "If you **come across** any good movies, let me know.",
+        es: "Si encuentras alguna buena película, avísame."
+    }
+]
+
 
 },
 {
@@ -189,7 +233,9 @@ const lessons = [
     phrasalInfinitive: "to go over",
     equivalents: "repasar; revisar; analizar"
 
-},{
+},
+
+{
 
     id: 8,
     narrator: "harry",
@@ -225,7 +271,9 @@ const lessons = [
     phrasalInfinitive: "to cut back on",
     equivalents: "reducir; recortar; disminuir "
 
-},  {
+}, 
+
+{
 
     id: 10,
     narrator: "dianne",
