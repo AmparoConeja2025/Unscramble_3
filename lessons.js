@@ -231,7 +231,22 @@ const lessons = [
     translation: "Necesito repasar mis respuestas.",
     phrasalSpanish: ["repasar"],
     phrasalInfinitive: "to go over",
-    equivalents: "repasar; revisar; analizar"
+    equivalents: "repasar; revisar; analizar",
+
+    supplemental: [
+    {
+        en: "I need **to go over** my notes before the exam.",
+        es: "Necesito repasar mis apuntes antes del examen."
+    },
+    {
+        en: "Let's **go over** this contract one more time.",
+        es: "Revisemos este contrato una vez más."
+    },
+    {
+        en: "The committee will **go over** all the proposals carefully.",
+        es: "El comité analizará todas las propuestas cuidadosamente."
+    }
+]
 
 },
 
@@ -250,7 +265,22 @@ const lessons = [
     translation: "No lo voy a aguantar.",
     phrasalSpanish: ["aguantar"],
     phrasalInfinitive: "to put up with",
-    equivalents: "aguantar; soportar; tolerar"
+    equivalents: "aguantar; soportar; tolerar",
+
+    supplemental: [
+    {
+        en: "I won't **put up with** your lies anymore.",
+        es: "Ya no voy a aguantar tus mentiras."
+    },
+    {
+        en: "How do you **put up with** that noise every day?",
+        es: "¿Cómo soportas ese ruido todos los días?"
+    },
+    {
+        en: "She won't **put up with** disrespect in her classroom.",
+        es: "Ella no tolera la falta de respeto en su salón de clase."
+    }
+]
 
 
 },
@@ -269,7 +299,24 @@ const lessons = [
     translation: "Necesita reducir su consumo de dulces.",
     phrasalSpanish: ["reducir", "consumo"],
     phrasalInfinitive: "to cut back on",
-    equivalents: "reducir; recortar; disminuir "
+    equivalents: "reducir; recortar; disminuir",
+
+    supplemental: [
+    {
+        en: "She needs **to cut back on** sweets.",
+        es: "Necesita reducir su consumo de dulces."
+    },
+    {
+        en: "The company is **cutting back on** expenses.",
+        es: "La empresa está recortando los gastos."
+    },
+    {
+        en: "The doctor told me **to cut back on** salt.",
+        es: "El médico me dijo que disminuya la sal."
+    }
+]
+
+
 
 }, 
 
