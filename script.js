@@ -330,6 +330,9 @@ document.getElementById('statsCloseBtn3').addEventListener('click', () => {
     document.getElementById('statsOverlay3').style.display = 'none';
 });
 
+// AUTO-SOLVE EVENT LISTENER (green dot → instant solve)
+document.getElementById('completionDot').addEventListener('click', autoSolve);
+
 // RANDOM/SEQUENTIAL MODE
 let isRandomMode = false;
 
