@@ -45,24 +45,29 @@ const lessons = [
         translation: "Me topé con mi amigo en el mercado.",
         phrasalSpanish: ["me", "topé","con"],
         phrasalInfinitive: "to run into",
-        equivalents: " toparse con; tropezarse con",
+        equivalents: "toparse con; tropezarse con",
         supplemental: [
         {
         en: "We **ran into** a problem with your order.",
         es: "Nos topamos con un problema con tu pedido."
         },
         {
+        en: "I **ran into** the coffee table and spilled my drink.",
+        es: "Me tropecé con la mesa de centro y se me cayó el trago."
+        },
+        {
         en: "They **ran into** bad weather on their trip",
         es: "Se toparon con mal tiempo en su viaje."
         },
         {
-        en: "She's always **running into** her friends at the mall.",
-        es: "Ella siempre se tropieza con sus amigos en el centro comercial."
+        en: "She says she is always **running into** her friends at the mall.",
+        es: "Ella dice que siempre se tropieza con sus amigos en el centro comercial."
         },
         {
-        en: "You're going **to run into** trouble with her.",
-        es: "Te vas a topar con problemas con ella."
-        }
+        en: "I hope we don't **run into** trouble with him.",
+        es: "Espero que no nos topemos con problemas con él."
+        },   
+        
     ]
 
 
