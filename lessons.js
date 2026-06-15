@@ -86,27 +86,60 @@ const lessons = [
         translation: "Voy a terminar con él.",
         phrasalSpanish: ["terminar", "con"],
         phrasalInfinitive: "to break up with",
-        equivalents: "terminar con; romper con; cortar con"
+        equivalents: "terminar con; romper con; cortar con",
+        
+        supplemental: [
+        {
+        en: "**Breaking up** is hard to do.",
+        es: "Terminar una relación es difícil. "
+        },
+        {
+        en: "I **broke up with** my girlfriend a year ago.",
+        es: "Corté con mi novia hace un año."
+        },
+        {
+        en: "She **broke up with** him after the fight.",
+        es: "Rompió con él después de la pelea."
         },
 
-    {
-    id: 4,
-    narrator: "john",
-    category: "people",
-    narratorAudio: "Audio/john-004-story.mp3",
-    answerAudio: "Audio/john-004-answer.mp3",
-    sentence: ["My", "father", "will", "look", "after", "her"],
-    correctOrder: ["My", "father", "will", "look", "after", "her"],
-    english: "My father will look after her.",
-    spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar.",
-    phrasal: ["look", "after"],
-    translation: "Mi papá la va a cuidar.",
-    phrasalSpanish: ["cuidar"],
-    phrasalInfinitive: "to look after",
-    equivalents: "cuidar a; encargarse de; velar por"
-},
+        ]
+
+        
+
+         },
+        {
+        id: 4,
+        narrator: "john",
+        category: "people",
+        narratorAudio: "Audio/john-004-story.mp3",
+        answerAudio: "Audio/john-004-answer.mp3",
+        sentence: ["My", "father", "will", "look", "after", "her"],
+        correctOrder: ["My", "father", "will", "look", "after", "her"],
+        english: "My father will look after her.",
+        spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar.",
+        phrasal: ["look", "after"],
+        translation: "Mi papá la va a cuidar.",
+        phrasalSpanish: ["cuidar"],
+        phrasalInfinitive: "to look after",
+        equivalents: "cuidar a; encargarse de; velar por",
     
+        supplemental: [
+        {
+        en: "I'm going **to look after** all those things.",
+        es: "Me voy a encargar de todas esas cosas."
+        },
+        {
+        en: "Thanks for **looking after** my cats.",
+        es: "Gracias por cuidar a mis gatos."
+        },
+        { 
+        en: "The security guard **looks after** the building at night.",
+        es: "El guardia de seguridad vela por el edificio por la noche."
+        },
+    ]    
+},
 {
+   	  
     id: 5,
     narrator: "jessica",
     category: "people",
