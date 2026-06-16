@@ -595,10 +595,12 @@ function updateSupplementalButton(lesson) {
     enLine.className = 'supplemental-en';
     // Convert **word** markdown to <strong>word</strong> for phrasal verb bolding
     enLine.innerHTML = item.en.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    enLine.innerHTML = enLine.innerHTML.replace(/==(.+?)==/g, '<mark class="hl-magenta">$1</mark>');
     
     const esLine = document.createElement('div');
     esLine.className = 'supplemental-es';
-    esLine.textContent = item.es;
+    esLine.innerHTML = item.es.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+    esLine.innerHTML = esLine.innerHTML.replace(/==(.+?)==/g, '<mark class="hl-magenta">$1</mark>');
     
     card.appendChild(enLine);
     card.appendChild(esLine);

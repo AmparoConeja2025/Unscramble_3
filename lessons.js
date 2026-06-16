@@ -26,6 +26,14 @@ const lessons = [
         {
         en: "She **came over** to borrow some sugar.",
         es: "Ella se pasó por mi casa a pedir azúcar prestada."
+        },
+        {
+        en: "Jose **comes over** to watch football on Sundays.",
+        es: "José viene a ver fútbol los domingos."
+        },
+        {
+        en: "Are you **coming over** tomorrow?",
+        es: "¿Vas a venir mañana?"
         }
         
     ]
@@ -67,7 +75,7 @@ const lessons = [
         {
         en: "I hope we don't **run into** trouble with him.",
         es: "Espero que no nos topemos con problemas con él."
-        },   
+        },  
         
     ]
 
@@ -162,16 +170,16 @@ const lessons = [
 
     supplemental: [
     {
-        en: "She **got over** the flu in three days.",
-        es: "Ella superó la gripe en tres días."
+        en: "She **got over** the ==flu== in three days.",
+        es: "Ella superó el ==gripe== en tres días."
     },
     {
-        en: "It took me a week **to get over** that cold.",
-        es: "Me tomó una semana recuperarme de ese resfriado."
+        en: "It took me a week **to get over** that ==cold==.",
+        es: "Me tomó una semana recuperarme de ese ==resfriado==."
     },
     {
-        en: "He finally **got over** the illness after months of treatment.",
-        es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento."
+        en: "He finally **got over** the illness after ==months== of treatment.",
+        es: "Él finalmente se sobrepuso a la enfermedad después de ==meses== de tratamiento."
     },
     {
         en: "Just **get over** it!",
@@ -1319,8 +1327,8 @@ const lessons = [
         category: "Out & About",
         narratorAudio: "Audio/dianne-067-story.mp3",
         answerAudio: "Audio/dianne-067-answer.mp3",
-        sentence: ["Can", "you", "show", "me", "around", "the", "city", "?"],
-        correctOrder: ["Can", "you", "show", "me", "around", "the", "city", "?"],
+        sentence: ["Can", "you", "show", "me", "around", "the", "city"],
+        correctOrder: ["Can", "you", "show", "me", "around", "the", "city"],
         phrasal: ["show", "around"],
         english: "Can you show me around the city?",
         spanish: "Casi no conozco esta ciudad.",
