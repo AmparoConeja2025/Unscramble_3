@@ -178,7 +178,7 @@ const lessons = [
         es: "Me tomó una semana recuperarme de ese resfriado."
     },
     {
-        en: "He ==finally== **got over** the illness after months of ==treatment==.",
+        en: "He finally **got over** the illness after months of treatment.",
         es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento."
     },
     {
