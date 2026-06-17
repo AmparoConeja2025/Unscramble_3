@@ -310,7 +310,7 @@ const lessons = [
     spanish: "Mi hermana está engordando mucho! Tiene que reducir el consumo de dulces!",
     phrasal: ["cut", "back", "on"],
     translation: "Necesita reducir su consumo de dulces.",
-    phrasalSpanish: ["reducir", "consumo"],
+    phrasalSpanish: ["reducir",],
     phrasalInfinitive: "to cut back on",
     equivalents: "reducir; recortar; disminuir",
 
@@ -346,7 +346,7 @@ const lessons = [
     spanish: "Iba a comprarme otra hamburguesa, pero se me acabó el dinero.",
     phrasal: ["ran", "out", "of"],
     translation: "Se me acabó el dinero.",
-    phrasalSpanish: ["me", "acabó"],
+    phrasalSpanish: ["Se", "me", "acabó"],
     phrasalInfinitive: "to run out of",
     equivalents: "acabársele; quedarse sin; agotársele"
 
