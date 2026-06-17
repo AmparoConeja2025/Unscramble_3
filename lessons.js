@@ -170,21 +170,26 @@ const lessons = [
 
     supplemental: [
     {
-        en: "She **got over** the ==flu== in three days.",
-        es: "Ella superó el ==gripe== en tres días."
+        en: "She **got over** the flu in three days.",
+        es: "Ella superó el gripe en tres días."
     },
     {
-        en: "It took me a week **to get over** that ==cold==.",
-        es: "Me tomó una semana recuperarme de ese ==resfriado==."
+        en: "It took me a week **to get over** that cold.",
+        es: "Me tomó una semana recuperarme de ese resfriado."
     },
     {
-        en: "He finally **got over** the illness after ==months== of treatment.",
-        es: "Él finalmente se sobrepuso a la enfermedad después de ==meses== de tratamiento."
+        en: "He ==finally== **got over** the illness after months of ==treatment==.",
+        es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento."
     },
     {
         en: "Just **get over** it!",
         es: "¡Ya supératelo!"
+    },
+    {
+        en: "Juana never **got over** the death of her brother.",
+        es: "Juana nunca superó la muerte de su hermano."
     }
+
 ]
 
 },
