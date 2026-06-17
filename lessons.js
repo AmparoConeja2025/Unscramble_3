@@ -16,12 +16,12 @@ const lessons = [
         equivalents: "venir; pasarse por; acercarse a",
         supplemental: [
         {
-        en: "Steve and his girlfriend **are coming over** for lunch tomorrow.",
+        en: "Steve and his girlfriend are **coming over** for lunch tomorrow.",
         es: "Steve y su novia se van a pasar a comer mañana."
         },
         {
-        en: "**Come over here** and look at this.",
-        es: "Acércate y mira esto."
+        en: "**Come over here**!",
+        es: "¡Ven para acá!"
         },
         {
         en: "She **came over** to borrow some sugar.",
@@ -34,8 +34,11 @@ const lessons = [
         {
         en: "Are you **coming over** tomorrow?",
         es: "¿Vas a venir mañana?"
-        }
-        
+        },
+        {
+        en: "**Come over here** and look at this.",
+        es: "Acércate y mira esto."
+        },
     ]
 
         
@@ -69,13 +72,17 @@ const lessons = [
         es: "Se toparon con mal tiempo en su viaje."
         },
         {
-        en: "She says she is always **running into** her friends at the mall.",
-        es: "Ella dice que siempre se tropieza con sus amigos en el centro comercial."
+        en: "She is always **running into** her friends at the mall.",
+        es: "Ella siempre se tropieza con sus amigos en el centro comercial."
         },
         {
         en: "I hope we don't **run into** trouble with him.",
         es: "Espero que no nos topemos con problemas con él."
         },  
+        {
+        en: "We **ran into** some unexpected problems with the new software.",
+        es: "Nos tropezamos con algunos problemas inesperados con el nuevo software."
+    }
         
     ]
 
@@ -114,6 +121,14 @@ const lessons = [
         en: "I **broke up with** my girlfriend a year ago.",
         es: "Corté con mi novia hace un año."
         },
+        {
+        en: "They **broke up** because of the distance.",
+        es: "Ellos terminaron por la distancia."
+         },
+        {
+        en: "He **broke up with** her over the phone.",
+        es: "Él cortó con ella por teléfono."
+        },
 
         ]
 
@@ -148,6 +163,18 @@ const lessons = [
         { 
         en: "The security guard **looks after** the building at night.",
         es: "El guardia de seguridad vela por el edificio por la noche."
+        },
+        {
+        en: "Could you **look after** my plants while I'm gone?",
+        es: "¿Podrías cuidar mis plantas mientras no estoy?"
+        },
+        {
+        en: "She **looks after** the children in the afternoon.",
+        es: "Ella se encarga de los niños por las tardes."
+        },
+        {
+        en: "The police officer **looks after** public safety.",
+        es: "El policía vela por la seguridad pública."
         },
     ]    
 },
@@ -188,7 +215,16 @@ const lessons = [
     {
         en: "Juana never **got over** the death of her brother.",
         es: "Juana nunca superó la muerte de su hermano."
-    }
+    },
+     {
+        en: "I hope you **get over** your cough soon.",
+        es: "Espero que te recuperes de esa tos pronto."
+    },
+     {
+        en: "She's still trying to **get over** her breakup.",
+        es: "Ella todavía está tratando de superar su ruptura."
+    },
+    
 
 ]
 
@@ -225,7 +261,15 @@ const lessons = [
     {
         en: "If you **come across** any good movies, let me know.",
         es: "Si encuentras alguna buena película, avísame."
-    }
+    },
+    {
+        en: "I **came across** an interesting article online.",
+        es: "Encontré un artículo interesante en internet."
+    },
+    {
+        en: "She **came across** her grandmother's old letters.",
+        es: "Ella dio con las cartas viejas de su abuela."
+    },
 ]
 
 
@@ -256,9 +300,21 @@ const lessons = [
         es: "Revisemos este contrato una vez más."
     },
     {
-        en: "The committee will **go over** all the proposals carefully.",
-        es: "El comité analizará todas las propuestas cuidadosamente."
-    }
+        en: "The committee is **going over** all the proposals right now.",
+        es: "El comité está analizando todas las propuestas ahora mismo."
+    },
+    {
+        en: "The teacher **went over** the answers with the class.",
+        es: "La maestra repasó las respuestas con la clase."
+    },
+    {
+        en: "I need to **go over** my budget before the end of the month.",
+        es: "Necesito revisar mi presupuesto antes de fin de mes."
+    },
+    {
+        en: "The lawyer **went over** the contract carefully.",
+        es: "El abogado analizó el contrato cuidadosamente."
+    },
 ]
 
 },
@@ -286,13 +342,25 @@ const lessons = [
         es: "Ya no voy a aguantar tus mentiras."
     },
     {
-        en: "How do you **put up with** that noise every day?",
-        es: "¿Cómo soportas ese ruido todos los días?"
+        en: "How do you **put up with** that racket every day?",
+        es: "¿Cómo soportas ese bullicio todos los días?"
     },
     {
         en: "She won't **put up with** disrespect in her classroom.",
         es: "Ella no tolera la falta de respeto en su salón de clase."
-    }
+    },
+     {
+        en: "I don't know how you **put up with** your boss.",
+        es: "No sé cómo aguantas a tu jefe."
+    },
+    {
+        en: "The neighbors have to **put up with** a lot of noise.",
+        es: "Los vecinos tienen que tolerar mucho ruido."
+    },
+    {
+        en: "She **put up with** a lot of pain after the surgery.",
+        es: "Ella soportó mucho dolor después de la cirugía."
+    },
 ]
 
 
@@ -324,9 +392,21 @@ const lessons = [
         es: "La empresa está recortando los gastos."
     },
     {
-        en: "The doctor told me **to cut back on** salt.",
+        en: "The doctor told me to **cut back on** salt.",
         es: "El médico me dijo que disminuya la sal."
-    }
+    },
+    {
+        en: "I'm trying to **cut back on** fast food.",
+        es: "Estoy tratando de reducir el comida rápida."
+    },
+    {
+        en: "The government is **cutting back on** public spending.",
+        es: "El gobierno está recortando el gasto público."
+    },
+    {
+        en: "You should **cut back on** the amount of red meat you eat.",
+        es: "Deberías disminuir la cantidad de carne roja que comes."
+    },
 ]
 
 
@@ -348,7 +428,34 @@ const lessons = [
     translation: "Se me acabó el dinero.",
     phrasalSpanish: ["Se", "me", "acabó"],
     phrasalInfinitive: "to run out of",
-    equivalents: "acabársele; quedarse sin; agotársele"
+    equivalents: "acabársele; quedarse sin; agotársele",
+
+    supplemental:[
+    {
+        en: "We **ran out of** milk this morning.",
+        es: "Nos quedamos sin leche esta mañana."
+    },
+    {
+        en: "I **ran out of** money before the end of the trip.",
+        es: "Se me acabó el dinero antes de que terminara el viaje."
+    },
+    {
+        en: "The printer is **running out of** ink.",
+        es: "La impresora se está quedando sin tinta."
+    },
+    {
+        en: "She **runs out of** patience with the kids.",
+        es: "Se le acaba la paciencia con los niños."
+    },
+    {
+        en: "We're going to **run out of** time if we don't hurry.",
+        es: "Nos vamos a quedar sin tiempo si no nos apuramos."
+    },
+    {
+        en: "The store **ran out of** bread early in the morning.",
+        es: "La tienda se quedó sin pan temprano en la mañana."
+    }
+    ]
 
 },
 
@@ -373,13 +480,25 @@ const lessons = [
         es: "Vamos a superar esto juntos."
     },
     {
-        en: "I don't know how I'll **get through** the week.",
-        es: "No sé cómo voy a superar la semana."
+        en: "They **got through** a very difficult winter.",
+        es: "Atravesaron un invierno muy difícil."
     },
     {
         en: "Her friends helped her **get through** the difficult time.",
         es: "Sus amigos la ayudaron a salir adelante."
-    }
+    },
+    {
+        en: "We're **getting through** this crisis thanks to our team.",
+        es: "Superamos esta crisis gracias a nuestro equipo."
+    },
+    {
+        en: "I don't know how she **got through** that tragedy.",
+        es: "No sé cómo ella salió adelante después de esa tragedia."
+    },
+    {
+        en: "We will **get through** the week somehow.",
+        es: "Superaremos la semana de alguna manera."
+    },
 ]
 
 },
@@ -398,7 +517,33 @@ const lessons = [
     translation: "No nos llevamos muy bien.",
     phrasalSpanish: ["nos", "llevamos"],
     phrasalInfinitive: "to get along with",
-    equivalents: "llevarse bien con; congeniar con"
+    equivalents: "llevarse bien con; congeniar con",
+    supplemental: [
+    {
+        en: "We **get along with** our neighbors just fine.",
+        es: "Nos llevamos muy bien con nuestros vecinos."
+    },
+    {
+        en: "She **gets along with** everyone at work.",
+        es: "Ella congenia con todos en el trabajo."
+    },
+    {
+        en: "I don't **get along with** my cousin.",
+        es: "No me llevo bien con mi primo."
+    },
+    {
+        en: "They always **get along with** each other.",
+        es: "Siempre se llevan bien el uno con el otro."
+    },
+    {
+        en: "Do you **get along with** your in-laws?",
+        es: "¿Te llevas bien con tus suegros?"
+    },
+    {
+        en: "It's important to **get along with** your coworkers.",
+        es: "Es importante llevarse bien con los compañeros de trabajo."
+    },
+]
 
 },
 
@@ -416,7 +561,33 @@ const lessons = [
     translation: "Me voy",
     phrasalSpanish: ["Me", "voy"],
     phrasalInfinitive: "to take off",
-    equivalents: "irse; marcharse; salir"
+    equivalents: "irse; marcharse; salir",
+    supplemental: [
+    {
+        en: "I'm going to **take off** now. See you tomorrow.",
+        es: "Ya me voy. Nos vemos mañana."
+    },
+    {
+        en: "Don't **take off** without saying goodbye.",
+        es: "No marches sin despedirse."
+    },
+    {
+        en: "Let's **take off** early to avoid traffic.",
+        es: "Salgamos temprano para evitar el tráfico."
+    },
+    {
+        en: "He always **takes off** right after the meetings.",
+        es: "Él siempre se va justo después de las reuniones."
+    },
+    {
+        en: "They **took off** before the party ended.",
+        es: "Ellos se marcharon antes de que terminara la fiesta."
+    },
+    {
+        en: "What time are you going to **take off**?",
+        es: "¿A qué hora te vas?"
+    },
+]
 
 },
 
@@ -433,7 +604,33 @@ const lessons = [
     phrasal: ["fall", "for"],translation: "No voy a caer en eso.",
     phrasalSpanish: ["caer", "en"],
     phrasalInfinitive: "to fall for",
-    equivalents: "caer en; tragárselo; creérselo"
+    equivalents: "caer en; tragárselo; creérselo",
+    supplemental: [
+    {
+        en: "I can't believe you **fell for** that.",
+        es: "No puedo creer que cayeras en eso."
+    },
+    {
+        en: "She **fell for** his lies.",
+        es: "Ella cayó en sus mentiras."
+    },
+    {
+        en: "Don't **fall for** it — it's a scam.",
+        es: "No caigas en eso — es una estafa."
+    },
+    {
+        en: "He **fell for** the oldest trick in the book.",
+        es: "Él cayó en el truco más viejo del libro."
+    },
+    {
+        en: "They **fell for** the sales pitch.",
+        es: "Ellos cayeron en el discurso de ventas."
+    },
+    {
+        en: "I almost **fell for** your excuse.",
+        es: "Casi caigo en tu excusa."
+    },
+]
 
 },
 
