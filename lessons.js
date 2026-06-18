@@ -67,27 +67,33 @@ const lessons = [
         supplemental: [
         {
         en: "We **ran into** a problem with your order.",
-        es: "Nos topamos con un problema con tu pedido."
+        es: "Nos topamos con un problema con tu pedido.",
+        audio: "Audio/adam-sup-002-1.mp3"
         },
         {
         en: "I **ran into** the coffee table and spilled my drink.",
-        es: "Me tropecé con la mesa de centro y se me cayó el trago."
+        es: "Me tropecé con la mesa de centro y se me cayó el trago.",
+        audio:"Audio/adam-sup-002-2.mp3"
         },
         {
         en: "They **ran into** bad weather on their trip",
-        es: "Se toparon con mal tiempo en su viaje."
+        es: "Se toparon con mal tiempo en su viaje.",
+        audio:"Audio/adam-sup-002-3.mp3"
         },
         {
         en: "She is always **running into** her friends at the mall.",
-        es: "Ella siempre se tropieza con sus amigos en el centro comercial."
+        es: "Ella siempre se tropieza con sus amigos en el centro comercial.",
+        audio:"Audio/adam-sup-002-4.mp3"
         },
         {
         en: "I hope we don't **run into** trouble with him.",
-        es: "Espero que no nos topemos con problemas con él."
+        es: "Espero que no nos topemos con problemas con él.",
+        audio:"Audio/adam-sup-002-5.mp3",
         },  
         {
         en: "We **ran into** some unexpected problems with the new software.",
-        es: "Nos tropezamos con algunos problemas inesperados con el nuevo software."
+        es: "Nos tropezamos con algunos problemas inesperados con el nuevo software.",
+        audio:"Audio/adam-sup-002-6.mp3",
     }
         
     ]

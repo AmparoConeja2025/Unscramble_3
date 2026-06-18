@@ -2735,6 +2735,10 @@ button, img, .word-tile {
     -webkit-tap-highlight-color: transparent;
 }
 
+body:has(.supplemental-overlay.active) .qa-replay-btn {
+  display: none;
+}
+
 .qa-replay-btn:active {
     opacity: 0.3;
     background: rgba(255, 255, 255, 0.4);
@@ -2816,7 +2820,7 @@ button, img, .word-tile {
 .supplemental-close {
   position: fixed;
   top: 20px;
-  right: 20px;
+  right: 0px;
   width: 30px;
   height: 30px;
   background: rgba(255, 255, 255, 0.25);
