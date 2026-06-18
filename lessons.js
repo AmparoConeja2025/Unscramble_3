@@ -66,8 +66,8 @@ const lessons = [
         equivalents: "toparse con; tropezarse con",
         supplemental: [
         {
-        en: "We **ran into** a problem with your order.",
-        es: "Nos topamos con un problema con tu pedido.",
+        en: "I'm sorry, but we **ran into** a problem with this order.",
+        es: "Lo siento, pero nos topamos con un problema con este pedido.",
         audio: "Audio/adam-sup-002-1.mp3"
         },
         {
@@ -91,8 +91,8 @@ const lessons = [
         audio:"Audio/adam-sup-002-5.mp3",
         },  
         {
-        en: "We **ran into** some unexpected problems with the new software.",
-        es: "Nos tropezamos con algunos problemas inesperados con el nuevo software.",
+        en: "We **ran into** some unexpected problems with that new software.",
+        es: "Nos tropezamos con algunos problemas inesperados con ese nuevo software.",
         audio:"Audio/adam-sup-002-6.mp3",
     }
         
@@ -118,28 +118,34 @@ const lessons = [
         
         supplemental: [
         {
-        en: "**Breaking up** is hard to do.",
-        es: "Terminar una relación es difícil. "
+        en: "**Breaking up** is hard.",
+        es: "Terminar una relación es difícil. ",
+        audio: "Audio/laura-sup-003-1.mp3"
         },
         {
-        en: "I **broke up with** my girlfriend a year ago.",
-        es: "Corté con mi novia hace un año."
+        en: "He **broke up with** his girlfriend a year ago.",
+        es: "Corté con mi novia hace un año.",
+        audio: "Audio/laura-sup-003-2.mp3",
         },
         {
         en: "She **broke up with** him after the fight.",
-        es: "Rompió con él después de la pelea."
+        es: "Rompió con él después de la pelea.",
+        audio: "Audio/laura-sup-003-3.mp3"
         },
         {
-        en: "I **broke up with** my girlfriend a year ago.",
-        es: "Corté con mi novia hace un año."
+        en: "I don't want to **break up with** him yet.",
+        es: "No quiero cortar con él todavía.",
+        audio: "Audio/laura-sup-003-4.mp3"
         },
         {
-        en: "They **broke up** because of the distance.",
-        es: "Ellos terminaron por la distancia."
+        en: "They **broke up** because they live so far apart.",
+        es: "Ellos terminaron porque viven tan lejos.",
+        audio: "Audio/laura-sup-003-5.mp3"
          },
         {
         en: "He **broke up with** her over the phone.",
-        es: "Él cortó con ella por teléfono."
+        es: "Él cortó con ella por teléfono.",
+        audio: "Audio/laura-sup-003-6.mp3"
         },
 
         ]
@@ -164,31 +170,37 @@ const lessons = [
         equivalents: "cuidar a; encargarse de; velar por",
     
         supplemental: [
-        {
+    {
         en: "I'm going **to look after** all those things.",
-        es: "Me voy a encargar de todas esas cosas."
-        },
-        {
+        es: "Me voy a encargar de todas esas cosas.",
+        audio: "Audio/john-sup-004-1.mp3"
+    },
+    {
         en: "Thanks for **looking after** my cats.",
-        es: "Gracias por cuidar a mis gatos."
-        },
-        { 
+        es: "Gracias por cuidar a mis gatos.",
+        audio: "Audio/john-sup-004-2.mp3"
+    },
+    { 
         en: "The security guard **looks after** the building at night.",
-        es: "El guardia de seguridad vela por el edificio por la noche."
-        },
-        {
+        es: "El guardia de seguridad vela por el edificio por la noche.",
+        audio: "Audio/john-sup-004-3.mp3"
+    },
+    {
         en: "Could you **look after** my plants while I'm gone?",
-        es: "¿Podrías cuidar mis plantas mientras no estoy?"
-        },
-        {
-        en: "She **looks after** the children in the afternoon.",
-        es: "Ella se encarga de los niños por las tardes."
-        },
-        {
-        en: "The police officer **looks after** public safety.",
-        es: "El policía vela por la seguridad pública."
-        },
-    ]    
+        es: "¿Podrías cuidar mis plantas mientras no estoy?",
+        audio: "Audio/john-sup-004-4.mp3"
+    },
+    {
+        en: "Jessica **looks after** the children in the afternoon.",
+        es: "Jessica se encarga de los niños por las tardes.",
+        audio: "Audio/john-sup-004-5.mp3"
+    },
+    {
+        en: "The police officers **look after** public safety.",
+        es: "El policía vela por la seguridad pública.",
+        audio: "Audio/john-sup-004-6.mp3"
+    }
+]    
 },
 {
    	  
@@ -210,34 +222,39 @@ const lessons = [
     supplemental: [
     {
         en: "She **got over** the flu in three days.",
-        es: "Ella superó el gripe en tres días."
+        es: "Ella superó el gripe en tres días.",
+        audio: "Audio/jessica-sup-005-1.mp3"
     },
     {
         en: "It took me a week **to get over** that cold.",
-        es: "Me tomó una semana recuperarme de ese resfriado."
+        es: "Me tomó una semana recuperarme de ese resfriado.",
+        audio: "Audio/jessica-sup-005-2.mp3"
     },
     {
         en: "He finally **got over** the illness after months of treatment.",
-        es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento."
+        es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento.",
+        audio: "Audio/jessica-sup-005-3.mp3"
     },
     {
         en: "Just **get over** it!",
-        es: "¡Ya supératelo!"
+        es: "¡Ya supératelo!",
+        audio: "Audio/jessica-sup-005-4.mp3"
     },
     {
         en: "Juana never **got over** the death of her brother.",
-        es: "Juana nunca superó la muerte de su hermano."
+        es: "Juana nunca superó la muerte de su hermano.",
+        audio: "Audio/jessica-sup-005-5.mp3"
     },
-     {
+    {
         en: "I hope you **get over** your cough soon.",
-        es: "Espero que te recuperes de esa tos pronto."
+        es: "Espero que te recuperes de esa tos pronto.",
+        audio: "Audio/jessica-sup-005-6.mp3"
     },
-     {
+    {
         en: "She's still trying to **get over** her breakup.",
-        es: "Ella todavía está tratando de superar su ruptura."
-    },
-    
-
+        es: "Ella todavía está tratando de superar su ruptura.",
+        audio: "Audio/jessica-sup-005-7.mp3"
+    }
 ]
 
 },
@@ -258,30 +275,38 @@ const lessons = [
     equivalents: "encontrar; toparse con; dar con;",
 
     supplemental: [
+        {
+        en: "I always **come across** interesting articles online.",
+        es: "Siempre encuentro artículos interesantes en internet.",
+        audio: "Audio/becky-sup-006-1.mp3"
+    },
     {
         en: "I **came across** this book at the used bookstore.",
-        es: "Encontré este libro en la librería de segunda."
+        es: "Encontré este libro en la librería de segunda.",
+        audio: "Audio/becky-sup-006-2.mp3"
+    },
+    
+    {
+        en: "She's hoping to **come across** the perfect recipe online.",
+        es: "Ella espera dar con la receta perfecta en línea.",
+        audio: "Audio/becky-sup-006-3.mp3"
     },
     {
         en: "I **came across** an old friend at the mall.",
-        es: "Me topé con un viejo amigo en el centro comercial."
-    },
-    {
-        en: "She finally **came across** the perfect recipe online.",
-        es: "Finalmente dio con la receta perfecta en internet."
+        es: "Me topé con un viejo amigo en el centro comercial.",
+        audio: "Audio/becky-sup-006-4.mp3"
     },
     {
         en: "If you **come across** any good movies, let me know.",
-        es: "Si encuentras alguna buena película, avísame."
-    },
-    {
-        en: "I **came across** an interesting article online.",
-        es: "Encontré un artículo interesante en internet."
+        es: "Si encuentras alguna buena película, avísame.",
+        audio: "Audio/becky-sup-006-5.mp3"
     },
     {
         en: "She **came across** her grandmother's old letters.",
-        es: "Ella dio con las cartas viejas de su abuela."
+        es: "Ella dio con las cartas viejas de su abuela.",
+        audio: "Audio/becky-sup-006-6.mp3"
     },
+    
 ]
 
 
@@ -305,28 +330,34 @@ const lessons = [
     supplemental: [
     {
         en: "I need **to go over** my notes before the exam.",
-        es: "Necesito repasar mis apuntes antes del examen."
+        es: "Necesito repasar mis apuntes antes del examen.",
+        audio: "Audio/john-sup-007-1.mp3"
     },
     {
         en: "Let's **go over** this contract one more time.",
-        es: "Revisemos este contrato una vez más."
+        es: "Revisemos este contrato una vez más.",
+        audio: "Audio/john-sup-007-2.mp3"
     },
     {
-        en: "The committee is **going over** all the proposals right now.",
-        es: "El comité está analizando todas las propuestas ahora mismo."
+        en: "The committee is **going over** the proposals right now.",
+        es: "El comité está analizando las propuestas ahora mismo.",
+        audio: "Audio/john-sup-007-3.mp3"
     },
     {
-        en: "The teacher **went over** the answers with the class.",
-        es: "La maestra repasó las respuestas con la clase."
+        en: "The teacher **went over** the answers with her class.",
+        es: "La maestra repasó las respuestas con su clase.",
+        audio: "Audio/john-sup-007-4.mp3"
     },
     {
-        en: "I need to **go over** my budget before the end of the month.",
-        es: "Necesito revisar mi presupuesto antes de fin de mes."
+        en: "I need to **go over** my personal budget before the end of the month.",
+        es: "Necesito revisar mi presupuesto personal antes de fin de mes.",
+        audio: "Audio/john-sup-007-5.mp3"
     },
     {
-        en: "The lawyer **went over** the contract carefully.",
-        es: "El abogado analizó el contrato cuidadosamente."
-    },
+        en: "The lawyer **went over** the contract very carefully.",
+        es: "El abogado analizó el contrato cuidadosamente.",
+        audio: "Audio/john-sup-007-6.mp3"
+    }
 ]
 
 },
