@@ -26,13 +26,13 @@ const lessons = [
         audio: "Audio/dianne-sup-001-2.mp3",
         },
         {
-        en: "She **came over** to borrow some sugar.",
-        es: "Ella se pasó por mi casa a pedir azúcar prestada.",
+        en: "She **came over** to borrow some ==sugar==.",
+        es: "Ella se pasó por mi casa a pedir ==azúcar== prestada.",
         audio: "Audio/dianne-sup-001-3.mp3",
         },
         {
-        en: "Jose **comes over** to watch football on Sundays.",
-        es: "José viene a ver fútbol los domingos.",
+        en: "Jose **comes over** to watch football on ==Sundays==.",
+        es: "José viene a ver fútbol los ==domingos==.",
         audio: "Audio/dianne-sup-001-4.mp3",
         },
         {
@@ -66,18 +66,18 @@ const lessons = [
         equivalents: "toparse con; tropezarse con",
         supplemental: [
         {
-        en: "I'm sorry, but we **ran into** a problem with this order.",
-        es: "Lo siento, pero nos topamos con un problema con este pedido.",
+        en: "I'm sorry, but we **ran into** a problem with ==this order==.",
+        es: "Lo siento, pero nos topamos con un problema con ==este pedido==.",
         audio: "Audio/adam-sup-002-1.mp3"
         },
         {
-        en: "I **ran into** the coffee table and spilled my drink.",
-        es: "Me tropecé con la mesa de centro y se me cayó el trago.",
+        en: "I **ran into** the ==coffee table== and spilled my drink.",
+        es: "Me tropecé con la ==mesa de centro== y se me cayó el trago.",
         audio:"Audio/adam-sup-002-2.mp3"
         },
         {
-        en: "They **ran into** bad weather on their trip",
-        es: "Se toparon con mal tiempo en su viaje.",
+        en: "They **ran into** bad weather on their ==trip==",
+        es: "Se toparon con mal tiempo en su ==viaje==.",
         audio:"Audio/adam-sup-002-3.mp3"
         },
         {
@@ -91,8 +91,8 @@ const lessons = [
         audio:"Audio/adam-sup-002-5.mp3",
         },  
         {
-        en: "We **ran into** some unexpected problems with that new software.",
-        es: "Nos tropezamos con algunos problemas inesperados con ese nuevo software.",
+        en: "We **ran into** some ==unexpected== problems with that new software.",
+        es: "Nos tropezamos con algunos problemas ==inesperados== con ese nuevo software.",
         audio:"Audio/adam-sup-002-6.mp3",
     }
         
@@ -123,28 +123,28 @@ const lessons = [
         audio: "Audio/laura-sup-003-1.mp3"
         },
         {
-        en: "He **broke up with** his girlfriend a year ago.",
-        es: "Corté con mi novia hace un año.",
+        en: "He **broke up with** his girlfriend ==a year ago==.",
+        es: "Corté con mi novia ==hace un año==.",
         audio: "Audio/laura-sup-003-2.mp3",
         },
         {
-        en: "She **broke up with** him after the fight.",
-        es: "Rompió con él después de la pelea.",
+        en: "She **broke up with** him after ==the fight==.",
+        es: "Rompió con él después de ==la pelea==.",
         audio: "Audio/laura-sup-003-3.mp3"
         },
         {
-        en: "I don't want to **break up with** him yet.",
-        es: "No quiero cortar con él todavía.",
+        en: "I don't want to **break up with** him ==yet==.",
+        es: "No quiero cortar con él ==todavía==.",
         audio: "Audio/laura-sup-003-4.mp3"
         },
         {
-        en: "They **broke up** because they live so far apart.",
-        es: "Ellos terminaron porque viven tan lejos.",
+        en: "They **broke up** because they live ==so far apart==.",
+        es: "Ellos terminaron porque viven ==tan lejos==.",
         audio: "Audio/laura-sup-003-5.mp3"
          },
         {
-        en: "He **broke up with** her over the phone.",
-        es: "Él cortó con ella por teléfono.",
+        en: "He **broke up with** her ==over the phone==.",
+        es: "Él cortó con ella ==por teléfono==.",
         audio: "Audio/laura-sup-003-6.mp3"
         },
 

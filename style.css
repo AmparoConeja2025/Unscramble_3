@@ -2867,9 +2867,9 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
   font-weight: bold;
 }
 
-.supplemental-en .hl-magenta,
-.supplemental-es .hl-magenta {
-  color: #e27281;
+.supplemental-en .hl-bridge,
+.supplemental-es .hl-bridge {
+  color: #f399a5;
   background: transparent;
   font-weight: bold;
 }
