@@ -2840,6 +2840,7 @@ button, img, .word-tile {
 }
 
 .supplemental-card {
+  position: relative;
   background: #3a5f5f;
   box-shadow: 2px 3px 8px rgb(122, 145, 145), inset 0 2px 4px rgba(0, 0, 0, 0);
   border-radius: 16px;
@@ -2922,6 +2923,34 @@ button, img, .word-tile {
   color: #f5d76e;
   margin-right: 2px;
 }
+.supplemental-speaker {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s ease;
+}
+
+.supplemental-speaker:active {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.supplemental-speaker.playing {
+  background: #f5d76e;
+  color: #1a3030;
+}
+
 
 /* Disable iOS pull-to-refresh and rubber-band overscroll */
 html, body {

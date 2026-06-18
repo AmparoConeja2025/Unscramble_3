@@ -17,27 +17,33 @@ const lessons = [
         supplemental: [
         {
         en: "Steve and his girlfriend are **coming over** for lunch tomorrow.",
-        es: "Steve y su novia se van a pasar a comer mañana."
+        es: "Steve y su novia se van a pasar a comer mañana.",
+        audio: "Audio/dianne-sup-001-1.mp3",
         },
         {
         en: "**Come over here**!",
-        es: "¡Ven para acá!"
+        es: "¡Ven para acá!",
+        audio: "Audio/dianne-sup-001-2.mp3",
         },
         {
         en: "She **came over** to borrow some sugar.",
-        es: "Ella se pasó por mi casa a pedir azúcar prestada."
+        es: "Ella se pasó por mi casa a pedir azúcar prestada.",
+        audio: "Audio/dianne-sup-001-3.mp3",
         },
         {
         en: "Jose **comes over** to watch football on Sundays.",
-        es: "José viene a ver fútbol los domingos."
+        es: "José viene a ver fútbol los domingos.",
+        audio: "Audio/dianne-sup-001-4.mp3",
         },
         {
         en: "Are you **coming over** tomorrow?",
-        es: "¿Vas a venir mañana?"
+        es: "¿Vas a venir mañana?",
+        audio: "Audio/dianne-sup-001-5.mp3",
         },
         {
         en: "**Come over here** and look at this.",
-        es: "Acércate y mira esto."
+        es: "Acércate y mira esto.",
+        audio: "Audio/dianne-sup-001-6.mp3",
         },
     ]
 

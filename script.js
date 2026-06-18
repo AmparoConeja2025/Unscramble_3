@@ -9,10 +9,13 @@ function enterFullscreen() {
 //document.addEventListener('click', enterFullscreen, { once: true });
 //document.addEventListener('touchstart', enterFullscreen, { once: true });
 
+
+
 // FIREWORK COLORS
 const fireworkColors = ['#FFD700', '#FF6B47', '#4ECDC4', '#45B7D1', '#FF69B4', '#32CD32', '#FF4500', '#9370DB', '#00CED1', '#FFB6C1'];
 
 // GLOBAL STATE
+let currentSupplementalAudio = null;
 let currentLessonIndex = 0;
 let lastAddedWord = null;
 let canUndo = false;
@@ -358,6 +361,7 @@ document.getElementById('randomBtn3').addEventListener('click', () => {
 
 // LOAD LESSON
 function loadLesson(index) {
+    
     const lesson = lessons[index];
     const wordBank = document.getElementById('wordBank');
     const dropZone = document.getElementById('dropZone');
@@ -570,6 +574,15 @@ function showSupplemental() {
 }
 
 function hideSupplemental() {
+  // Stop any playing supplemental audio
+  if (currentSupplementalAudio) {
+    currentSupplementalAudio.pause();
+    currentSupplementalAudio.currentTime = 0;
+    currentSupplementalAudio = null;
+    document.querySelectorAll('.supplemental-speaker.playing').forEach(btn => {
+      btn.classList.remove('playing');
+    });
+  }
   document.getElementById('supplementalOverlay').classList.remove('active');
 }
 
@@ -587,23 +600,36 @@ function updateSupplementalButton(lesson) {
   // Populate the supplemental overlay with this lesson's cards
   document.getElementById('supplementalInfinitive').textContent = lesson.phrasalInfinitive || '';
   container.innerHTML = '';
-  lesson.supplemental.forEach(item => {
+lesson.supplemental.forEach(item => {
     const card = document.createElement('div');
     card.className = 'supplemental-card';
     
     const enLine = document.createElement('div');
     enLine.className = 'supplemental-en';
-    // Convert **word** markdown to <strong>word</strong> for phrasal verb bolding
     enLine.innerHTML = item.en.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    enLine.innerHTML = enLine.innerHTML.replace(/==(.+?)==/g, '<mark class="hl-magenta">$1</mark>');
+    enLine.innerHTML = enLine.innerHTML.replace(/==(.+?)==/g, '<mark class="hl-bridge">$1</mark>');
     
     const esLine = document.createElement('div');
     esLine.className = 'supplemental-es';
     esLine.innerHTML = item.es.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-    esLine.innerHTML = esLine.innerHTML.replace(/==(.+?)==/g, '<mark class="hl-magenta">$1</mark>');
+    esLine.innerHTML = esLine.innerHTML.replace(/==(.+?)==/g, '<mark class="hl-bridge">$1</mark>');
     
     card.appendChild(enLine);
     card.appendChild(esLine);
+    
+    // Add speaker icon button if this entry has audio
+    if (item.audio) {
+      const speakerBtn = document.createElement('button');
+      speakerBtn.className = 'supplemental-speaker';
+      speakerBtn.innerHTML = '🔊';
+      speakerBtn.setAttribute('aria-label', 'Play audio');
+      speakerBtn.dataset.audioSrc = item.audio;
+      speakerBtn.addEventListener('click', () => {
+        playSupplementalAudio(speakerBtn, item.audio);
+      });
+      card.appendChild(speakerBtn);
+    }
+    
     container.appendChild(card);
   });
   
@@ -646,4 +672,41 @@ function autoSolve() {
       }, index * 120); // 120ms stagger — quick but watchable
     });
   }, 150);
+}
+
+// ============================================
+// SUPPLEMENTAL AUDIO — play example sentence audio
+// ============================================
+
+
+
+function playSupplementalAudio(buttonEl, audioSrc) {
+  // Stop any currently-playing audio
+  if (currentSupplementalAudio) {
+    currentSupplementalAudio.pause();
+    currentSupplementalAudio.currentTime = 0;
+    // Remove playing class from any button
+    document.querySelectorAll('.supplemental-speaker.playing').forEach(btn => {
+      btn.classList.remove('playing');
+    });
+  }
+  
+  // Create and play the new audio
+  const audio = new Audio(audioSrc);
+  currentSupplementalAudio = audio;
+  
+  buttonEl.classList.add('playing');
+  
+  audio.play().catch(err => {
+    console.warn('Supplemental audio failed to play:', err);
+    buttonEl.classList.remove('playing');
+  });
+  
+  // Remove playing flash when audio ends
+  audio.addEventListener('ended', () => {
+    buttonEl.classList.remove('playing');
+    if (currentSupplementalAudio === audio) {
+      currentSupplementalAudio = null;
+    }
+  });
 }
