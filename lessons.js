@@ -117,8 +117,8 @@ const lessons = [
         
         supplemental: [
     {
-        en: "**Breaking up** is hard.",
-        es: "Terminar una relación es difícil.",
+        en: "They say that **breaking up** is hard to do.",
+        es: "Dicen que terminar una relación es difícil.",
         audio: "Audio/laura-003-sup-1.mp3"
     },
     {
@@ -127,8 +127,8 @@ const lessons = [
         audio: "Audio/laura-003-sup-2.mp3"
     },
     {
-        en: "She **broke up with** him after the fight.",
-        es: "Rompió con él después de la pelea.",
+        en: "She **broke up with** him after that fight.",
+        es: "Rompió con él después de esa pelea.",
         audio: "Audio/laura-003-sup-3.mp3"
     },
     {
@@ -157,12 +157,12 @@ const lessons = [
         category: "people",
         narratorAudio: "Audio/john-004-story.mp3",
         answerAudio: "Audio/john-004-answer.mp3",
-        sentence: ["My", "father", "will", "look", "after", "her"],
-        correctOrder: ["My", "father", "will", "look", "after", "her"],
+        sentence: ["Don't","worry","my", "father", "will", "look", "after", "her"],
+        correctOrder: ["Don't","worry","my", "father", "will", "look", "after", "her"],
         english: "My father will look after her.",
         spanish: "Mi mamá está en la cama con la gripa. Mi papá la va a cuidar.",
         phrasal: ["look", "after"],
-        translation: "Mi papá la va a cuidar.",
+        translation: "No te preocupes, mi papá la va a cuidar.",
         phrasalSpanish: ["cuidar"],
         phrasalInfinitive: "to look after",
         equivalents: "cuidar a; encargarse de; velar por",
@@ -171,34 +171,35 @@ const lessons = [
     {
         en: "I'm going **to look after** all those things.",
         es: "Me voy a encargar de todas esas cosas.",
-        audio: "Audio/john-sup-004-1.mp3"
+        audio: "Audio/john-004-sup-1.mp3"
     },
     {
         en: "Thanks for **looking after** my cats.",
         es: "Gracias por cuidar a mis gatos.",
-        audio: "Audio/john-sup-004-2.mp3"
+        audio: "Audio/john-004-sup-2.mp3"
     },
     { 
         en: "The security guard **looks after** the building at night.",
         es: "El guardia de seguridad vela por el edificio por la noche.",
-        audio: "Audio/john-sup-004-3.mp3"
+        audio: "Audio/john-004-sup-3.mp3"
     },
     {
         en: "Could you **look after** my plants while I'm gone?",
         es: "¿Podrías cuidar mis plantas mientras no esté.?",
-        audio: "Audio/john-sup-004-4.mp3"
+        audio: "Audio/john-004-sup-4.mp3"
     },
     {
         en: "Jessica **looks after** the children in the afternoon.",
         es: "Jessica se encarga de los niños por las tardes.",
-        audio: "Audio/john-sup-004-5.mp3"
+        audio: "Audio/john-004-sup-5.mp3"
     },
     {
         en: "The police officers **look after** public safety.",
         es: "El policía vela por la seguridad pública.",
-        audio: "Audio/john-sup-004-6.mp3"
+        audio: "Audio/john-004-sup-6.mp3"
     }
-]    
+]     
+
 },
 {
    	  
@@ -210,7 +211,7 @@ const lessons = [
     sentence: ["I'm","glad","she", "got", "over", "it"],
     correctOrder: ["I'm","glad","she", "got", "over", "it"],
     english: "I'm glad she got over it.",
-    spanish: "Mi mamá tenía el gripe la semana pasada.",
+    spanish: "Mi mamá tenía la gripe la semana pasada.",
     phrasal: ["got", "over"],
     translation: "Me alegra que ella lo superara.",
     phrasalSpanish: ["superara"],
@@ -220,38 +221,38 @@ const lessons = [
     supplemental: [
     {
         en: "She **got over** the flu in three days.",
-        es: "Ella superó el gripe en tres días.",
-        audio: "Audio/jessica-sup-005-1.mp3"
+        es: "Ella superó la gripe en tres días.",
+        audio: "Audio/jessica-005-sup-1.mp3"
     },
     {
         en: "It took me a week **to get over** that cold.",
         es: "Me tomó una semana recuperarme de ese resfriado.",
-        audio: "Audio/jessica-sup-005-2.mp3"
+        audio: "Audio/jessica-005-sup-2.mp3"
     },
     {
         en: "He finally **got over** the illness after months of treatment.",
         es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento.",
-        audio: "Audio/jessica-sup-005-3.mp3"
+        audio: "Audio/jessica-005-sup-3.mp3"
     },
     {
         en: "Just **get over** it!",
         es: "¡Ya supératelo!",
-        audio: "Audio/jessica-sup-005-4.mp3"
+        audio: "Audio/jessica-005-sup-4.mp3"
     },
     {
         en: "Juana never **got over** the death of her brother.",
         es: "Juana nunca superó la muerte de su hermano.",
-        audio: "Audio/jessica-sup-005-5.mp3"
+        audio: "Audio/jessica-005-sup-5.mp3"
     },
     {
         en: "I hope you **get over** your cough soon.",
         es: "Espero que te recuperes de esa tos pronto.",
-        audio: "Audio/jessica-sup-005-6.mp3"
+        audio: "Audio/jessica-005-sup-6.mp3"
     },
     {
         en: "She's still trying to **get over** her breakup.",
         es: "Ella todavía está tratando de superar su ruptura.",
-        audio: "Audio/jessica-sup-005-7.mp3"
+        audio: "Audio/jessica-005-sup-7.mp3"
     }
 ]
 
@@ -285,7 +286,7 @@ const lessons = [
     },
     {
         en: "She's hoping to **come across** the perfect recipe online.",
-        es: "Ella espera dar con la receta perfecta en línea.",
+        es: "Ella espera dar con la receta perfecta en internet.",
         audio: "Audio/becky-006-sup-3.mp3"
     },
     {
