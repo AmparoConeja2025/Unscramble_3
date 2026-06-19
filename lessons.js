@@ -41,8 +41,8 @@ const lessons = [
         audio: "Audio/dianne-sup-001-5.mp3",
         },
         {
-        en: "**Come over here** and look at this.",
-        es: "Acércate y mira esto.",
+        en: "I need you to **come over here** and look at this.",
+        es: "Necesito que te acerques y mires esto.",
         audio: "Audio/dianne-sup-001-6.mp3",
         },
     ]
