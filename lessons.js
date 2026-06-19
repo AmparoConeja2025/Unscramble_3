@@ -18,32 +18,32 @@ const lessons = [
         {
         en: "Steve and his girlfriend are **coming over** for lunch tomorrow.",
         es: "Steve y su novia se van a pasar a comer mañana.",
-        audio: "Audio/dianne-sup-001-1.mp3",
+        audio: "Audio/dianne-001-sup-1.mp3",
         },
         {
         en: "Hey, **come over here**!",
         es: "¡Ey, ven para acá!",
-        audio: "Audio/dianne-sup-001-2.mp3",
+        audio: "Audio/dianne-001-sup-2.mp3",
         },
         {
         en: "Adriana **came over** yesterday to borrow some sugar.",
         es: "Ella se pasó por mi casa ayer a pedir azúcar prestada.",
-        audio: "Audio/dianne-sup-001-3.mp3",
+        audio: "Audio/dianne-001-sup-3.mp3",
         },
         {
         en: "Jose **comes over** to watch football on Sundays.",
         es: "José viene a ver fútbol los domingos.",
-        audio: "Audio/dianne-sup-001-4.mp3",
+        audio: "Audio/dianne-001-sup-4.mp3",
         },
         {
         en: "Are you **coming over** tomorrow?",
         es: "¿Vas a venir mañana?",
-        audio: "Audio/dianne-sup-001-5.mp3",
+        audio: "Audio/dianne-001-sup-5.mp3",
         },
         {
         en: "I need you to **come over here** and look at this.",
         es: "Necesito que te acerques y mires esto.",
-        audio: "Audio/dianne-sup-001-6.mp3",
+        audio: "Audio/dianne-001-sup-6.mp3",
         },
     ]
 
@@ -65,38 +65,37 @@ const lessons = [
         phrasalInfinitive: "to run into",
         equivalents: "toparse con; tropezarse con",
         supplemental: [
-        {
+    {
         en: "I'm sorry, but we **ran into** a problem with this order.",
         es: "Lo siento, pero nos topamos con un problema con este pedido.",
-        audio: "Audio/adam-sup-002-1.mp3"
-        },
-        {
+        audio: "Audio/adam-002-sup-1.mp3"
+    },
+    {
         en: "I **ran into** the coffee table and spilled my drink.",
         es: "Me tropecé con la mesa de centro y se me cayó el trago.",
-        audio:"Audio/adam-sup-002-2.mp3"
-        },
-        {
+        audio: "Audio/adam-002-sup-2.mp3"
+    },
+    {
         en: "They **ran into** bad weather on their trip",
         es: "Se toparon con mal tiempo en su viaje.",
-        audio:"Audio/adam-sup-002-3.mp3"
-        },
-        {
+        audio: "Audio/adam-002-sup-3.mp3"
+    },
+    {
         en: "She is always **running into** her friends at the mall.",
         es: "Ella siempre se tropieza con sus amigos en el centro comercial.",
-        audio:"Audio/adam-sup-002-4.mp3"
-        },
-        {
+        audio: "Audio/adam-002-sup-4.mp3"
+    },
+    {
         en: "I hope we don't **run into** trouble with him.",
         es: "Espero que no nos topemos con problemas con él.",
-        audio:"Audio/adam-sup-002-5.mp3",
-        },  
-        {
+        audio: "Audio/adam-002-sup-5.mp3"
+    },
+    {
         en: "We **ran into** some unexpected problems with that new software.",
         es: "Nos tropezamos con algunos problemas inesperados con ese nuevo software.",
-        audio:"Audio/adam-sup-002-6.mp3",
+        audio: "Audio/adam-002-sup-6.mp3"
     }
-        
-    ]
+]
 
 
     },
@@ -117,38 +116,37 @@ const lessons = [
         equivalents: "terminar con; romper con; cortar con",
         
         supplemental: [
-        {
+    {
         en: "**Breaking up** is hard.",
-        es: "Terminar una relación es difícil. ",
-        audio: "Audio/laura-sup-003-1.mp3"
-        },
-        {
+        es: "Terminar una relación es difícil.",
+        audio: "Audio/laura-003-sup-1.mp3"
+    },
+    {
         en: "He **broke up with** his girlfriend a year ago.",
         es: "Cortó con su novia hace un año.",
-        audio: "Audio/laura-sup-003-2.mp3",
-        },
-        {
+        audio: "Audio/laura-003-sup-2.mp3"
+    },
+    {
         en: "She **broke up with** him after the fight.",
         es: "Rompió con él después de la pelea.",
-        audio: "Audio/laura-sup-003-3.mp3"
-        },
-        {
+        audio: "Audio/laura-003-sup-3.mp3"
+    },
+    {
         en: "I don't want to **break up with** him yet.",
         es: "No quiero cortar con él todavía.",
-        audio: "Audio/laura-sup-003-4.mp3"
-        },
-        {
+        audio: "Audio/laura-003-sup-4.mp3"
+    },
+    {
         en: "They **broke up** because they live so far apart.",
         es: "Ellos terminaron porque viven tan lejos.",
-        audio: "Audio/laura-sup-003-5.mp3"
-         },
-        {
+        audio: "Audio/laura-003-sup-5.mp3"
+    },
+    {
         en: "He **broke up with** her over the phone.",
         es: "Él cortó con ella por teléfono.",
-        audio: "Audio/laura-sup-003-6.mp3"
-        },
-
-        ]
+        audio: "Audio/laura-003-sup-6.mp3"
+    }
+]
 
         
 
@@ -275,38 +273,36 @@ const lessons = [
     equivalents: "encontrar; toparse con; dar con;",
 
     supplemental: [
-        {
+    {
         en: "I always **come across** interesting articles online.",
         es: "Siempre encuentro artículos interesantes en internet.",
-        audio: "Audio/becky-sup-006-1.mp3"
+        audio: "Audio/becky-006-sup-1.mp3"
     },
     {
         en: "I **came across** this book at the used bookstore.",
         es: "Encontré este libro en la librería de segunda.",
-        audio: "Audio/becky-sup-006-2.mp3"
+        audio: "Audio/becky-006-sup-2.mp3"
     },
-    
     {
         en: "She's hoping to **come across** the perfect recipe online.",
         es: "Ella espera dar con la receta perfecta en línea.",
-        audio: "Audio/becky-sup-006-3.mp3"
+        audio: "Audio/becky-006-sup-3.mp3"
     },
     {
         en: "I **came across** an old friend at the mall.",
         es: "Me topé con un viejo amigo en el centro comercial.",
-        audio: "Audio/becky-sup-006-4.mp3"
+        audio: "Audio/becky-006-sup-4.mp3"
     },
     {
         en: "If you **come across** any good movies, let me know.",
         es: "Si encuentras alguna buena película, avísame.",
-        audio: "Audio/becky-sup-006-5.mp3"
+        audio: "Audio/becky-006-sup-5.mp3"
     },
     {
         en: "She **came across** her grandmother's old letters.",
         es: "Ella dio con las cartas viejas de su abuela.",
-        audio: "Audio/becky-sup-006-6.mp3"
-    },
-    
+        audio: "Audio/becky-006-sup-6.mp3"
+    }
 ]
 
 
@@ -331,32 +327,32 @@ const lessons = [
     {
         en: "I need **to go over** my notes before the exam.",
         es: "Necesito repasar mis apuntes antes del examen.",
-        audio: "Audio/john-sup-007-1.mp3"
+        audio: "Audio/john-007-sup-1.mp3"
     },
     {
         en: "Let's **go over** this contract one more time.",
         es: "Revisemos este contrato una vez más.",
-        audio: "Audio/john-sup-007-2.mp3"
+        audio: "Audio/john-007-sup-2.mp3"
     },
     {
         en: "The committee is **going over** the proposals right now.",
         es: "El comité está analizando las propuestas ahora mismo.",
-        audio: "Audio/john-sup-007-3.mp3"
+        audio: "Audio/john-007-sup-3.mp3"
     },
     {
         en: "The teacher **went over** the answers with her class.",
         es: "La maestra repasó las respuestas con su clase.",
-        audio: "Audio/john-sup-007-4.mp3"
+        audio: "Audio/john-007-sup-4.mp3"
     },
     {
         en: "I need to **go over** my personal budget before the end of the month.",
         es: "Necesito revisar mi presupuesto personal antes de fin de mes.",
-        audio: "Audio/john-sup-007-5.mp3"
+        audio: "Audio/john-007-sup-5.mp3"
     },
     {
         en: "The lawyer **went over** the contract very carefully.",
         es: "El abogado analizó el contrato cuidadosamente.",
-        audio: "Audio/john-sup-007-6.mp3"
+        audio: "Audio/john-007-sup-6.mp3"
     }
 ]
 
