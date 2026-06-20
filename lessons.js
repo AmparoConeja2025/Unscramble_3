@@ -378,28 +378,36 @@ const lessons = [
 
     supplemental: [
     {
-        en: "I won't **put up with** your lies anymore.",
-        es: "Ya no voy a aguantar tus mentiras."
+        en: "Listen, I'm not **putting up with** your lies anymore.",
+        es: "Oiga, ya no voy a aguantar tus mentiras.",
+        audio: "Audio/harry-008-sup-1.mp3",
     },
     {
         en: "How do you **put up with** that racket every day?",
-        es: "¿Cómo soportas ese bullicio todos los días?"
+        es: "¿Cómo soportas ese bullicio todos los días?",
+        audio: "Audio/harry-008-sup-2.mp3"
     },
     {
-        en: "She won't **put up with** disrespect in her classroom.",
-        es: "Ella no tolera la falta de respeto en su salón de clase."
+        en: "She doesn't **put up with** any disrespect in her classroom.",
+        es: "Ella no tolera nada de falta de respeto en su salón de clase.",
+        audio: "Audio/harry-008-sup-3.mp3"
     },
      {
-        en: "I don't know how you **put up with** your boss.",
-        es: "No sé cómo aguantas a tu jefe."
+        en: "How do you **put up with** your boss?",
+        es: "¿Cómo aguantas a tu jefe?",
+        audio: "Audio/harry-008-sup-4.mp3"
+
     },
     {
-        en: "The neighbors have to **put up with** a lot of noise.",
-        es: "Los vecinos tienen que tolerar mucho ruido."
+        en: "My neighbors have to **put up with** a lot of noise.",
+        es: "Mis vecinos tienen que tolerar mucho ruido.",
+        audio: "Audio/harry-008-sup-5.mp3"
     },
     {
-        en: "She **put up with** a lot of pain after the surgery.",
-        es: "Ella soportó mucho dolor después de la cirugía."
+        en: "Anna **put up with** a lot of pain after her surgery.",
+        es: "Anna soportó mucho dolor después de su cirugía.",
+        audio: "Audio/harry-008-sup-6.mp3"
+
     },
 ]
 
@@ -424,29 +432,35 @@ const lessons = [
 
     supplemental: [
     {
-        en: "She needs **to cut back on** sweets.",
-        es: "Necesita reducir su consumo de dulces."
+        en: "My sister needs **to cut back on** sweets.",
+        es: "Necesita reducir su consumo de dulces.",
+        audio: "Audio/mark-009-sup-1.mp3"
     },
     {
-        en: "The company is **cutting back on** expenses.",
-        es: "La empresa está recortando los gastos."
+        en: "This company is **cutting back on** expenses.",
+        es: "Esta empresa está recortando los gastos.",
+        audio: "Audio/mark-009-sup-2.mp3"
     },
     {
-        en: "The doctor told me to **cut back on** salt.",
-        es: "El médico me dijo que disminuya la sal."
+        en: "My doctor told me to **cut back on** salt.",
+        es: "Mi doctor me dijo que disminuya la sal.",
+        audio: "Audio/mark-009-sup-3.mp3"
     },
     {
-        en: "I'm trying to **cut back on** fast food.",
-        es: "Estoy tratando de reducir el comida rápida."
+        en: "I'm really trying to **cut back on** fast food.",
+        es: "Realmente estoy tratando de reducir el consumo de comida rápida.",
+        audio: "Audio/mark-009-sup-4.mp3"
     },
     {
         en: "The government is **cutting back on** public spending.",
-        es: "El gobierno está recortando el gasto público."
+        es: "El gobierno está recortando el gasto público.",
+        audio: "Audio/mark-009-sup-5.mp3"
     },
     {
         en: "You should **cut back on** the amount of red meat you eat.",
-        es: "Deberías disminuir la cantidad de carne roja que comes."
-    },
+        es: "Deberías disminuir la cantidad de carne roja que comes.",
+        audio: "Audio/mark-009-sup-6.mp3"
+    }
 ]
 
 
@@ -470,32 +484,38 @@ const lessons = [
     phrasalInfinitive: "to run out of",
     equivalents: "acabársele; quedarse sin; agotársele",
 
-    supplemental:[
+    supplemental: [
     {
         en: "We **ran out of** milk this morning.",
-        es: "Nos quedamos sin leche esta mañana."
+        es: "Nos quedamos sin leche esta mañana.",
+        audio: "Audio/dianne-010-sup-1.mp3"
     },
     {
-        en: "I **ran out of** money before the end of the trip.",
-        es: "Se me acabó el dinero antes de que terminara el viaje."
+        en: "I **ran out of** money before the end of my trip.",
+        es: "Se me acabó el dinero antes de que terminara mi viaje.",
+        audio: "Audio/dianne-010-sup-2.mp3"
     },
     {
         en: "The printer is **running out of** ink.",
-        es: "La impresora se está quedando sin tinta."
+        es: "La impresora se está quedando sin tinta.",
+        audio: "Audio/dianne-010-sup-3.mp3"
     },
     {
-        en: "She **runs out of** patience with the kids.",
-        es: "Se le acaba la paciencia con los niños."
+        en: "She **runs out of** patience with the kids sometimes.",
+        es: "Se le acaba la paciencia con los niños a veces.",
+        audio: "Audio/dianne-010-sup-4.mp3"
     },
     {
         en: "We're going to **run out of** time if we don't hurry.",
-        es: "Nos vamos a quedar sin tiempo si no nos apuramos."
+        es: "Nos vamos a quedar sin tiempo si no nos apuramos.",
+        audio: "Audio/dianne-010-sup-5.mp3"
     },
     {
-        en: "The store **ran out of** bread early in the morning.",
-        es: "La tienda se quedó sin pan temprano en la mañana."
+        en: "The store already **ran out of** bread this morning.",
+        es: "La tienda ya se quedó sin pan esta mañana.",
+        audio: "Audio/dianne-010-sup-6.mp3"
     }
-    ]
+]
 
 },
 
@@ -513,32 +533,39 @@ const lessons = [
     translation: "Vamos a superar esto.",
     phrasalSpanish: ["superar"],
     phrasalInfinitive: "to get through",
-    equivalents: "superar; salir adelante; atravesar",
+    equivalents: "superar; salir adelante; atravesar", 
+
     supplemental: [
     {
-        en: "We're going to **get through** this together.",
-        es: "Vamos a superar esto juntos."
+        en: "It's ok, we're going to **get through** this together.",
+        es: "Vamos a superar esto juntos.",
+        audio: "Audio/mark-011-sup-1.mp3"
     },
     {
-        en: "They **got through** a very difficult winter.",
-        es: "Atravesaron un invierno muy difícil."
+        en: "They **got through** a really tough winter.",
+        es: "Atravesaron un invierno muy difícil.",
+        audio: "Audio/mark-011-sup-2.mp3"
     },
     {
-        en: "Her friends helped her **get through** the difficult time.",
-        es: "Sus amigos la ayudaron a salir adelante."
+        en: "Her friends helped her **get through** it.",
+        es: "Sus amigos la ayudaron a salir adelante.",
+        audio: "Audio/mark-011-sup-3.mp3"
     },
     {
         en: "We're **getting through** this crisis thanks to our team.",
-        es: "Superamos esta crisis gracias a nuestro equipo."
+        es: "Estamos superando esta crisis gracias a nuestro equipo.",
+        audio: "Audio/mark-011-sup-4.mp3"
     },
     {
-        en: "I don't know how she **got through** that tragedy.",
-        es: "No sé cómo ella salió adelante después de esa tragedia."
+        en: "I don't know how she **got through** her divorce.",
+        es: "No sé cómo ella salió adelante después de su divorcio.",
+        audio: "Audio/mark-011-sup-5.mp3"
     },
     {
-        en: "We will **get through** the week somehow.",
-        es: "Superaremos la semana de alguna manera."
-    },
+        en: "We'll **get through** the week somehow.",
+        es: "Superaremos la semana de alguna manera.",
+        audio: "Audio/mark-011-sup-6.mp3"
+    }
 ]
 
 },
@@ -558,31 +585,44 @@ const lessons = [
     phrasalSpanish: ["nos", "llevamos"],
     phrasalInfinitive: "to get along with",
     equivalents: "llevarse bien con; congeniar con",
+
     supplemental: [
     {
         en: "We **get along with** our neighbors just fine.",
-        es: "Nos llevamos muy bien con nuestros vecinos."
+        es: "Nos llevamos muy bien con nuestros vecinos.",
+        audio: "Audio/laura-012-sup-1.mp3"
     },
     {
-        en: "She **gets along with** everyone at work.",
-        es: "Ella congenia con todos en el trabajo."
+        en: "Alicia **gets along with** everyone at work.",
+        es: "Alicia congenia con todos en el trabajo.",
+        audio: "Audio/laura-012-sup-2.mp3"
     },
     {
-        en: "I don't **get along with** my cousin.",
-        es: "No me llevo bien con mi primo."
+        en: "I don't **get along with** my cousin at all.",
+        es: "No me llevo bien con mi primo para nada.",
+        audio: "Audio/laura-012-sup-3.mp3"
     },
     {
         en: "They always **get along with** each other.",
-        es: "Siempre se llevan bien el uno con el otro."
+        es: "Siempre se llevan bien el uno con el otro.",
+        audio: "Audio/laura-012-sup-4.mp3"
     },
     {
         en: "Do you **get along with** your in-laws?",
-        es: "¿Te llevas bien con tus suegros?"
+        es: "¿Te llevas bien con tus suegros?",
+        audio: "Audio/laura-012-sup-5.mp3"
     },
     {
-        en: "It's important to **get along with** your coworkers.",
-        es: "Es importante llevarse bien con los compañeros de trabajo."
+        en: "It's really important to **get along with** your coworkers.",
+        es: "Es muy importante llevarse bien con los compañeros de trabajo.",
+        audio: "Audio/laura-012-sup-6.mp3"
     },
+    {
+        en: "I don't think they're going to **get along** very well.",
+        es: "No creo que vayan a llevarse muy bien.",
+        audio: "Audio/laura-012-sup-7.mp3"
+    },
+    
 ]
 
 },
