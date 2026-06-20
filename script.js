@@ -21,6 +21,14 @@ let currentLessonIndex = 0;
 let lastAddedWord = null;
 let canUndo = false;
 
+function flashEmptyBalance() {
+  const badge = document.getElementById('supplementalBalance');
+  if (!badge) return;
+  badge.classList.add('flash-empty');
+  setTimeout(() => badge.classList.remove('flash-empty'), 600);
+}
+
+
 function updateSlowPlayBalance(delta) {
   slowPlayBalance = Math.max(0, slowPlayBalance + delta);
   localStorage.setItem('unscramble3SlowPlayBalance', slowPlayBalance);
@@ -634,16 +642,52 @@ lesson.supplemental.forEach(item => {
     
     // Add speaker icon button if this entry has audio
     if (item.audio) {
-      const speakerBtn = document.createElement('button');
-      speakerBtn.className = 'supplemental-speaker';
-      speakerBtn.innerHTML = '🔊';
-      speakerBtn.setAttribute('aria-label', 'Play audio');
-      speakerBtn.dataset.audioSrc = item.audio;
-      speakerBtn.addEventListener('click', () => {
-        playSupplementalAudio(speakerBtn, item.audio);
-      });
-      card.appendChild(speakerBtn);
+  const speakerBtn = document.createElement('button');
+  speakerBtn.className = 'supplemental-speaker';
+  speakerBtn.innerHTML = '🔊';
+  speakerBtn.setAttribute('aria-label', 'Play audio');
+  speakerBtn.dataset.audioSrc = item.audio;
+  
+  let holdTimer = null;
+  let holdFired = false;
+  
+  speakerBtn.addEventListener('pointerdown', (e) => {
+    e.preventDefault();
+    holdFired = false;
+    speakerBtn.classList.add('holding');
+    holdTimer = setTimeout(() => {
+      holdFired = true;
+      speakerBtn.classList.remove('holding');
+      if (slowPlayBalance > 0) {
+        updateSlowPlayBalance(-1);
+        playSupplementalAudio(speakerBtn, item.audio, true);
+      } else {
+        flashEmptyBalance();
+      }
+    }, 500);
+  });
+  
+  speakerBtn.addEventListener('pointerup', () => {
+    speakerBtn.classList.remove('holding');
+    if (holdTimer) {
+      clearTimeout(holdTimer);
+      holdTimer = null;
     }
+    if (!holdFired) {
+      playSupplementalAudio(speakerBtn, item.audio, false);
+    }
+  });
+  
+  speakerBtn.addEventListener('pointerleave', () => {
+    speakerBtn.classList.remove('holding');
+    if (holdTimer) {
+      clearTimeout(holdTimer);
+      holdTimer = null;
+    }
+  });
+  
+  card.appendChild(speakerBtn);
+}
     
     container.appendChild(card);
   });
@@ -695,7 +739,7 @@ function autoSolve() {
 
 
 
-function playSupplementalAudio(buttonEl, audioSrc) {
+function playSupplementalAudio(buttonEl, audioSrc, slow = false) {
   // Stop any currently-playing audio
   if (currentSupplementalAudio) {
     currentSupplementalAudio.pause();
@@ -711,6 +755,8 @@ function playSupplementalAudio(buttonEl, audioSrc) {
   currentSupplementalAudio = audio;
   
   buttonEl.classList.add('playing');
+
+  audio.playbackRate = slow ? 0.75 : 1.0;
   
   audio.play().catch(err => {
     console.warn('Supplemental audio failed to play:', err);

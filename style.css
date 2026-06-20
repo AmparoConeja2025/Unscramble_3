@@ -2863,6 +2863,22 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
   padding: 10px;
 }
 
+.supplemental-speaker.holding {
+  background: #ffd700;
+  transform: scale(0.95);
+  transition: background 0.1s, transform 0.1s;
+}
+
+.supplemental-balance.flash-empty {
+  animation: balanceFlashEmpty 0.6s ease-out;
+}
+
+@keyframes balanceFlashEmpty {
+  0%, 100% { background: rgba(255, 255, 255, 0.25); }
+  50% { background: rgba(255, 80, 80, 0.7); }
+}
+
+
 .supplemental-card {
   position: relative;
   background: #3a5f5f;
