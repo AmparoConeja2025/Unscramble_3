@@ -16,9 +16,21 @@ const fireworkColors = ['#FFD700', '#FF6B47', '#4ECDC4', '#45B7D1', '#FF69B4', '
 
 // GLOBAL STATE
 let currentSupplementalAudio = null;
+let slowPlayBalance = parseInt(localStorage.getItem('unscramble3SlowPlayBalance') || '0', 10);
 let currentLessonIndex = 0;
 let lastAddedWord = null;
 let canUndo = false;
+
+function updateSlowPlayBalance(delta) {
+  slowPlayBalance = Math.max(0, slowPlayBalance + delta);
+  localStorage.setItem('unscramble3SlowPlayBalance', slowPlayBalance);
+  refreshSlowPlayDisplay();
+}
+
+function refreshSlowPlayDisplay() {
+  const badge = document.getElementById('supplementalBalance');
+  if (badge) badge.textContent = slowPlayBalance;
+}
 
 function updateUndoButton() {
     document.querySelectorAll('.undo-btn').forEach(undoBtn => {
@@ -318,6 +330,8 @@ function recordCompletion() {
     data[today] = (data[today] || 0) + 1;
     data.total = (data.total || 0) + 1;
     localStorage.setItem('unscramble3Stats', JSON.stringify(data));
+    // Award slow plays for first-time daily solve
+    updateSlowPlayBalance(6);
 }
 
 function showStats() {
@@ -571,6 +585,7 @@ function showSupplemental() {
   const overlay = document.getElementById('supplementalOverlay');
   // Content was already populated when the lesson loaded; just show it
   overlay.classList.add('active');
+  refreshSlowPlayDisplay();
 }
 
 function hideSupplemental() {

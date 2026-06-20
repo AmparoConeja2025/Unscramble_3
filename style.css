@@ -2837,6 +2837,26 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
   z-index: 1001;
 }
 
+.supplemental-balance {
+    position: fixed;
+    top: 58px;
+    right: 0px;
+    width: 30px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 50%;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+    pointer-events: none;
+}
+
 .supplemental-content {
   max-width: 900px;
   margin: 0px auto;
