@@ -81,8 +81,8 @@ const lessons = [
         audio: "Audio/adam-002-sup-3.mp3"
     },
     {
-        en: "She is always **running into** her friends at the mall.",
-        es: "Ella siempre se tropieza con sus amigos en el centro comercial.",
+        en: "It seems like she's always **running into** her friends when we go out.",
+        es: "Parece que siempre se tropieza con sus amigas cuando salimos.",
         audio: "Audio/adam-002-sup-4.mp3"
     },
     {

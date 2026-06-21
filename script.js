@@ -591,8 +591,10 @@ document.querySelectorAll('.undo-btn').forEach(btn => btn.addEventListener('clic
 
 function showSupplemental() {
   const overlay = document.getElementById('supplementalOverlay');
-  // Content was already populated when the lesson loaded; just show it
   overlay.classList.add('active');
+  requestAnimationFrame(() => {
+    overlay.scrollTop = 0;
+  });
   refreshSlowPlayDisplay();
 }
 
