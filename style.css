@@ -2992,6 +2992,10 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
   color: #1a3030;
 }
 
+.supplemental-speaker.playing-slow {
+    background: #7cc4e8;
+    color: #1a3030;
+}
 
 /* Disable iOS pull-to-refresh and rubber-band overscroll */
 html, body {

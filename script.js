@@ -748,26 +748,27 @@ function playSupplementalAudio(buttonEl, audioSrc, slow = false) {
     currentSupplementalAudio.currentTime = 0;
     // Remove playing class from any button
     document.querySelectorAll('.supplemental-speaker.playing').forEach(btn => {
-      btn.classList.remove('playing');
+      btn.classList.remove('playing', 'playing-slow');
     });
   }
   
   // Create and play the new audio
   const audio = new Audio(audioSrc);
   currentSupplementalAudio = audio;
-  
+
   buttonEl.classList.add('playing');
+if (slow) buttonEl.classList.add('playing-slow');
 
   audio.playbackRate = slow ? 0.75 : 1.0;
   
   audio.play().catch(err => {
     console.warn('Supplemental audio failed to play:', err);
-    buttonEl.classList.remove('playing');
+    buttonEl.classList.remove('playing', 'playing-slow');
   });
   
   // Remove playing flash when audio ends
   audio.addEventListener('ended', () => {
-    buttonEl.classList.remove('playing');
+    buttonEl.classList.remove('playing', 'playing-slow');
     if (currentSupplementalAudio === audio) {
       currentSupplementalAudio = null;
     }
