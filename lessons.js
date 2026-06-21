@@ -793,7 +793,40 @@ const lessons = [
     translation: "Lo voy a investigar.",
     phrasalSpanish: ["investigar"],
     phrasalInfinitive: "to look into",
-    equivalents: "investigar; averiguar; indagar"
+    equivalents: "investigar; averiguar; indagar",
+
+    supplemental: [
+    {
+        en: "The police are **looking into** the robbery.",
+        es: "La policía está investigando el robo.",
+        audio: "Audio/harry-016-sup-1.mp3"
+    },
+    {
+        en: "I'll **look into** it and get back to you tomorrow.",
+        es: "Voy a averiguar y te aviso mañana.",
+        audio: "Audio/harry-016-sup-2.mp3"
+    },
+    {
+        en: "Have you **looked into** the cost of flights to Quito?",
+        es: "¿Ya averiguaste cuánto cuestan los vuelos a Quito?",
+        audio: "Audio/harry-016-sup-3.mp3"
+    },
+    {
+        en: "The manager promised to **look into** my complaint.",
+        es: "El gerente prometió revisar mi queja.",
+        audio: "Audio/harry-016-sup-4.mp3"
+    },
+    {
+        en: "You should **look into** that strange noise the motor is making.",
+        es: "Deberías revisar ese ruido raro que hace el motor.",
+        audio: "Audio/harry-016-sup-5.mp3"
+    },
+    {
+        en: "We're **looking into** buying a house in Cuenca.",
+        es: "Estamos viendo la posibilidad de comprar una casa en Cuenca.",
+        audio: "Audio/harry-016-sup-6.mp3"
+    }
+]
 
 },{
     id: 17,
@@ -809,7 +842,40 @@ const lessons = [
     translation: "Me deja salirme con la mía.",
     phrasalSpanish: ["salirme", "con", "la", "mía"],
     phrasalInfinitive: "to get away with",
-    equivalents: "salirse con la suya; salir impune; librarse"
+    equivalents: "salirse con la suya; salir impune; librarse",
+
+    supplemental: [
+    {
+        en: "I can't believe he **got away with** lying to the teacher.",
+        es: "No puedo creer que se haya salido con la suya mintiéndole al profesor.",
+        audio: "Audio/dianne-017-sup-1.mp3"
+    },
+    {
+    en: "Don't think you'll **get away with** that excuse ever again!",
+    es: "¡No creas que jamás te vas a salir con esa excusa!",
+    audio: "Audio/dianne-017-sup-2.mp3"
+},
+    {
+        en: "The thieves **got away with** thousands of dollars.",
+        es: "Los ladrones se llevaron miles de dólares.",
+        audio: "Audio/dianne-017-sup-3.mp3"
+    },
+    {
+        en: "How does she **get away with** wearing pajamas to work?",
+        es: "¿Cómo hace ella para venir al trabajo en pijama y que no le digan nada?",
+        audio: "Audio/dianne-017-sup-4.mp3"
+    },
+    {
+        en: "You won't **get away with** cheating on this exam.",
+        es: "No te vas a salir con la tuya haciendo trampa en este examen.",
+        audio: "Audio/dianne-017-sup-5.mp3"
+    },
+    {
+        en: "My little brother always **gets away with** everything.",
+        es: "A mi hermanito siempre se le pasa todo.",
+        audio: "Audio/dianne-017-sup-6.mp3"
+    }
+]
 
 },
 
@@ -819,15 +885,48 @@ const lessons = [
     category: "people",
     narratorAudio: "Audio/mark-018-story.mp3",
     answerAudio: "Audio/mark-018-answer.mp3",
-    sentence: ["She", "likes", "to", "keep", "to", "herself"],
-    correctOrder: ["She", "likes", "to", "keep", "to", "herself"],
-    english: "She likes to keep to herself.",
+    sentence: ["She", "likes", "keeping", "to", "herself"],
+    correctOrder: ["She", "likes", "keeping", "to", "herself"],
+    english: "She likes keeping to herself.",
     spanish: "Le gusta mantenerse aparte.",
-    phrasal: ["keep", "to"],
+    phrasal: ["keeping", "to"],
     translation: "Le gusta mantenerse aparte.",
     phrasalSpanish: ["mantenerse", "aparte"],
     phrasalInfinitive: "to keep to oneself",
-    equivalents: "mantenerse aparte; no mezclarse"  
+    equivalents: "mantenerse aparte; no mezclarse; guardarse algo; no contar",
+    
+    supplemental: [
+    {
+        en: "My new neighbor **keeps to himself** most of the time.",
+        es: "Mi vecino nuevo es bastante reservado la mayor parte del tiempo.",
+        audio: "Audio/mark-018-sup-1.mp3"
+    },
+    {
+        en: "My brother **keeps to himself** when the family visits.",
+        es: "Mi hermano se mantiene aparte cuando viene la familia de visita.",
+        audio: "Audio/mark-018-sup-2.mp3"
+},
+    {
+        en: "Please **keep** this **to yourself** — don't tell anyone.",
+        es: "Por favor guárdate esto para ti — no se lo cuentes a nadie.",
+        audio: "Audio/mark-018-sup-3.mp3"
+    },
+    {
+        en: "He **kept** his opinion **to himself** during the meeting.",
+        es: "Él se guardó su opinión durante la reunión.",
+        audio: "Audio/mark-018-sup-4.mp3"
+    },
+    {
+        en: "I learned to **keep** my problems **to myself**.",
+        es: "Aprendí a guardarme mis problemas.",
+        audio: "Audio/mark-018-sup-5.mp3"
+    },
+    {
+        en: "You should **keep** that information **to yourself** for now.",
+        es: "Deberías guardarte esa información por ahora.",
+        audio: "Audio/mark-018-sup-6.mp3"
+    }
+]
 
 },
 
@@ -837,15 +936,48 @@ const lessons = [
     category: "people",
     narratorAudio: "Audio/laura-019-story.mp3",
     answerAudio: "Audio/laura-019-answer.mp3",
-    sentence: ["I", "have", "to", "stick", "to", "my", "diet"],
-    correctOrder: ["I", "have", "to", "stick", "to", "my", "diet"],
-    english: "I have to stick to my diet.",
+    sentence: ["Sticking","to", "my","diet",  "requires", "discipline", ],
+    correctOrder: ["Sticking","to", "my","diet", "requires", "discipline",],
+    english: "Sticking to my diet requires discipline.",
     spanish: "Tengo ganas de comerme un dulce, pero no lo voy a comer.",
-    phrasal: ["stick", "to"],
-    translation: "Tengo que apegarme a mi dieta.",
+    phrasal: ["Sticking", "to"],
+    translation: "Apegarme a mi dieta require disciplina.",
     phrasalSpanish: ["apegarme"],
     phrasalInfinitive: "to stick to",
-    equivalents: "apegarse a; ceñirse a; mantenerse en"
+    equivalents: "apegarse a; ceñirse a; mantenerse en",
+
+    supplemental: [
+    {
+        en: "It's hard for me to **stick to** my diet, especially on weekends.",
+        es: "Es difícil para mi mantener una dieta los fines de semana.",
+        audio: "Audio/laura-019-sup-1.mp3"
+    },
+    {
+        en: "This time, please **stick to** the rules during the game.",
+        es: "Por favor respeta las reglas durante el juego.",
+        audio: "Audio/laura-019-sup-2.mp3"
+    },
+    {
+        en: "I'm really trying to **stick to** my budget this month.",
+        es: "Estoy tratando de cumplir con mi presupuesto este mes.",
+        audio: "Audio/laura-019-sup-3.mp3"
+    },
+    {
+        en: "Let's **stick to** the original plan.",
+        es: "Sigamos con el plan original.",
+        audio: "Audio/laura-019-sup-4.mp3"
+    },
+    {
+        en:"Jessica always **sticks to** her promises.",
+        es: "Ella siempre cumple sus promesas.",
+        audio: "Audio/laura-019-sup-5.mp3"
+    },
+    {
+        en: "We need to **stick to** the schedule today.",
+        es: "Tenemos que respetar el horario hoy.",
+        audio: "Audio/laura-019-sup-6.mp3"
+    }
+]
 
 },
 
@@ -863,7 +995,40 @@ const lessons = [
     translation: "No tengo ganas de irme.",
     phrasalSpanish: ["tengo", "ganas", "de"],
     phrasalInfinitive: "to feel like",
-    equivalents: "tener ganas de; apetecerle"
+    equivalents: "tener ganas de; apetecerle",
+
+    supplemental: [
+    {
+        en: "I **feel like** having pizza tonight.",
+        es: "Tengo ganas de comer pizza esta noche.",
+        audio: "Audio/john-020-sup-1.mp3"
+    },
+    {
+        en: "Hey, do you **feel like** going for a walk?",
+        es: "¿Tienes ganas de ir a caminar?",
+        audio: "Audio/john-020-sup-2.mp3"
+    },
+    {
+        en: "She doesn't **feel like** talking right now.",
+        es: "Ella no tiene ganas de hablar en este momento.",
+        audio: "Audio/john-020-sup-3.mp3"
+    },
+    {
+        en: "I **feel like** a cold beer after work.",
+        es: "Me provoca una cerveza fría después del trabajo.",
+        audio: "Audio/john-020-sup-4.mp3"
+    },
+    {
+        en: "The kids say they **feel like** watching a movie tonight.",
+        es: "Los niños dicen que tienen ganas de ver una película esta noche.",
+        audio: "Audio/john-020-sup-5.mp3"
+    },
+    {
+        en: "I really don't **feel like** cooking today.",
+        es: "la verdad es que hoy no tengo ganas de cocinar.",
+        audio: "Audio/john-020-sup-6.mp3"
+    }
+]
 },
 
 {

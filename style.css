@@ -2752,14 +2752,14 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
     padding: 18px 24px 10px;
     border-radius: 16px;
     text-align: center;
-    width: 55%;
+    width: 60%;
     max-width: 700px;
     opacity: 0;
     transition: opacity 0.5s ease-in;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.40);
     position: fixed;
     bottom:11%;
-    left: 56%;
+    left: 59%;
     transform: translateX(-50%);
     z-index: 100;
 }

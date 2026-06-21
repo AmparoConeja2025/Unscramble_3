@@ -759,7 +759,7 @@ function playSupplementalAudio(buttonEl, audioSrc, slow = false) {
   buttonEl.classList.add('playing');
 if (slow) buttonEl.classList.add('playing-slow');
 
-  audio.playbackRate = slow ? 0.75 : 1.0;
+  audio.playbackRate = slow ? 0.7 : 1.0;
   
   audio.play().catch(err => {
     console.warn('Supplemental audio failed to play:', err);
