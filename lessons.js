@@ -642,31 +642,38 @@ const lessons = [
     phrasalSpanish: ["Me", "voy"],
     phrasalInfinitive: "to take off",
     equivalents: "irse; marcharse; salir",
+
     supplemental: [
     {
         en: "I'm going to **take off** now. See you tomorrow.",
-        es: "Ya me voy. Nos vemos mañana."
+        es: "Ya me voy. Nos vemos mañana.",
+        audio: "Audio/jessica-013-sup-1.mp3"
     },
     {
-        en: "Don't **take off** without saying goodbye.",
-        es: "No marches sin despedirse."
+        en: "Hey, don't **take off** without saying goodbye.",
+        es: "Oye, no te vayas sin despedirte.",
+        audio: "Audio/jessica-013-sup-2.mp3"
     },
     {
         en: "Let's **take off** early to avoid traffic.",
-        es: "Salgamos temprano para evitar el tráfico."
+        es: "Salgamos temprano para evitar el tráfico.",
+        audio: "Audio/jessica-013-sup-3.mp3"
     },
     {
         en: "He always **takes off** right after the meetings.",
-        es: "Él siempre se va justo después de las reuniones."
+        es: "Él siempre se va justo después de las reuniones.",
+        audio: "Audio/jessica-013-sup-4.mp3"
     },
     {
         en: "They **took off** before the party ended.",
-        es: "Ellos se marcharon antes de que terminara la fiesta."
+        es: "Ellos se marcharon antes de que terminara la fiesta.",
+        audio: "Audio/jessica-013-sup-5.mp3"
     },
     {
         en: "What time are you going to **take off**?",
-        es: "¿A qué hora te vas?"
-    },
+        es: "¿A qué hora te vas?",
+        audio: "Audio/jessica-013-sup-6.mp3"
+    }
 ]
 
 },
@@ -685,31 +692,38 @@ const lessons = [
     phrasalSpanish: ["caer", "en"],
     phrasalInfinitive: "to fall for",
     equivalents: "caer en; tragárselo; creérselo",
+
     supplemental: [
     {
         en: "I can't believe you **fell for** that.",
-        es: "No puedo creer que cayeras en eso."
+        es: "No puedo creer que cayeras en eso.",
+        audio: "Audio/becky-014-sup-1.mp3"
     },
     {
         en: "She **fell for** his lies.",
-        es: "Ella cayó en sus mentiras."
+        es: "Ella cayó en sus mentiras.",
+        audio: "Audio/becky-014-sup-2.mp3"
     },
     {
         en: "Don't **fall for** it — it's a scam.",
-        es: "No caigas en eso — es una estafa."
+        es: "No caigas en eso — es una estafa.",
+        audio: "Audio/becky-014-sup-3.mp3"
     },
     {
         en: "He **fell for** the oldest trick in the book.",
-        es: "Él cayó en el truco más viejo del libro."
+        es: "Él cayó en el truco más viejo del libro.",
+        audio: "Audio/becky-014-sup-4.mp3"
     },
     {
-        en: "They **fell for** the sales pitch.",
-        es: "Ellos cayeron en el discurso de ventas."
+        en: "They **fell for** that sales pitch.",
+        es: "Ellos cayeron en el discurso de ventas.",
+        audio: "Audio/becky-014-sup-5.mp3"
     },
     {
         en: "I almost **fell for** your excuse.",
-        es: "Casi caigo en tu excusa."
-    },
+        es: "Casi caigo en tu excusa.",
+        audio: "Audio/becky-014-sup-6.mp3"
+    }
 ]
 
 },
@@ -728,7 +742,40 @@ const lessons = [
     translation: "Necesitamos encontrar algunas ideas.",
     phrasalSpanish: ["encontrar"],
     phrasalInfinitive: "to come up with",
-    equivalents: "encontrar; conseguir; producir"
+    equivalents: "encontrar; conseguir; producir",
+
+    supplemental: [
+    {
+        en: "How did you **come up with** that idea?",
+        es: "¿Cómo se te ocurrió esa idea?",
+        audio: "Audio/john-015-sup-1.mp3"
+    },
+    {
+        en: "She **came up with** a brilliant solution during the meeting.",
+        es: "Se le ocurrió una solución brillante en plena reunión.",
+        audio: "Audio/john-015-sup-2.mp3"
+    },
+    {
+        en: "He always **comes up with** an excuse when it's time to pay.",
+        es: "Siempre inventa una excusa a la hora de pagar.",
+        audio: "Audio/john-015-sup-3.mp3"
+    },
+    {
+        en: "I need to **come up with** the rent by Monday.",
+        es: "Tengo que conseguir la plata del arriendo para el lunes.",
+        audio: "Audio/john-015-sup-4.mp3"
+    },
+    {
+        en: "Let's **come up with** a plan before mom gets home.",
+        es: "Inventémonos un plan antes de que llegue mi mamá.",
+        audio: "Audio/john-015-sup-5.mp3"
+    },
+    {
+        en: "Don't worry — I'll **come up with** something.",
+        es: "Tranquilo, ya se me ocurrirá algo.",
+        audio: "Audio/john-015-sup-6.mp3"
+    }
+]
 
 },
 
