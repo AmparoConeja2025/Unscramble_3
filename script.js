@@ -17,6 +17,7 @@ const fireworkColors = ['#FFD700', '#FF6B47', '#4ECDC4', '#45B7D1', '#FF69B4', '
 // GLOBAL STATE
 let currentSupplementalAudio = null;
 let slowPlayBalance = parseInt(localStorage.getItem('unscramble3SlowPlayBalance') || '0', 10);
+let favorites = JSON.parse(localStorage.getItem('unscramble3Favorites') || '[]');
 let currentLessonIndex = 0;
 let lastAddedWord = null;
 let canUndo = false;
@@ -33,6 +34,24 @@ function updateSlowPlayBalance(delta) {
   slowPlayBalance = Math.max(0, slowPlayBalance + delta);
   localStorage.setItem('unscramble3SlowPlayBalance', slowPlayBalance);
   refreshSlowPlayDisplay();
+}
+
+function toggleFavorite(lessonIndex) {
+  const existingIndex = favorites.indexOf(lessonIndex);
+  if (existingIndex === -1) {
+    favorites.unshift(lessonIndex);
+  } else {
+    favorites.splice(existingIndex, 1);
+  }
+  localStorage.setItem('unscramble3Favorites', JSON.stringify(favorites));
+}
+
+function isFavorite(lessonIndex) {
+  return favorites.indexOf(lessonIndex) !== -1;
+}
+
+function getFavorites() {
+  return favorites.slice();
 }
 
 function refreshSlowPlayDisplay() {
