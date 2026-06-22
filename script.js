@@ -59,6 +59,15 @@ function refreshSlowPlayDisplay() {
   if (badge) badge.textContent = slowPlayBalance;
 }
 
+function refreshFavoriteButton() {
+  const btn = document.getElementById('favoriteButton');
+  if (!btn) return;
+  const isFav = isFavorite(currentLessonIndex);
+  btn.classList.toggle('is-favorite', isFav);
+  btn.innerHTML = isFav ? '♥' : '♡';
+  btn.setAttribute('aria-label', isFav ? 'Remove from favorites' : 'Add to favorites');
+}
+
 function updateUndoButton() {
     document.querySelectorAll('.undo-btn').forEach(undoBtn => {
         if (canUndo && lastAddedWord) {
@@ -374,6 +383,11 @@ document.getElementById('statsCloseBtn3').addEventListener('click', () => {
     document.getElementById('statsOverlay3').style.display = 'none';
 });
 
+document.getElementById('favoriteButton').addEventListener('click', () => {
+  toggleFavorite(currentLessonIndex);
+  refreshFavoriteButton();
+});
+
 // AUTO-SOLVE EVENT LISTENER (green dot → instant solve)
 document.getElementById('completionDot').addEventListener('click', autoSolve);
 
@@ -449,6 +463,7 @@ function loadLesson(index) {
     updateNavButtons();
     setupInteraction();
     updateCompletionDot();
+    refreshFavoriteButton();
 }
 
 // EVENT LISTENERS

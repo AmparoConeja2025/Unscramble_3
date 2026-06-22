@@ -82,6 +82,33 @@ button, img, .word-tile {
     user-select: none;
 }
 
+/* FAVORITE HEART BUTTON */
+.favorite-btn {
+    position: absolute;
+    top: 58px;
+    left: 15px;
+    background: transparent;
+    color: #374151;
+    font-size: 28px;
+    line-height: 1;
+    padding: 4px 8px;
+    border: none;
+    cursor: pointer;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.favorite-btn:active {
+    transform: scale(0.9);
+}
+
+.favorite-btn.is-favorite {
+    color: #e74c3c;
+}
+
 /* CHECK BUTTON */
 .check-btn {
     position: absolute;
