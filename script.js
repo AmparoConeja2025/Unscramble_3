@@ -70,7 +70,7 @@ function populateFavoritesList() {
     
     const label = document.createElement('div');
     label.className = 'favorites-row-label';
-    label.textContent = `Lesson ${lessonIndex + 1}: ${lesson.phrasalInfinitive || lesson.englishAnswer || 'Lesson ' + (lessonIndex + 1)}`;
+    label.innerHTML = `Lesson ${lessonIndex + 1}: <span class="favorites-row-infinitive">${lesson.phrasalInfinitive || lesson.englishAnswer || 'Lesson ' + (lessonIndex + 1)}</span>`;
     
     const removeBtn = document.createElement('button');
     removeBtn.className = 'favorites-row-remove';

@@ -1353,6 +1353,9 @@ const lessons = [
     english: "He loves to stand around all day.",
     spanish: "Jose siempre está desocupado.", 
     translation: "Le gusta estar parado todo el día.",
+    phrasalSpanish: ["estar", "parado"],
+    phrasalInfinitive: "to stand around",
+    equivalents: "estar parado; quedarse parado; haraganear; perder el tiempo",
  
 },
 
