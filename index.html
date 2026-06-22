@@ -15,7 +15,9 @@
     <button class="reset-btn" id="resetButton" onclick="loadLesson(currentLessonIndex)">Reset</button>
     <button class="help-btn" id="helpButton">Help</button>
     <button class="stats-btn" id="statsButton">Stats</button>
+    <button class="favorites-list-btn" id="favoritesListButton">Favs</button>
     <button class="favorite-btn" id="favoriteButton" aria-label="Add to favorites">♡</button>
+
     <!-- QA: Hidden audio replay (dev only) -->
     <button class="qa-replay-btn" id="qaReplayBtn" aria-hidden="true"></button>
 
@@ -113,6 +115,19 @@
 
     </div>
 </div>
+
+<!-- Favorites list overlay -->
+<div id="favoritesOverlay" class="favorites-overlay">
+    <button class="favorites-close" onclick="hideFavoritesOverlay()" aria-label="Close">×</button>
+    <h2 class="favorites-title">Favorites</h2>
+    <div id="favoritesList" class="favorites-list">
+        <!-- Rows injected dynamically by JS when overlay opens -->
+    </div>
+    <div id="favoritesEmpty" class="favorites-empty">
+        No favorites yet. Tap the ♡ on any lesson to add it.
+    </div>
+</div>
+
 
 <!-- STATS OVERLAY -->
 <div class="stats-overlay-3" id="statsOverlay3" style="display: none;">

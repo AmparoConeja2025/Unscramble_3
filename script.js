@@ -36,6 +36,69 @@ function updateSlowPlayBalance(delta) {
   refreshSlowPlayDisplay();
 }
 
+function showFavoritesOverlay() {
+  populateFavoritesList();
+  document.getElementById('favoritesOverlay').classList.add('active');
+}
+
+function hideFavoritesOverlay() {
+  document.getElementById('favoritesOverlay').classList.remove('active');
+}
+
+
+function populateFavoritesList() {
+  const overlay = document.getElementById('favoritesOverlay');
+  const list = document.getElementById('favoritesList');
+  const favs = getFavorites();
+  
+  list.innerHTML = '';
+  
+  if (favs.length === 0) {
+    overlay.classList.add('is-empty');
+    return;
+  }
+  
+  overlay.classList.remove('is-empty');
+  
+  favs.forEach(lessonIndex => {
+    const lesson = lessons[lessonIndex];
+    if (!lesson) return;
+    
+    const row = document.createElement('div');
+    row.className = 'favorites-row';
+    row.dataset.lessonIndex = lessonIndex;
+    
+    const label = document.createElement('div');
+    label.className = 'favorites-row-label';
+    label.textContent = `Lesson ${lessonIndex + 1}: ${lesson.phrasalInfinitive || lesson.englishAnswer || 'Lesson ' + (lessonIndex + 1)}`;
+    
+    const removeBtn = document.createElement('button');
+    removeBtn.className = 'favorites-row-remove';
+    removeBtn.innerHTML = '×';
+    removeBtn.setAttribute('aria-label', 'Remove from favorites');
+    
+    row.appendChild(label);
+    row.appendChild(removeBtn);
+    list.appendChild(row);
+    // Click row → jump to that lesson
+    label.addEventListener('click', () => {
+      hideFavoritesOverlay();
+      currentLessonIndex = lessonIndex;
+      loadLesson(currentLessonIndex);
+    });
+    
+    // Click X → remove favorite, refresh list
+    removeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleFavorite(lessonIndex);
+      populateFavoritesList();
+      refreshFavoriteButton();
+    });
+
+  });
+}
+
+
 function toggleFavorite(lessonIndex) {
   const existingIndex = favorites.indexOf(lessonIndex);
   if (existingIndex === -1) {
@@ -387,6 +450,8 @@ document.getElementById('favoriteButton').addEventListener('click', () => {
   toggleFavorite(currentLessonIndex);
   refreshFavoriteButton();
 });
+
+document.getElementById('favoritesListButton').addEventListener('click', showFavoritesOverlay);
 
 // AUTO-SOLVE EVENT LISTENER (green dot → instant solve)
 document.getElementById('completionDot').addEventListener('click', autoSolve);
