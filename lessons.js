@@ -16,8 +16,8 @@ const lessons = [
         equivalents: "venir; pasarse por; acercarse a",
         supplemental: [
         {
-        en: "Steve and his girlfriend are **coming over** for lunch tomorrow.",
-        es: "Steve y su novia se van a pasar a comer mañana.",
+        en: "Are Steve and his girlfriend **coming over** for lunch tomorrow?",
+        es: "¿Steve y su novia se van a pasar a comer mañana?",
         audio: "Audio/dianne-001-sup-1.mp3",
         },
         {
@@ -26,7 +26,7 @@ const lessons = [
         audio: "Audio/dianne-001-sup-2.mp3",
         },
         {
-        en: "Adriana **came over** yesterday to borrow some sugar.",
+        en: "Susana **came over** yesterday to borrow some sugar.",
         es: "Ella se pasó por mi casa ayer a pedir azúcar prestada.",
         audio: "Audio/dianne-001-sup-3.mp3",
         },
@@ -66,8 +66,8 @@ const lessons = [
         equivalents: "toparse con; tropezarse con",
         supplemental: [
     {
-        en: "I'm sorry, but we **ran into** a problem with this order.",
-        es: "Lo siento, pero nos topamos con un problema con este pedido.",
+        en: "I'm sorry, but we **ran into** a little problem with this order.",
+        es: "Lo siento, pero nos topamos con un pequeño problema con este pedido.",
         audio: "Audio/adam-002-sup-1.mp3"
     },
     {
@@ -81,8 +81,8 @@ const lessons = [
         audio: "Audio/adam-002-sup-3.mp3"
     },
     {
-        en: "It seems like she's always **running into** her friends when we go out.",
-        es: "Parece que siempre se tropieza con sus amigas cuando salimos.",
+        en: "It seems like we're always **running into** her friends when we go out.",
+        es: "Parece que siempre nos tropezamos con sus amigas cuando salimos.",
         audio: "Audio/adam-002-sup-4.mp3"
     },
     {
@@ -169,8 +169,8 @@ const lessons = [
     
         supplemental: [
     {
-        en: "I'm going **to look after** all those things.",
-        es: "Me voy a encargar de todas esas cosas.",
+        en: "I'm going **to look after** everything for you.",
+        es: "Me voy a encargar de todo para ti.",
         audio: "Audio/john-004-sup-1.mp3"
     },
     {
@@ -230,7 +230,7 @@ const lessons = [
         audio: "Audio/jessica-005-sup-2.mp3"
     },
     {
-        en: "He finally **got over** the illness after months of treatment.",
+        en: "She finally **got over** the illness after months of treatment.",
         es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento.",
         audio: "Audio/jessica-005-sup-3.mp3"
     },
@@ -240,8 +240,8 @@ const lessons = [
         audio: "Audio/jessica-005-sup-4.mp3"
     },
     {
-        en: "Juana never **got over** the death of her brother.",
-        es: "Juana nunca superó la muerte de su hermano.",
+        en: "Juana never really **got over** the death of her brother.",
+        es: "Juana nunca superó por cpmpleto la muerte de su hermano.",
         audio: "Audio/jessica-005-sup-5.mp3"
     },
     {
@@ -280,8 +280,8 @@ const lessons = [
         audio: "Audio/becky-006-sup-1.mp3"
     },
     {
-        en: "I **came across** this book at the used bookstore.",
-        es: "Encontré este libro en la librería de segunda.",
+        en: "I **came across** this really old book at the used bookstore.",
+        es: "Encontré este libro súper antiguo en la librería de segunda.",
         audio: "Audio/becky-006-sup-2.mp3"
     },
     {
@@ -300,8 +300,8 @@ const lessons = [
         audio: "Audio/becky-006-sup-5.mp3"
     },
     {
-        en: "She **came across** her grandmother's old letters.",
-        es: "Ella dio con las cartas viejas de su abuela.",
+        en: "Elena **came across** her grandmother's old love letters.",
+        es: "Ella dio con las cartas de amor viejas de su abuela.",
         audio: "Audio/becky-006-sup-6.mp3"
     }
 ]
@@ -330,19 +330,19 @@ const lessons = [
         es: "Necesito repasar mis apuntes antes del examen.",
         audio: "Audio/john-007-sup-1.mp3"
     },
-    {
+    {  
         en: "Let's **go over** this contract one more time.",
         es: "Revisemos este contrato una vez más.",
         audio: "Audio/john-007-sup-2.mp3"
     },
     {
-        en: "The committee is **going over** the proposals right now.",
-        es: "El comité está analizando las propuestas ahora mismo.",
+        en: "The committee is **going over** our proposal right now.",
+        es: "El comité está analizando nuestra propuesta ahora mismo.",
         audio: "Audio/john-007-sup-3.mp3"
     },
     {
-        en: "The teacher **went over** the answers with her class.",
-        es: "La maestra repasó las respuestas con su clase.",
+        en: "Mrs. Johnson already **went over** my answers with me.",
+        es: "Sra. Johnson ya repasó mis respuestas conmigo.",
         audio: "Audio/john-007-sup-4.mp3"
     },
     {
@@ -351,7 +351,7 @@ const lessons = [
         audio: "Audio/john-007-sup-5.mp3"
     },
     {
-        en: "The lawyer **went over** the contract very carefully.",
+        en: "My lawyer **went over** the contract very carefully.",
         es: "El abogado analizó el contrato cuidadosamente.",
         audio: "Audio/john-007-sup-6.mp3"
     }
@@ -433,7 +433,7 @@ const lessons = [
     supplemental: [
     {
         en: "My sister needs **to cut back on** sweets.",
-        es: "Necesita reducir su consumo de dulces.",
+        es: "Mi hermana necesita reducir su consumo de dulces.",
         audio: "Audio/mark-009-sup-1.mp3"
     },
     {
@@ -547,8 +547,8 @@ const lessons = [
         audio: "Audio/mark-011-sup-2.mp3"
     },
     {
-        en: "Her friends helped her **get through** it.",
-        es: "Sus amigos la ayudaron a salir adelante.",
+        en: "Her friends helped her **get through** a difficult time.",
+        es: "Sus amigas le ayudaron a salir adelante en un momento difícil.",
         audio: "Audio/mark-011-sup-3.mp3"
     },
     {
