@@ -27,7 +27,7 @@ const lessons = [
         },
         {
         en: "Susana **came over** yesterday to borrow some sugar.",
-        es: "Ella se pasó por mi casa ayer a pedir azúcar prestada.",
+        es: "Susana se pasó por mi casa ayer a pedir azúcar prestada.",
         audio: "Audio/dianne-001-sup-3.mp3",
         },
         {

@@ -3,8 +3,9 @@
   "short_name": "Unscramble",
   "start_url": ".",
   "display": "standalone",
+  "orientation": "landscape",
   "background_color": "#4B5563",
-  "theme_color": "#4B5563",
+  "theme_color": "#4a8080",
   "description": "An English word unscrambling game.",
   "icons": [
     {
