@@ -335,8 +335,8 @@ const lessons = [
         audio: "Audio/john-007-sup-2.mp3"
     },
     {
-        en: "Do we have to **go over** this again?",
-        es: "¿Tenemos que repasar esto otra vez? ",
+        en: "Do we really have to **go over** this again?",
+        es: "¿Realmente tenemos que repasar esto otra vez? ",
         audio: "Audio/john-007-sup-3.mp3"
     },
     {
