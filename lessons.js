@@ -169,8 +169,8 @@ const lessons = [
     
         supplemental: [
     {
-        en: "I'm going **to look after** everything for you.",
-        es: "Me voy a encargar de todo para ti.",
+        en: "Who's gonna **look after** my stuff when I'm gone?",
+        es: "¿Quién se va a encargar de mis cosas cuando ya no esté?",
         audio: "Audio/john-004-sup-1.mp3"
     },
     {
@@ -179,13 +179,13 @@ const lessons = [
         audio: "Audio/john-004-sup-2.mp3"
     },
     { 
-        en: "The security guard **looks after** the building at night.",
-        es: "El guardia de seguridad vela por el edificio por la noche.",
+        en: "I **look after** my nephew for my sister sometimes.",
+        es: "A veces me encargo de mi sobrino por mi hermana.",
         audio: "Audio/john-004-sup-3.mp3"
     },
     {
         en: "Could you **look after** my plants while I'm gone?",
-        es: "¿Podrías cuidar mis plantas mientras no esté.?",
+        es: "¿Podrías cuidar mis plantas mientras no esté?",
         audio: "Audio/john-004-sup-4.mp3"
     },
     {
@@ -194,8 +194,8 @@ const lessons = [
         audio: "Audio/john-004-sup-5.mp3"
     },
     {
-        en: "The police officers **look after** public safety.",
-        es: "El policía vela por la seguridad pública.",
+        en: "The nurses do a good job of **looking after** their patients.",
+        es: "Las enfermeras hacen un buen trabajo velando por sus pacientes.",
         audio: "Audio/john-004-sup-6.mp3"
     }
 ]     
@@ -250,8 +250,8 @@ const lessons = [
         audio: "Audio/jessica-005-sup-6.mp3"
     },
     {
-        en: "She's still trying to **get over** her breakup.",
-        es: "Ella todavía está tratando de superar su ruptura.",
+        en: "She's still trying to **get over** her divorce.",
+        es: "Ella todavía está tratando de superar su divorcio.",
         audio: "Audio/jessica-005-sup-7.mp3"
     }
 ]
@@ -331,13 +331,13 @@ const lessons = [
         audio: "Audio/john-007-sup-1.mp3"
     },
     {  
-        en: "Let's **go over** this contract one more time.",
-        es: "Revisemos este contrato una vez más.",
+        en: "Let's **go over** these instructions one more time.",
+        es: "Revisemos estas instucciones una vez más.",
         audio: "Audio/john-007-sup-2.mp3"
     },
     {
-        en: "The committee is **going over** our proposal right now.",
-        es: "El comité está analizando nuestra propuesta ahora mismo.",
+        en: "Do we have to **go over** this again?",
+        es: "¿Tenemos que repasar esto otra vez? ",
         audio: "Audio/john-007-sup-3.mp3"
     },
     {
@@ -346,13 +346,13 @@ const lessons = [
         audio: "Audio/john-007-sup-4.mp3"
     },
     {
-        en: "I need to **go over** my personal budget before the end of the month.",
-        es: "Necesito revisar mi presupuesto personal antes de fin de mes.",
+        en: "I need to **go over** my expenses before the end of the month.",
+        es: "Necesito revisar mis gastos antes del fin del mes.",
         audio: "Audio/john-007-sup-5.mp3"
     },
     {
-        en: "My lawyer **went over** the contract very carefully.",
-        es: "El abogado analizó el contrato cuidadosamente.",
+        en: "Be sure to **go over** the contract before you sign it.",
+        es: "Asegúrate de analizar el contrato antes de firmarlo.",
         audio: "Audio/john-007-sup-6.mp3"
     }
 ]
