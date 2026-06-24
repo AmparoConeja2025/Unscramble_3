@@ -91,12 +91,11 @@ const lessons = [
         audio: "Audio/adam-002-sup-5.mp3"
     },
     {
-        en: "We **ran into** some unexpected problems with that new software.",
-        es: "Nos tropezamos con algunos problemas inesperados con ese nuevo software.",
+        en: "We **ran into** an unexpected problem with your credit card.",
+        es: "Nos tropezamos con un problema inesperado con su tarjeta de crédito.",
         audio: "Audio/adam-002-sup-6.mp3"
     }
 ]
-
 
     },
     {
@@ -117,8 +116,8 @@ const lessons = [
         
         supplemental: [
     {
-        en: "They say that **breaking up** is hard to do.",
-        es: "Dicen que terminar una relación es difícil.",
+        en: "She's always **breaking up with** her boyfriends.",
+        es: "Siempre está terminando con sus novios.",
         audio: "Audio/laura-003-sup-1.mp3"
     },
     {
@@ -169,8 +168,8 @@ const lessons = [
     
         supplemental: [
     {
-        en: "Who's gonna **look after** my stuff when I'm gone?",
-        es: "¿Quién se va a encargar de mis cosas cuando ya no esté?",
+        en: "Who's gonna **look after** my stuff when I'm on vacation?",
+        es: "¿Quién se va a encargar de mis cosas cuando esté de vacaciones?",
         audio: "Audio/john-004-sup-1.mp3"
     },
     {
@@ -241,18 +240,18 @@ const lessons = [
     },
     {
         en: "Juana never really **got over** the death of her brother.",
-        es: "Juana nunca superó por cpmpleto la muerte de su hermano.",
+        es: "Juana nunca superó por completo la muerte de su hermano.",
         audio: "Audio/jessica-005-sup-5.mp3"
     },
     {
-        en: "I hope you **get over** your cough soon.",
+        en: "I hope you **get over** that cough soon.",
         es: "Espero que te recuperes de esa tos pronto.",
         audio: "Audio/jessica-005-sup-6.mp3"
     },
     {
         en: "She's still trying to **get over** her divorce.",
         es: "Ella todavía está tratando de superar su divorcio.",
-        audio: "Audio/jessica-005-sup-7.mp3"
+        audio: "Audio/jessica-005-sup-7.mp3" 
     }
 ]
 
@@ -285,8 +284,8 @@ const lessons = [
         audio: "Audio/becky-006-sup-2.mp3"
     },
     {
-        en: "She's hoping to **come across** the perfect recipe online.",
-        es: "Ella espera dar con la receta perfecta en internet.",
+        en: "I'm always **coming across** good recipes on this website.",
+        es: "Siempre doy con con buenas recetas en esta página web.",
         audio: "Audio/becky-006-sup-3.mp3"
     },
     {
@@ -346,7 +345,7 @@ const lessons = [
         audio: "Audio/john-007-sup-4.mp3"
     },
     {
-        en: "I need to **go over** my expenses before the end of the month.",
+        en: "I need to **go over** my expenses before the end of the month.", 
         es: "Necesito revisar mis gastos antes del fin del mes.",
         audio: "Audio/john-007-sup-5.mp3"
     },
