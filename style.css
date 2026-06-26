@@ -491,6 +491,11 @@ button, img, .word-tile {
     font-family: Arial, sans-serif;
 }
 
+.word-tile.highlighted {
+    background: #7dd7e9 !important;
+    color: #1a3030 !important;
+}
+
 .word-tile-active {
     transform: scale(0.95);
     opacity: 0.8;

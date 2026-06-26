@@ -420,17 +420,24 @@ function recordCompletion() {
     const today = new Date().toDateString();
     let data = JSON.parse(localStorage.getItem('unscramble3Stats') || '{}');
     
-    // Check if this lesson was already completed today
     const lessonKey = `lesson_${currentLessonIndex}_${today}`;
-    if (data[lessonKey]) return; // Already done today!
     
-    // Mark as completed today
-    data[lessonKey] = true;
-    data[today] = (data[today] || 0) + 1;
-    data.total = (data.total || 0) + 1;
-    localStorage.setItem('unscramble3Stats', JSON.stringify(data));
-    // Award slow plays for first-time daily solve
-    updateSlowPlayBalance(6);
+    // Award stats + credits ONLY on first solve of the day
+    if (!data[lessonKey]) {
+        data[lessonKey] = true;
+        data[today] = (data[today] || 0) + 1;
+        data.total = (data.total || 0) + 1;
+        localStorage.setItem('unscramble3Stats', JSON.stringify(data));
+        
+        updateSlowPlayBalance(6);
+    }
+    
+    // Attach highlight handlers EVERY time puzzle is solved
+    document.querySelectorAll('#dropZone .word-tile').forEach(tile => {
+        tile.addEventListener('click', () => {
+            tile.classList.toggle('highlighted');
+        });
+    });
 }
 
 function showStats() {
@@ -483,6 +490,9 @@ document.getElementById('randomBtn3').addEventListener('click', () => {
 function loadLesson(index) {
     
     const lesson = lessons[index];
+    document.querySelectorAll('.word-tile.highlighted').forEach(tile => {
+        tile.classList.remove('highlighted');
+    });
     const wordBank = document.getElementById('wordBank');
     const dropZone = document.getElementById('dropZone');
     document.getElementById('lessonNumber').textContent = index + 1;
