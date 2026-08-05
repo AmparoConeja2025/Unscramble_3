@@ -192,6 +192,7 @@ button, img, .word-tile {
 
 .nav-btn {
     background: #7dd7e9;
+    position: relative;
     color: #1f2937;
     font-weight: 700;
     padding: 8px 16px;
@@ -205,6 +206,14 @@ button, img, .word-tile {
     -webkit-user-select: none;
     -webkit-touch-callout: none;
     
+}
+.nav-btn::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    bottom: -8px;
+    left: -8px;
+    right: -8px;
 }
 
 .nav-btn-hover {

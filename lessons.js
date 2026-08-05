@@ -365,18 +365,18 @@ const lessons = [
     category: "people",
     narratorAudio: "Audio/harry-008-story.mp3",
     answerAudio: "Audio/harry-008-answer.mp3",
-    sentence: ["I", "won't", "put", "up", "with", "it",],
-    correctOrder: ["I", "won't", "put", "up", "with", "it",],
-    english: "I won't put up with it.",
+    sentence: ["I", "won't", "put", "up", "with", "it", "any", "longer",],
+    correctOrder: ["I", "won't", "put", "up", "with", "it", "any", "longer",],
+    english: "I won't put up with it any longer.",
     spanish: "No voy a aguantar el bullicio que hacen los vecinos.",
     phrasal: ["put", "up", "with"],
-    translation: "No lo voy a aguantar.",
+    translation: "Ya no lo voy a aguantar.",
     phrasalSpanish: ["aguantar"],
     phrasalInfinitive: "to put up with",
     equivalents: "aguantar; soportar; tolerar",
 
     supplemental: [
-    {
+    {  
         en: "Listen, I'm not **putting up with** your lies anymore.",
         es: "Oiga, ya no voy a aguantar tus mentiras.",
         audio: "Audio/harry-008-sup-1.mp3",
