@@ -1,7 +1,7 @@
 
 body {
   /* This sets the background for the main content area. */
-  background-color: #3e626d; 
+  background-color: #4a8080; 
   font-family: Arial, sans-serif;
   -webkit-user-select: none;
   user-select: none;
@@ -485,6 +485,8 @@ button, img, .word-tile {
     gap: 18px;
     justify-content: center;
 }
+
+
 
 /* WORD TILES */
 .word-tile {
@@ -3215,3 +3217,59 @@ html, body {
   height: 100%;
   background: #4a8080;
 }
+
+/* ============================================
+   DESKTOP LAYOUT WORKBENCH  (PC only, 801px+)
+   All desktop position/size tweaks live HERE.
+   Phones (under 801px) never see this block.
+   ============================================ */
+@media screen and (min-width: 801px) {
+
+    /* --- PUZZLE: drop zone --- */
+    .drop-zone {
+        top: 25%;
+    }
+
+    /* --- PUZZLE: word bank --- */
+    .word-bank {
+        top: 42%;
+    }
+
+    /* --- AVATAR (all narrators share these image classes) --- */
+        /* --- AVATAR (all narrators share these image classes) --- */
+    .adam-image,
+    .jessica-image,
+    .john-image,
+    .becky-image,
+    .mark-image,
+    .laura-image,
+    .harry-image,
+    .dianne-image {
+        top: auto;
+        bottom: 5%;
+        left: 3%;
+        width: 260px;
+    }
+
+        /* --- ANSWER / TRANSLATION PANEL --- */
+    .translation-panel {
+        bottom: 42%;
+    }
+
+       /* --- PREVIOUS / NEXT nav buttons --- */
+    .lesson-nav {
+        right: 3%;
+    }
+
+    /* --- COMPLETION DOT (green "solved today" dot) --- */
+    .completion-dot {
+        right: 18%;
+    }
+
+    /* --- FAVORITE HEART --- */
+    .favorite-btn {
+        left: 18%;
+    }
+
+}
+

@@ -270,7 +270,7 @@ const lessons = [
     translation: "Yo sé que las voy a encontrar.",
     phrasalSpanish: ["encontrar"],
     phrasalInfinitive: "to come across",
-    equivalents: "encontrar; toparse con; dar con;",
+    equivalents: "encontrar; toparse con; dar con",
 
     supplemental: [
     {
