@@ -476,7 +476,7 @@ button, img, .word-tile {
 /* WORD BANK */
 .word-bank {
     position: absolute;
-    top: 65%;
+    top: 60%;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
