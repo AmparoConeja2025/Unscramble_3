@@ -1906,7 +1906,7 @@ button, img, .word-tile {
 }
 
 .mobile-landscape-word-bank {
-    top: 145px;
+    top: 400px;
     gap: 8px;
     max-width: 95%;
     flex-wrap: nowrap;
