@@ -2861,7 +2861,7 @@ button, img, .word-tile {
 .completion-dot {
     position: absolute;
     top: 22px;
-    right: 220px;
+    right: 235px;
     width: 12px;
     height: 12px;
     cursor: pointer;
