@@ -184,7 +184,7 @@ button, img, .word-tile {
 .lesson-nav {
     position: absolute;
     top: 20px;
-    right:18px;
+    right:22px;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -3263,7 +3263,7 @@ html, body {
 
         /* --- COMPLETION DOT --- */
     .completion-dot {
-        right: 260px;       /* ← fixed px, matches base rule's original 210px */
+        right: 270px;       /* ← fixed px, matches base rule's original 210px */
     }
 
     /* --- FAVORITE HEART --- */
