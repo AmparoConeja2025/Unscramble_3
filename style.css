@@ -1741,25 +1741,31 @@ button, img, .word-tile {
     content: "• ";
 }
 
+/* === TRANSLATION PANEL TEXT — tune these two together for balance === */
 .translation-spanish {
-    font-size: 11px;
-    text-align:right;
-   
+    font-size: 15px;                    /* translation line (top) — tweak */
+    -webkit-text-size-adjust: 100%;
+    font-weight: 500;
+    text-align: right;
     color: #dcfce7;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
-    line-height: 1.0;
+    line-height: 1.15;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .translation-equivalents {
-    font-size: 15px;
-    text-align:right;
+    font-size: 15px;                    /* equivalents line (bottom) — tweak */
+    -webkit-text-size-adjust: 100%;
     font-weight: 400;
+    text-align: right;
     color: #a7f3d0;
     line-height: 1.3;
     margin-top: 4px;
     font-style: italic;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
+
+
 
 .translation-close-btn {
     background: rgba(255, 255, 255, 0.2);
@@ -2987,14 +2993,7 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
     margin-bottom: 3px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
 }
-.translation-spanish {
-    font-size: 12px;
-    font-weight: 500;
-    color: #dcfce7;
-    line-height: 1.15;
-    margin-bottom: 5px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-}
+
 .translation-spanish em {
     font-style: italic;
     font-weight: 700;
