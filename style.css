@@ -290,7 +290,7 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .adam-image {
         width: 150px !important;
         top: 51% !important;
@@ -324,7 +324,7 @@ button, img, .word-tile {
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
 
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .jessica-image {
         width: 145px !important;
         top: 52% !important;
@@ -342,7 +342,7 @@ button, img, .word-tile {
 }
 
 
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .john-image {
         width: 133px !important;
         top: 53% !important;
@@ -359,7 +359,7 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
 }
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .becky-image {
         width: 140px !important;
         top: 53% !important;
@@ -375,7 +375,7 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
 }
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .mark-image {
         width: 142px !important;
         top: 52% !important;
@@ -392,7 +392,7 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .laura-image {
         width: 145px !important;
         top: 52% !important;
@@ -408,7 +408,7 @@ button, img, .word-tile {
         width: 256px;
         filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .harry-image {
         width: 150px !important;
         top: 53% !important;
@@ -425,7 +425,7 @@ button, img, .word-tile {
     width: 256px;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.6));
 }
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .dianne-image {
         width: 140px !important;
         top: 53% !important;
@@ -657,7 +657,7 @@ button, img, .word-tile {
 }
 
 /* Translation Overlay - Mobile Override */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .translation-overlay {
         bottom: 5%;
         left: 48%;
@@ -734,7 +734,7 @@ button, img, .word-tile {
 }
 
 /* MOBILE LANDSCAPE SPEEDRUN OPTIMIZATION - NO SCROLLING */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .speedrun-content {
         padding: 15px !important;
         min-width: 90vw !important;
@@ -1112,7 +1112,7 @@ button, img, .word-tile {
 }
 
 /* MOBILE LANDSCAPE OPTIMIZATION */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .speedrun-floating-timer {
         top: 70px !important;
         left: 0px !important;
@@ -1326,7 +1326,7 @@ button, img, .word-tile {
 }
 
 /* MOBILE RESPONSIVE */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stats-three-column-grid {
     display: flex;
     flex-direction: column;
@@ -1390,14 +1390,14 @@ button, img, .word-tile {
     }
 
     /* REMOVE EMOJIS FROM MOBILE STATS */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stat-icon {
         display: none !important;
     }
 }
 
 /* SINGLE LINE LAYOUT FOR MOBILE STATS */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stat-info {
         display: flex !important;
         flex-direction: row !important;
@@ -1422,7 +1422,7 @@ button, img, .word-tile {
 }
 
 /* REMOVE CATEGORY HEADER LINES */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stats-column-header {
         border-bottom: none !important;
         padding-bottom: 5px !important;
@@ -1438,7 +1438,7 @@ button, img, .word-tile {
 }
 
 /* COMPRESS CATEGORY HEADERS TO MATCH CARD HEIGHT */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stats-column-header {
         border-bottom: none !important;
         padding-bottom: 0 !important;
@@ -1459,7 +1459,7 @@ button, img, .word-tile {
     }
 
     /* COMPRESS CATEGORY HEADERS - SINGLE CHANGE */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stats-column-header {
         margin-bottom: 5px !important;
         padding-bottom: 0 !important;
@@ -1472,7 +1472,7 @@ button, img, .word-tile {
     }
 }
       /* KEEP VERTICAL STACKING, REDUCE GAPS */
-      @media (max-width: 800px) and (orientation: landscape) {
+      @media (max-width: 900px) and (orientation: landscape) {
       .stats-three-column-grid {
         display: flex !important;
         flex-direction: column !important;
@@ -1487,7 +1487,7 @@ button, img, .word-tile {
     }
     
     /* FIX TALL BADGE ROW */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .badge-showcase {
         height: 40px !important;
         min-height: 40px !important;
@@ -1518,7 +1518,7 @@ button, img, .word-tile {
     }
 
     /* FURTHER REDUCE PADDING FOR EVEN TIGHTER LAYOUT */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .stats-column {
         padding: 5px !important;
         margin-bottom: 2px !important;
@@ -2319,7 +2319,7 @@ button, img, .word-tile {
 }
 
 /* MOBILE MENU - KILL THE TEXT BLOAT */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .menu-content {
         padding: 8px 12px !important;
         max-height: 90vh !important;
@@ -2361,7 +2361,7 @@ button, img, .word-tile {
 }
 
 /* HIDE TITLE, KEEP X BUTTON */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .menu-header h2 {
         display: none !important;
     }
@@ -2380,7 +2380,7 @@ button, img, .word-tile {
 }
 
 /* FLOAT X BUTTON OVER CONTENT - RECLAIM SPACE */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     /* HIDE THE ENTIRE HEADER CONTAINER */
     .menu-header {
         display: none !important;
@@ -2399,7 +2399,7 @@ button, img, .word-tile {
 }
 
 /* HIDE REDUNDANT BACK TO GAME BUTTON */
-@media (max-width: 800px) and (orientation: landscape) {
+@media (max-width: 900px) and (orientation: landscape) {
     .menu-action-btn {
         display: none !important;
     }
@@ -3219,11 +3219,11 @@ html, body {
 }
 
 /* ============================================
-   DESKTOP LAYOUT WORKBENCH  (PC only, 801px+)
+   DESKTOP LAYOUT WORKBENCH  (PC only, 901px+)
    All desktop position/size tweaks live HERE.
-   Phones (under 801px) never see this block.
+   Phones (under 901px) never see this block.
    ============================================ */
-@media screen and (min-width: 801px) {
+@media screen and (min-width: 901px) {
 
     /* --- PUZZLE: drop zone --- */
     .drop-zone {
