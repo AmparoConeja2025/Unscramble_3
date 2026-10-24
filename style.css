@@ -184,7 +184,7 @@ button, img, .word-tile {
 .lesson-nav {
     position: absolute;
     top: 20px;
-    right:10px;
+    right:18px;
     display: flex;
     gap: 15px;
     align-items: center;
@@ -207,6 +207,7 @@ button, img, .word-tile {
     -webkit-touch-callout: none;
     
 }
+
 .nav-btn::before {
     content: '';
     position: absolute;
@@ -3260,14 +3261,14 @@ html, body {
         right: 3%;
     }
 
-    /* --- COMPLETION DOT (green "solved today" dot) --- */
+        /* --- COMPLETION DOT --- */
     .completion-dot {
-        right: 18%;
+        right: 260px;       /* ← fixed px, matches base rule's original 210px */
     }
 
     /* --- FAVORITE HEART --- */
     .favorite-btn {
-        left: 18%;
+        left: 265px;        /* ← fixed px, just right of Favs button at 207px */
     }
 
 }
