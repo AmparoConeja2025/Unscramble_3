@@ -201,25 +201,9 @@
     document.getElementById('installGate').style.display = 'flex';
   }
 })();
+
 </script>
 
-<div id="viewportDiag" style="position:fixed; bottom:4px; left:4px; background:rgba(0,0,0,0.75); color:#0f0; font-family:monospace; font-size:12px; padding:4px 8px; border-radius:4px; z-index:999999; pointer-events:none;">
-  loading...
-</div>
-<script>
-(function(){
-  function updateDiag(){
-    var d = document.getElementById('viewportDiag');
-    if(!d) return;
-    d.textContent =
-      'CSS px: ' + window.innerWidth + ' × ' + window.innerHeight +
-      ' | DPR: ' + window.devicePixelRatio;
-  }
-  updateDiag();
-  window.addEventListener('resize', updateDiag);
-  window.addEventListener('orientationchange', function(){ setTimeout(updateDiag, 300); });
-})();
-</script>
 
 </body>
-</html>12
+</html>14
