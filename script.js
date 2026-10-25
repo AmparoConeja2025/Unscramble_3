@@ -133,7 +133,7 @@ function refreshFavoriteButton() {
 
 function updateUndoButton() {
     document.querySelectorAll('.undo-btn').forEach(undoBtn => {
-        if (canUndo && lastAddedWord) {
+        if (canUndo) {
             undoBtn.disabled = false;
             undoBtn.classList.add('undo-btn-active');
         } else {
