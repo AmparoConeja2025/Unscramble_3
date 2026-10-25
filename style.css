@@ -3031,7 +3031,7 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
 .supplemental-close {
   position: fixed;
   top: 20px;
-  right: 0px;
+  right: 14px;
   width: 30px;
   height: 30px;
   background: rgba(255, 255, 255, 0.25);
@@ -3051,7 +3051,7 @@ body:has(.supplemental-overlay.active) .qa-replay-btn {
 .supplemental-balance {
     position: fixed;
     top: 58px;
-    right: 0px;
+    right: 14px;
     width: 30px;
     height: 30px;
     background: rgba(255, 255, 255, 0.25);
