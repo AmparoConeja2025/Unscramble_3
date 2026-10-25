@@ -77,7 +77,7 @@ const lessons = [
     },
     {
         en: "They **ran into** some bad weather on their trip.",
-        es: "Se toparon con tiempo en su viaje.",
+        es: "Se toparon con mal tiempo en su viaje.",
         audio: "Audio/adam-002-sup-3.mp3"
     },
     {
