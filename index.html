@@ -12,11 +12,110 @@
     
 
 <!-- INSTALL GATE — shown only to mobile browser users (not desktop, not installed PWA) -->
-<div id="installGate" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#4a8080; color:white; z-index:99999; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; box-sizing:border-box; font-family:Arial, sans-serif;">
-  <h1 style="font-size:28px; margin-bottom:16px;">Install Unscramble</h1>
-  <p style="font-size:18px; max-width:400px; line-height:1.5;">This app runs as an installed app on your phone.</p>
-  <p style="font-size:16px; opacity:0.85; margin-top:12px;">(Install instructions will go here.)</p>
+<style>
+  .gate-install { max-width: 560px; margin: 0 auto; padding: 0 16px; text-align: center; color: #fff; }
+  .gate-reassure { font-size: clamp(15px, 2.4vh, 18px); margin: 0 0 14px; opacity: .9; }
+  .gate-btn { font-size: clamp(18px, 3vh, 22px); font-weight: 700; padding: 12px 40px;
+    border: none; border-radius: 999px; background: #ffd700; color: #2b2b2b; cursor: pointer; }
+  .gate-small { font-size: clamp(14px, 2.2vh, 16px); margin-top: 12px; opacity: .85; }
+  .gate-steps { text-align: left; margin: 0 auto; padding-left: 1.4em;
+    font-size: clamp(15px, 2.6vh, 19px); line-height: 1.45; }
+  .gate-steps li { margin-bottom: 8px; }
+  .gate-share { vertical-align: -5px; margin: 0 2px; }
+  @media (orientation: landscape) and (max-height: 480px) {
+    .gate-steps { max-width: 90%; font-size: 15px; line-height: 1.3; }
+    .gate-steps li { margin-bottom: 4px; }
+    .gate-reassure { margin-bottom: 8px; }
+  }
+</style>
+
+<div id="installGate" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#4a8080; color:white; z-index:99999; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; box-sizing:border-box; font-family:Arial, sans-serif; overflow-y:auto;">
+  <h1 style="font-size:28px; margin:0 0 12px;">Instala Unscramble</h1>
+  <p style="font-size:18px; max-width:400px; line-height:1.5; margin:0 0 14px;">Esta app funciona como una aplicación instalada en tu teléfono.</p>
+
+  <div id="gate-install" class="gate-install" hidden>
+    <p class="gate-reassure">Gratis, sin tienda de aplicaciones. Toma 10 segundos.</p>
+
+    <!-- Android Chrome -->
+    <div id="gate-android" hidden>
+      <button id="gate-install-btn" class="gate-btn" hidden>Instalar</button>
+      <p id="gate-android-fallback" class="gate-small">
+        Toca el menú <b>⋮</b> de Chrome y luego <b>"Instalar aplicación"</b>.
+      </p>
+    </div>
+
+    <!-- iPhone Safari -->
+    <ol id="gate-ios" class="gate-steps" hidden>
+      <li>Toca el botón <b>Compartir</b>
+        <svg class="gate-share" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M12 3v12M8 7l4-4 4 4M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"
+                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        en la parte de abajo.</li>
+      <li>Desliza y toca <b>"Agregar a pantalla de inicio"</b>.</li>
+      <li>Toca <b>Agregar</b>. ¡Listo! Abre Unscramble desde tu pantalla de inicio.</li>
+    </ol>
+
+    <!-- Wrong browser / in-app browser -->
+    <p id="gate-switch" class="gate-small" hidden></p>
+    <p id="gate-done" class="gate-reassure" hidden>¡Listo! Abre Unscramble desde tu pantalla de inicio.</p>
+  </div>
 </div>
+
+<script>
+(function () {
+  let deferredPrompt = null;
+  window.addEventListener('beforeinstallprompt', e => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const b = document.getElementById('gate-install-btn');
+    const f = document.getElementById('gate-android-fallback');
+    if (b) b.hidden = false;
+    if (f) f.hidden = true;
+  });
+  window.addEventListener('appinstalled', () => {
+    ['gate-android', 'gate-ios', 'gate-switch'].forEach(id => {
+      const el = document.getElementById(id); if (el) el.hidden = true;
+    });
+    document.getElementById('gate-done').hidden = false;
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const $ = id => document.getElementById(id);
+    const ua = navigator.userAgent;
+    const isIOS = /iPhone|iPad|iPod/.test(ua) ||
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    const isAndroid = /Android/.test(ua);
+    const inApp = /FBAN|FBAV|Instagram|Line\/|TikTok|Snapchat|MicroMessenger/.test(ua);
+    const iosOtherBrowser = isIOS && /CriOS|FxiOS|EdgiOS|OPiOS/.test(ua);
+
+    $('gate-install').hidden = false;
+
+    if (inApp) {
+      $('gate-switch').textContent = isIOS
+        ? 'Abre este enlace en Safari para instalar Unscramble.'
+        : 'Abre este enlace en Chrome para instalar Unscramble.';
+      $('gate-switch').hidden = false;
+    } else if (isIOS && iosOtherBrowser) {
+      $('gate-switch').textContent = 'Abre este enlace en Safari para instalar Unscramble.';
+      $('gate-switch').hidden = false;
+    } else if (isIOS) {
+      $('gate-ios').hidden = false;
+    } else {
+      $('gate-android').hidden = false; // Android and generic fallback
+    }
+
+    const btn = $('gate-install-btn');
+    if (btn) btn.addEventListener('click', async () => {
+      if (!deferredPrompt) return;
+      deferredPrompt.prompt();
+      await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      btn.hidden = true;
+    });
+  });
+})();
+</script>
 
     <button class="undo-btn undo-btn-left" id="undoButtonLeft" disabled>←</button>
     <button class="reset-btn" id="resetButton">Reset</button>
@@ -206,4 +305,4 @@
 
 
 </body>
-</html>21
+</html>23
