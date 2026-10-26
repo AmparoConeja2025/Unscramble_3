@@ -11,7 +11,7 @@
 
     
 
-<!--<!-- INSTALL GATE — shown only to mobile browser users (not desktop, not installed PWA) -->
+<!-- INSTALL GATE — shown only to mobile browser users (not desktop, not installed PWA) -->
 <style>
   .gate-install { max-width: 560px; margin: 0 auto; padding: 0 16px; text-align: center; color: #fff; }
   .gate-reassure { font-size: clamp(15px, 2.4vh, 18px); margin: 0 0 14px; opacity: .9; }
@@ -30,11 +30,11 @@
 </style>
 
 <div id="installGate" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#4a8080; color:white; z-index:99999; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; box-sizing:border-box; font-family:Arial, sans-serif; overflow-y:auto;">
-  <h1 style="font-size:28px; margin:0 0 12px;">Instala Unscramble</h1>
-  <p style="font-size:18px; max-width:400px; line-height:1.5; margin:0 0 14px;">Esta app funciona como una aplicación instalada en tu teléfono.</p>
+  <h1 id="gate-title" style="font-size:28px; margin:0 0 12px;">Instala Unscramble</h1>
+  <p id="gate-intro" style="font-size:18px; max-width:400px; line-height:1.5; margin:0 0 14px;">Esta app funciona como una aplicación instalada en tu teléfono.</p>
 
   <div id="gate-install" class="gate-install" hidden>
-    <p class="gate-reassure">Gratis, sin tienda de aplicaciones. Toma 10 segundos.</p>
+    <p id="gate-reassure" class="gate-reassure">Gratis, sin tienda de aplicaciones. Toma 10 segundos.</p>
 
     <!-- Android Chrome -->
     <div id="gate-android" hidden>
@@ -50,12 +50,12 @@
         <svg class="gate-share" viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
           <path d="M12 3v12M8 7l4-4 4 4M6 11H5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1h-1"
                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>.</li>  
+        </svg>.</li>
       <li>Desliza y toca <b>"Agregar a pantalla de inicio"</b>.</li>
       <li>Toca <b>Agregar</b>. ¡Listo! Abre Unscramble desde tu pantalla de inicio.</li>
     </ol>
 
-    <!-- In-app browsers that cannot install -->
+    <!-- In-app browsers and Samsung Internet -->
     <p id="gate-switch" class="gate-small" hidden></p>
     <p id="gate-done" class="gate-reassure" hidden>¡Listo! Abre Unscramble desde tu pantalla de inicio.</p>
   </div>
@@ -85,6 +85,7 @@
     const isIOS = /iPhone|iPad|iPod/.test(ua) ||
                   (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
     const inApp = /FBAN|FBAV|Instagram|Line\/|TikTok|Snapchat|MicroMessenger/.test(ua);
+    const isSamsung = /SamsungBrowser/.test(ua);
 
     $('gate-install').hidden = false;
 
@@ -92,6 +93,11 @@
       $('gate-switch').textContent = isIOS
         ? 'Abre este enlace en Safari o Chrome para instalar Unscramble.'
         : 'Abre este enlace en Chrome para instalar Unscramble.';
+      $('gate-switch').hidden = false;
+    } else if (isSamsung) {
+      $('gate-title').textContent = 'Instala Unscramble con Chrome';
+      $('gate-reassure').hidden = true;
+      $('gate-switch').textContent = 'Copia la dirección de esta página y ábrela en Chrome.';
       $('gate-switch').hidden = false;
     } else if (isIOS) {
       $('gate-ios').hidden = false;
@@ -299,4 +305,4 @@
 
 
 </body>
-</html>26
+</html>27
