@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Unscramble 3</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    
+
+<!-- INSTALL GATE — shown only to mobile browser users (not desktop, not installed PWA) -->
+<div id="installGate" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#4a8080; color:white; z-index:99999; flex-direction:column; align-items:center; justify-content:center; text-align:center; padding:24px; box-sizing:border-box; font-family:Arial, sans-serif;">
+  <h1 style="font-size:28px; margin-bottom:16px;">Install Unscramble</h1>
+  <p style="font-size:18px; max-width:400px; line-height:1.5;">This app runs as an installed app on your phone.</p>
+  <p style="font-size:16px; opacity:0.85; margin-top:12px;">(Install instructions will go here.)</p>
+</div>
+
+    <button class="undo-btn undo-btn-left" id="undoButtonLeft" disabled>←</button>
+    <button class="reset-btn" id="resetButton">Reset</button>
+    <button class="undo-btn" id="undoButton" disabled>←</button>
+    <button class="reset-btn" id="resetButton" onclick="loadLesson(currentLessonIndex)">Reset</button>
+    <button class="help-btn" id="helpButton">Help</button>
+    <button class="stats-btn" id="statsButton">Stats</button>
+    <button class="favorites-list-btn" id="favoritesListButton">Favs</button>
+    <button class="favorite-btn" id="favoriteButton" aria-label="Add to favorites">♡</button>
+
+    <!-- QA: Hidden audio replay (dev only) -->
+    <button class="qa-replay-btn" id="qaReplayBtn" aria-hidden="true"></button>
+
+   
+
+    <!-- AVATARS -->
+<img src="Image/dianne.png" alt="Dianne" class="dianne-image" id="dianneImage" style="cursor: pointer; display: none;" />
+<img src="Image/adam.png" alt="Adam" class="adam-image" id="adamImage" style="cursor: pointer; display: none;" />
+<img src="Image/becky.png" alt="Becky" class="becky-image" id="beckyImage" style="cursor: pointer; display: none;" />
+<img src="Image/harry.png" alt="Harry" class="harry-image" id="harryImage" style="cursor: pointer; display: none;" />
+<img src="Image/mark.png" alt="Mark" class="mark-image" id="markImage" style="cursor: pointer; display: none;" />
+<img src="Image/jessica.png" alt="Jessica" class="jessica-image" id="jessicaImage" style="cursor: pointer; display: none;" />
+<img src="Image/john.png" alt="John" class="john-image" id="johnImage" style="cursor: pointer; display: none;" />
+<img src="Image/laura.png" alt="Laura" class="laura-image" id="lauraImage" style="cursor: pointer; display: none;" />
+
+<!-- COMPLETION DOT -->
+<div class="completion-dot" id="completionDot" style="display: none;"></div>
+
+<audio id="narratorAudio"></audio>
+<audio id="answerAudio"></audio>
+
+    <!-- DROP ZONE -->
+    <div id="dropZone" class="drop-zone"></div>
+
+    <!-- WORD BANK -->
+    <div id="wordBank" class="word-bank"></div>
+
+    
+     <!-- TRANSLATION PANEL -->
+<div id="translationPanel" class="translation-panel" style="display: none;">
+    <div class="translation-infinitive" id="translationInfinitive"></div>
+    <div class="translation-spanish" id="translationSpanish"></div>
+    <div class="translation-equivalents" id="translationEquivalents"></div>
+    <button id="supplementalBtn" class="to-supplemental-btn" onclick="showSupplemental()" aria-label="Más ejemplos">+</button>
+</div>
+
+    <!-- NAVIGATION -->
+    <div class="lesson-nav">
+        <button class="nav-btn" id="prevBtn">← Previous</button>
+        <button class="nav-btn" id="nextBtn">Next →</button>
+    </div>
+
+    <!-- FIREWORKS -->
+    <div class="fireworks-container" id="fireworksContainer"></div>
+
+    <!-- TRY AGAIN -->
+    <div class="try-again-text" id="tryAgainText">🤔 Try Again! 💭</div>
+
+    <!-- INSTRUCTIONS OVERLAY -->
+<div class="instructions-overlay" id="instructionsOverlay" style="display: none;">
+    <div class="instructions-content">
+        <button class="instructions-close-btn" id="instructionsCloseBtn">✕</button>
+        
+        <h2 class="instructions-title">¿Cómo funciona?</h2>
+        
+        <div class="instructions-step">
+            <span class="instructions-icon">🎧</span>
+            <div class="instructions-text">
+                <strong>Toca el avatar</strong>
+                <p>Escucha la historia en español</p>
+            </div>
+        </div>
+        
+        <div class="instructions-step">
+            <span class="instructions-icon">🔤</span>
+            <div class="instructions-text">
+                <strong>Ordena las palabras</strong>
+                <p>Toca las palabras en el orden correcto para formar la frase</p>
+            </div>
+        </div>
+
+        <div class="instructions-step">
+            <span class="instructions-icon">↶</span>
+            <div class="instructions-text">
+                <strong>Botón deshacer</strong>
+                <p>Saca palabras para corregir tu respuesta</p>
+            </div>
+        </div>
+
+        <div class="instructions-step">
+            <span class="instructions-icon">↺</span>
+            <div class="instructions-text">
+                <strong>Botón reset</strong>
+                <p>Sacar todas las las palabras para empezer de nuevo</p>
+            </div>
+        </div>
+
+        <div class="instructions-step">
+            <span class="instructions-icon">✅</span>
+            <div class="instructions-text">
+                <strong>¡Correcto!</strong>
+                <p>Toca el avatar de nuevo para escuchar la respuesta en inglés</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Favorites list overlay -->
+<div id="favoritesOverlay" class="favorites-overlay">
+    <button class="favorites-close" onclick="hideFavoritesOverlay()" aria-label="Close">×</button>
+    <h2 class="favorites-title">Favorites</h2>
+    <div id="favoritesList" class="favorites-list">
+        <!-- Rows injected dynamically by JS when overlay opens -->
+    </div>
+    <div id="favoritesEmpty" class="favorites-empty">
+        No favorites yet. Tap the ♡ on any lesson to add it.
+    </div>
+</div>
+
+
+<!-- STATS OVERLAY -->
+<div class="stats-overlay-3" id="statsOverlay3" style="display: none;">
+    <div class="stats-content-3">
+        <button class="stats-close-btn-3" id="statsCloseBtn3">✕</button>
+        
+        <h2 class="stats-title-3">📊 Tu Progreso</h2>
+        
+        <div class="stats-grid-3">
+            <div class="stats-card-3">
+                <div class="stats-number-3" id="todayCount">0</div>
+                <div class="stats-label-3">Hoy</div>
+            </div>
+            <div class="stats-card-3">
+                <div class="stats-number-3" id="totalCount">0</div>
+                <div class="stats-label-3">Total</div>
+            </div>
+        </div>
+
+        <!-- MODE TOGGLE -->
+        <div class="mode-toggle-3">
+            <button class="mode-btn-3 mode-active-3" id="sequentialBtn3">📋 Secuencial</button>
+            <button class="mode-btn-3" id="randomBtn3">🔀 Aleatorio</button>
+            <button class="mode-btn-3" id="freshBtn3">✨ Nuevos</button>
+        </div>
+
+    </div>
+</div>
+
+<!-- LESSON NUMBER -->
+<div class="lesson-number" id="lessonNumber">1</div>
+
+<!-- END BUTTON -->
+<button class="end-btn" id="endBtn">»</button>
+
+<!-- Supplemental content overlay -->
+<div id="supplementalOverlay" class="supplemental-overlay">
+  <button class="supplemental-close" onclick="hideSupplemental()" aria-label="Close">×</button>
+  <div id="supplementalBalance" class="supplemental-balance">0</div>
+  <div id="supplementalInfinitive" class="supplemental-infinitive"></div>
+  <div id="supplementalContent" class="supplemental-content">
+    <!-- Cards injected dynamically by JS when user opens the overlay -->
+  </div>
+</div>
+
+    <script src="lessons.js"></script>
+    <script src="script.js"></script>
+
+    <script>
+(function() {
+  // Is the app running as an installed PWA? (standalone or fullscreen display mode)
+  var isInstalled = window.matchMedia('(display-mode: standalone)').matches
+                 || window.matchMedia('(display-mode: fullscreen)').matches
+                 || window.navigator.standalone === true;  // iOS Safari check
+
+  // Is this a mobile device? (user-agent based)
+  var isMobile = /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|Mobile/i.test(navigator.userAgent);
+
+  // Show the gate ONLY if: mobile device AND not installed.
+  // Desktop → app. Installed PWA → app. Mobile browser tab → gate.
+  if (isMobile && !isInstalled) {
+    document.getElementById('installGate').style.display = 'flex';
+  }
+})();
+
+</script>
+
+
+</body>
+</html>21

@@ -230,7 +230,7 @@ const lessons = [
     },
     {
         en: "She finally **got over** the illness after months of treatment.",
-        es: "Él finalmente se sobrepuso a la enfermedad después de meses de tratamiento.",
+        es: "Por fin se sobrepuso a la enfermedad después de meses de tratamiento.",
         audio: "Audio/jessica-005-sup-3.mp3"
     },
     {
