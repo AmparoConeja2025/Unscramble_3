@@ -303,6 +303,315 @@
 
 </script>
 
+<!-- TOUR MODE — guided spotlight tour of the puzzle screen. Started from the Help overlay. -->
+<style>
+  .tour-blocker { position:fixed; top:0; left:0; right:0; bottom:0; z-index:100000;
+    display:none; touch-action:none; }
+  .tour-blocker.dim { background:rgba(0,0,0,.65); }
+  .tour-spot { position:fixed; z-index:100001; display:none; box-sizing:border-box;
+    border-radius:12px; border:2px solid #ffd700;
+    box-shadow:0 0 0 9999px rgba(0,0,0,.65);
+    transition:top .25s, left .25s, width .25s, height .25s; }
+  .tour-spot.ghost { border-style:dashed; }
+  .tour-cap { position:fixed; z-index:100002; display:none; box-sizing:border-box;
+    width:min(400px, calc(100vw - 32px)); max-height:calc(100vh - 32px); overflow-y:auto;
+    background:#fff; color:#1f2d2d; border-radius:14px; padding:14px 16px;
+    box-shadow:0 6px 24px rgba(0,0,0,.35); font-family:Arial, sans-serif; text-align:left; }
+  .tour-count { font-size:13px; color:#6b7f7f; margin-bottom:4px; }
+  .tour-title { font-size:clamp(17px, 2.8vh, 20px); font-weight:700; margin-bottom:6px; }
+  .tour-text { font-size:clamp(15px, 2.5vh, 18px); line-height:1.4; }
+  .tour-note { display:none; font-size:clamp(14px, 2.3vh, 16px); line-height:1.35;
+    margin-top:8px; color:#4a8080; font-style:italic; }
+  .tour-btns { display:flex; justify-content:space-between; align-items:center;
+    gap:8px; margin-top:12px; }
+  .tour-right { display:flex; align-items:center; gap:8px; }
+  .tour-close { background:none; border:none; color:#4a6a6a; font-size:16px;
+    padding:10px 6px; cursor:pointer; }
+  .tour-back { background:none; border:2px solid #4a8080; color:#4a8080; border-radius:999px;
+    font-size:16px; font-weight:700; padding:9px 18px; cursor:pointer; }
+  .tour-next { background:#4a8080; color:#fff; border:none; border-radius:999px;
+    font-size:17px; font-weight:700; padding:11px 26px; cursor:pointer; }
+  .tour-start { display:block; margin:6px auto 18px; padding:12px 28px; border:none;
+    border-radius:999px; background:#ffd700; color:#2b2b2b; font-size:17px;
+    font-weight:700; cursor:pointer; }
+      @media (max-height: 500px) {
+    .tour-cap { width:min(520px, calc(100vw - 32px)); padding:10px 14px; }
+    .tour-count { display:none; }
+    .tour-title { font-size:16px; margin-bottom:2px; }
+    .tour-text { font-size:15px; line-height:1.3; }
+    .tour-note { font-size:14px; margin-top:4px; }
+    .tour-btns { margin-top:8px; }
+    .tour-close { padding:6px 4px; font-size:15px; }
+    .tour-back { padding:6px 14px; font-size:15px; }
+    .tour-next { padding:8px 20px; font-size:16px; }
+  }
+</style>
 
+<div class="tour-blocker" id="tourBlocker"></div>
+<div class="tour-spot" id="tourSpot"></div>
+<div class="tour-cap" id="tourCap" role="dialog" aria-live="polite">
+  <div class="tour-count" id="tourCount"></div>
+  <div class="tour-title" id="tourTitle"></div>
+  <div class="tour-text" id="tourText"></div>
+  <div class="tour-note" id="tourNote"></div>
+  <div class="tour-btns">
+    <button class="tour-close" id="tourClose">Cerrar</button>
+    <div class="tour-right">
+      <button class="tour-back" id="tourBack">Atrás</button>
+      <button class="tour-next" id="tourNext">Siguiente</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // ----- The tour steps: edit the wording here -----
+  // sample: true = if the translation panel is hidden (puzzle not solved), show it temporarily with sample text
+  // ghost: true  = if the element is hidden, outline where it WOULD appear
+  // avoid: '...' = keep the caption clear of this whole area (not just the highlighted element)
+  var STEPS = [
+    { sel: 'img[id$="Image"]', title: 'Tu avatar',
+      text: 'Toca el avatar para escuchar la historia en español. Cuando completes la frase, tócalo otra vez para escuchar la respuesta en inglés.' },
+    { sel: '#wordBank', title: 'Banco de palabras',
+      text: 'Estas son las palabras de la frase, mezcladas. Tócalas en el orden correcto.' },
+    { sel: '#dropZone', title: 'Zona de respuesta',
+      text: 'Las palabras que tocas aparecen aquí y forman tu frase.' },
+    { sel: '#undoButton, #undoButtonLeft', title: 'Deshacer',
+      text: 'Saca palabras para corregir tu respuesta.' },
+    { sel: '.reset-btn', title: 'Reset',
+      text: 'Saca todas las palabras para empezar de nuevo.' },
+    { sel: '#translationPanel', title: 'Traducción y más ejemplos',
+      text: 'Cuando completas la frase, aquí aparece su traducción al español. Toca el botón + para ver más frases de ejemplo con este verbo.',
+      absent: 'Aparece cuando completas la frase.' },
+    { sel: '#favoriteButton', title: 'Corazón',
+      text: 'Toca el corazón para marcar esta lección como favorita. Tócalo otra vez para quitarla.' },
+    { sel: '.lesson-nav', title: '← Previous / Next →',
+      text: 'Pasa a la lección anterior o a la siguiente.' },
+    { sel: '#completionDot', title: 'Punto verde', ghost: true,
+      text: 'El punto verde significa que ya completaste esta lección hoy. Tócalo para completarla automáticamente. Se reinicia al día siguiente.',
+      absent: 'Aparece cuando completas una lección.' },
+    { sel: '#helpButton', title: 'Help',
+      text: 'Aquí se abre la ayuda, donde puedes volver a ver este recorrido.' },
+    { sel: '#statsButton', title: 'Stats',
+      text: 'Mira cuántas lecciones completaste hoy y en total. También eliges el orden: secuencial, aleatorio o nuevas.' },
+    { sel: '#favoritesListButton', title: 'Favs',
+      text: 'Aquí está la lista de tus lecciones favoritas. Toca una lección de la lista para ir directamente a ella.' }
+  ];
+
+  var M = 16;   // minimum margin from every screen edge (same on iPhone, Android, PC)
+  var blocker = document.getElementById('tourBlocker');
+  var spot = document.getElementById('tourSpot');
+  var cap = document.getElementById('tourCap');
+  var countEl = document.getElementById('tourCount');
+  var titleEl = document.getElementById('tourTitle');
+  var textEl = document.getElementById('tourText');
+  var noteEl = document.getElementById('tourNote');
+  var nextBtn = document.getElementById('tourNext');
+  var backBtn = document.getElementById('tourBack');
+  var closeBtn = document.getElementById('tourClose');
+  var idx = 0, active = false;
+  var sampleState = null;   // remembers the panel's real contents while the sample is showing
+
+  function isVisible(el) {
+    var cs = getComputedStyle(el);
+    if (cs.display === 'none' || cs.visibility === 'hidden') return false;
+    var r = el.getBoundingClientRect();
+    return r.width > 0 && r.height > 0;
+  }
+
+  // First VISIBLE match (handles duplicate buttons and the 8 avatars).
+  function findTarget(sel) {
+    var list = document.querySelectorAll(sel);
+    for (var i = 0; i < list.length; i++) if (isVisible(list[i])) return list[i];
+    return null;
+  }
+
+  // ----- Sample translation panel (only while the puzzle is unsolved) -----
+  function fillSample() {
+    if (sampleState) return;
+    var p = document.getElementById('translationPanel');
+    var a = document.getElementById('translationInfinitive');
+    var b = document.getElementById('translationSpanish');
+    var c = document.getElementById('translationEquivalents');
+    if (!p || !a || !b || !c) return;
+    sampleState = { p: p, a: a, b: b, c: c,
+      disp: p.style.display, ha: a.innerHTML, hb: b.innerHTML, hc: c.innerHTML };
+    a.textContent = 'to come over';
+    b.textContent = 'visitar, pasar por la casa de alguien';
+    c.textContent = 'to stop by, to drop in';
+    p.style.display = '';
+    if (getComputedStyle(p).display === 'none') p.style.display = 'block';
+  }
+
+  function restoreSample() {
+    if (!sampleState) return;
+    var s = sampleState;
+    s.a.innerHTML = s.ha; s.b.innerHTML = s.hb; s.c.innerHTML = s.hc;
+    s.p.style.display = s.disp;
+    sampleState = null;
+  }
+
+  // Measure where a currently hidden element WOULD appear, without showing it.
+  function ghostRect(sel) {
+    var el = document.querySelector(sel);
+    if (!el) return null;
+    var saved = [], n = el;
+    while (n && n !== document.body) {
+      if (getComputedStyle(n).display === 'none') saved.push([n, n.style.display, n.style.visibility]);
+      n = n.parentElement;
+    }
+    saved.forEach(function (s) {
+      s[0].style.display = '';
+      if (getComputedStyle(s[0]).display === 'none') s[0].style.display = 'block';
+      s[0].style.visibility = 'hidden';
+    });
+    var r = el.getBoundingClientRect();
+    var out = { left: r.left, top: r.top, width: r.width, height: r.height };
+    saved.forEach(function (s) { s[0].style.display = s[1]; s[0].style.visibility = s[2]; });
+    return (out.width > 0 && out.height > 0) ? out : null;
+  }
+
+  function toRect(r) { return { left: r.left, top: r.top, width: r.width, height: r.height }; }
+  function pad(r, p) {
+    var o = { left: r.left - p, top: r.top - p, width: r.width + 2 * p, height: r.height + 2 * p };
+    o.right = o.left + o.width; o.bottom = o.top + o.height;
+    return o;
+  }
+  function union(a, b) {
+    var l = Math.min(a.left, b.left), t = Math.min(a.top, b.top);
+    var rr = Math.max(a.left + a.width, b.left + b.width), bb = Math.max(a.top + a.height, b.top + b.height);
+    return { left: l, top: t, width: rr - l, height: bb - t };
+  }
+
+  function place(rect) {
+    var vw = window.innerWidth, vh = window.innerHeight, gap = 12;
+    cap.style.left = '0px'; cap.style.top = '0px';
+    var cw = cap.offsetWidth, ch = cap.offsetHeight, left, top;
+    function clampX(x) { return Math.max(M, Math.min(x, vw - cw - M)); }
+    function clampY(y) { return Math.max(M, Math.min(y, vh - ch - M)); }
+    if (!rect) {
+      left = (vw - cw) / 2; top = (vh - ch) / 2;
+    } else {
+      var cx = rect.left + rect.width / 2, cy = rect.top + rect.height / 2;
+      if (vh - rect.bottom >= ch + gap + M)      { top = rect.bottom + gap;      left = clampX(cx - cw / 2); }
+      else if (rect.top >= ch + gap + M)         { top = rect.top - gap - ch;    left = clampX(cx - cw / 2); }
+      else if (vw - rect.right >= cw + gap + M)  { left = rect.right + gap;      top = clampY(cy - ch / 2); }
+      else if (rect.left >= cw + gap + M)        { left = rect.left - gap - cw;  top = clampY(cy - ch / 2); }
+      else { top = (cy > vh / 2) ? M : vh - ch - M; left = clampX(cx - cw / 2); }
+    }
+    cap.style.left = Math.round(left) + 'px';
+    cap.style.top = Math.round(Math.max(M, top)) + 'px';
+  }
+
+  function show(i) {
+    idx = i;
+    var s = STEPS[i];
+
+    // Sample panel: on only for the sample steps, and only if the real panel is hidden.
+    if (s.sample) {
+      if (!sampleState && !findTarget('#translationPanel')) fillSample();
+    } else {
+      restoreSample();
+    }
+
+    var el = findTarget(s.sel);
+    var r = null, isGhost = false;
+
+    if (el) {
+      r = toRect(el.getBoundingClientRect());
+    } else if (s.ghost) {
+      var g = ghostRect(s.sel);
+      if (g) { r = g; isGhost = true; }
+    }
+
+    // Area the caption must stay clear of (may be bigger than the highlighted element)
+    var avoidR = r;
+    if (s.avoid) {
+      var ae = findTarget(s.avoid);
+      var a = ae ? toRect(ae.getBoundingClientRect()) : ghostRect(s.avoid);
+      if (a) avoidR = r ? union(r, a) : a;
+    }
+
+    countEl.textContent = (i + 1) + ' de ' + STEPS.length;
+    titleEl.textContent = s.title;
+    textEl.textContent = s.text;
+    if (sampleState && s.sampleNote) {
+      noteEl.textContent = s.sampleNote;
+      noteEl.style.display = 'block';
+    } else {
+      noteEl.textContent = s.absent || '';
+      noteEl.style.display = (!el && s.absent) ? 'block' : 'none';
+    }
+    nextBtn.textContent = (i === STEPS.length - 1) ? '¡Listo!' : 'Siguiente';
+    backBtn.style.visibility = (i === 0) ? 'hidden' : 'visible';
+
+    if (r) {
+      var p = pad(r, 6);
+      spot.className = 'tour-spot' + (isGhost ? ' ghost' : '');
+      spot.style.left = p.left + 'px';
+      spot.style.top = p.top + 'px';
+      spot.style.width = p.width + 'px';
+      spot.style.height = p.height + 'px';
+      spot.style.display = 'block';
+      blocker.className = 'tour-blocker';
+    } else {
+      spot.style.display = 'none';          // nothing to point at: just dim and center the caption
+      blocker.className = 'tour-blocker dim';
+    }
+    place(avoidR ? pad(avoidR, 6) : null);
+  }
+
+  function start() {
+    var ov = document.getElementById('instructionsOverlay');
+    if (ov) ov.style.display = 'none';
+    active = true;
+    blocker.style.display = 'block';
+    cap.style.display = 'block';
+    show(0);
+  }
+
+  function stop() {
+    active = false;
+    restoreSample();
+    blocker.style.display = 'none';
+    spot.style.display = 'none';
+    cap.style.display = 'none';
+  }
+
+  nextBtn.addEventListener('click', function () {
+    if (idx >= STEPS.length - 1) stop(); else show(idx + 1);
+  });
+  backBtn.addEventListener('click', function () {
+    if (idx > 0) show(idx - 1);
+  });
+  closeBtn.addEventListener('click', stop);
+  document.addEventListener('keydown', function (e) {
+    if (!active) return;
+    if (e.key === 'Escape') stop();
+    if (e.key === 'ArrowRight') nextBtn.click();
+    if (e.key === 'ArrowLeft') backBtn.click();
+  });
+  window.addEventListener('resize', function () {
+    if (active) setTimeout(function () { show(idx); }, 150);
+  });
+  window.addEventListener('orientationchange', function () {
+    if (active) setTimeout(function () { show(idx); }, 300);
+  });
+
+  // "Ver recorrido" button at the TOP of the Help overlay, right under the title.
+  var content = document.querySelector('#instructionsOverlay .instructions-content');
+  if (content) {
+    var b = document.createElement('button');
+    b.className = 'tour-start';
+    b.textContent = '▶ Ver recorrido';
+    b.addEventListener('click', start);
+    var title = content.querySelector('.instructions-title');
+    if (title) title.insertAdjacentElement('afterend', b);
+    else content.insertBefore(b, content.firstChild);
+  }
+
+  window.startTour = start;   // handy hook for a first-visit prompt later
+})();
+</script>
 </body>
-</html>28
+</html>32
