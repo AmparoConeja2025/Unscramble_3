@@ -1,6 +1,6 @@
 {
   "name": "Unscramble Learning Game",
-  "short_name": "Test",
+  "short_name": "Unscramble_3",
   "start_url": ".",
   "display": "fullscreen",
   "display_override": ["fullscreen", "standalone"],
