@@ -296,7 +296,7 @@
 
   // Show the gate ONLY if: mobile device AND not installed.
   // Desktop → app. Installed PWA → app. Mobile browser tab → gate.
-    if (false && isMobile && !isInstalled) {   // GATE PAUSED FOR TESTING - remove "false && "
+      if (isMobile && !isInstalled) {
     document.getElementById('installGate').style.display = 'flex';
   }
 })();
@@ -649,4 +649,4 @@
 })();
 </script>
 </body>
-</html>39
+</html>40
