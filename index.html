@@ -648,5 +648,24 @@
   });
 })();
 </script>
+<!-- VERSION CHECK — reloads once if a newer version is on the server -->
+<script>
+(function () {
+  var APP_VERSION = 42;   // bump this, version.txt, and your stamp together at every deploy
+  if (!navigator.onLine) return;
+  fetch('version.txt?t=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) { return r.ok ? r.text() : ''; })
+    .then(function (t) {
+      var v = parseInt(t, 10);
+      if (!v || v <= APP_VERSION) return;
+      var k = 'vcReload' + v, done = false;
+      try { done = sessionStorage.getItem(k) === '1'; } catch (e) {}
+      if (done) return;                       // already tried once: never loop
+      try { sessionStorage.setItem(k, '1'); } catch (e) {}
+      location.replace(location.pathname + '?v=' + v);   // cache-busting reload
+    })
+    .catch(function () {});
+})();
+</script>
 </body>
-</html>41
+</html>42
