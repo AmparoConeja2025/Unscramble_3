@@ -209,7 +209,7 @@
             <span class="instructions-icon">↺</span>
             <div class="instructions-text">
                 <strong>Botón reset</strong>
-                <p>Sacar todas las las palabras para empezer de nuevo</p>
+                <p>Saca todas las palabras para empezar de nuevo</p>
             </div>
         </div>
 
@@ -613,5 +613,40 @@
   window.startTour = start;   // handy hook for a first-visit prompt later
 })();
 </script>
+<!-- HELP BUTTON PULSE — draws attention until the Help page has been opened once -->
+<style>
+  @keyframes helpPulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, .85); transform: scale(1); }
+    50%      { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); transform: scale(1.07); }
+  }
+  #helpButton.help-pulse {
+    animation: helpPulse 1.6s ease-in-out infinite;
+    outline: 2px solid #ffd700;
+    outline-offset: 2px;
+  }
+</style>
+
+<script>
+(function () {
+  var KEY = 'helpPulseLaunches1';
+  var MAX = 100;   // !!! TESTING VALUE !!! BEFORE SHARING: MAX = 3 and bump KEY to the next number
+  var btn = document.getElementById('helpButton');
+  if (!btn) return;
+
+  var n = 0;
+  try { n = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (e) {}
+
+  if (n < MAX) {
+    btn.classList.add('help-pulse');
+    try { localStorage.setItem(KEY, String(n + 1)); } catch (e) {}
+  }
+
+  // Tapping Help stops the pulse for this session only.
+  // The counter is untouched, so it pulses again on the next open (until 3 opens are used).
+  btn.addEventListener('click', function () {
+    btn.classList.remove('help-pulse');
+  });
+})();
+</script>
 </body>
-</html>32
+</html>35
