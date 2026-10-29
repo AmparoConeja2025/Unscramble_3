@@ -651,7 +651,7 @@
 <!-- VERSION CHECK — reloads once if a newer version is on the server -->
 <script>
 (function () {
-  var APP_VERSION = 44;   // bump this, version.txt, and your stamp together at every deploy
+  var APP_VERSION = 45;   // bump this, version.txt, and your stamp together at every deploy
   if (!navigator.onLine) return;
   fetch('version.txt?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.text() : ''; })
@@ -668,4 +668,4 @@
 })();
 </script>
 </body>
-</html>44
+</html>45
