@@ -179,7 +179,7 @@
     <div class="instructions-content">
         <button class="instructions-close-btn" id="instructionsCloseBtn">✕</button>
         
-        <h2 class="instructions-title">¿Cómo funciona?</h2>
+        <h2 class="instructions-title">Mapa</h2>
         
         
 
@@ -293,8 +293,8 @@
     font-size:16px; font-weight:700; padding:9px 18px; cursor:pointer; }
   .tour-next { background:#4a8080; color:#fff; border:none; border-radius:999px;
     font-size:17px; font-weight:700; padding:11px 26px; cursor:pointer; }
-  .tour-start { display:block; margin:6px auto 18px; padding:12px 28px; border:none;
-    border-radius:999px; background:#ffd700; color:#2b2b2b; font-size:17px;
+    .tour-start { display:block; margin:0 0 8px auto; padding:7px 16px; border:none;
+    border-radius:999px; background:#ffd700; color:#2b2b2b; font-size:14px;
     font-weight:700; cursor:pointer; }
       @media (max-height: 500px) {
     .tour-cap { width:min(520px, calc(100vw - 32px)); padding:10px 14px; }
@@ -316,7 +316,7 @@
   <div class="tour-title" id="tourTitle"></div>
   <div class="tour-text" id="tourText"></div>
   <div class="tour-note" id="tourNote"></div>
-  <div class="tour-btns">zona de zona de colocación
+  <div class="tour-btns"> 
     <button class="tour-close" id="tourClose">Cerrar</button>
     <div class="tour-right">
       <button class="tour-back" id="tourBack">Atrás</button>
@@ -565,7 +565,7 @@
   if (content) {
     var b = document.createElement('button');
     b.className = 'tour-start';
-    b.textContent = '▶ Ver recorrido';
+        b.textContent = '▶ Recorrido rápido';
     b.addEventListener('click', start);
     var title = content.querySelector('.instructions-title');
     if (title) title.insertAdjacentElement('afterend', b);
@@ -668,19 +668,19 @@
   var PANELS = [
     { label: 'Pantalla principal', img: 'help-main.webp', alt: 'Pantalla principal de Unscramble',
       pins: [
-      { x: 15.4, y: 8.1, t: 'Reset', d: 'Saca todas las palabras para empezar de nuevo.' },
-      { x: 23.8, y: 7.0, t: 'Help', d: 'Aquí está esta ayuda y el recorrido. Brilla hasta que te acostumbres a usarlo.' },
+            { x: 15.4, y: 8.1, t: 'Reset', d: 'Saca todas las palabras para empezar de nuevo.\nCada vez que presionas Reset, las palabras del banco aparecen en un orden diferente, así que puedes practicar la misma frase las veces que quieras sin que se repita el mismo acomodo.' },
+      { x: 23.8, y: 7.0, t: 'Help', d: 'Este botón abre el mapa que estás viendo ahora. Es una guía visual de la pantalla principal: cada número del mapa marca un botón o elemento de la app.\nToca un número en el mapa y abajo aparece su explicación completa, con todos los detalles de lo que hace y cómo se usa. Puedes tocar tantos números como quieras, en el orden que prefieras. No hace falta leerlos todos: busca solo el que te interesa.\nEn el teléfono, la explicación aparece debajo del mapa. Cuando termines de leerla, toca el botón amarillo Ver mapa para volver arriba y elegir otro número.\nSi prefieres que te guíen paso a paso, usa el botón Recorrido rápido, arriba a la derecha.\nPara cerrar esta pantalla y volver a la lección, toca la X de la esquina.' },
       { x: 31.0, y: 8.1, t: 'Stats', d: 'Mira cuántas lecciones completaste hoy y en total. También eliges el orden: secuencial, aleatorio o nuevos.' },
       { x: 38.1, y: 8.1, t: 'Favs', d: 'Tu lista de lecciones favoritas. Toca una para ir directamente a ella.' },
       { x: 44.0, y: 6.0, t: 'Corazón', d: 'Marca esta lección como favorita. Tócalo otra vez para quitarla.' },
-      { x: 63, y: 7.0, t: 'Punto verde', d: 'Ya completaste esta lección hoy. Tócalo para completarla automáticamente. Se reinicia al día siguiente.' },
+      { x: 63, y: 7.0, t: 'Punto verde', d: 'El punto verde aparece cuando completas una lección. Lo verás un instante después de resolver la frase, junto con los fuegos artificiales y la traducción. También aparece cuando vuelves a una lección que ya completaste ese mismo día.\nToca el punto verde para ver cómo la app resuelve la frase automáticamente, con una animación. Es divertido de ver, y es una buena forma de repasar la respuesta. Después de resolver, podrás ver también la traducción y el botón de más ejemplos.\nEl punto verde se reinicia cada día. Mañana, para que aparezca otra vez en una lección, tendrás que volver a completarla.' },
       { x: 81.4, y: 7.5, t: 'Previous', d: 'Lección anterior. Mantén presionado para avanzar rápido.' },
       { x: 92.1, y: 7.5, t: 'Next', d: 'Lección siguiente. Mantén presionado para avanzar rápido.' },
-      { x: 13.8, y: 22.4, t: 'Deshacer', d: 'Saca palabras para corregir tu respuesta.' },
-      { x: 93.6, y: 22.4, t: 'Deshacer (otro botón)', d: 'Hay dos botones deshacer y los dos funcionan igual.' },
-      { x: 72.4, y: 27.2, t: 'Zona de respuesta', d: 'Las palabras que tocas aparecen aquí y forman tu frase.' },
+      { x: 13.8, y: 22.4, t: 'Deshacer', d: 'Hay dos botones deshacer, uno a cada lado de la pantalla, y los dos funcionan exactamente igual. Usa el que te quede más cómodo.\nSaca palabras de la zona de respuesta para corregir tu frase.\nSi colocas una palabra en el orden incorrecto, la ficha parpadea en rojo. Toca el botón deshacer para retirarla; la palabra regresa al banco de palabras y puedes volver a usarla.\nLas palabras se retiran de la última a la primera, una por cada toque.' },
+      { x: 93.6, y: 22.4, t: 'Deshacer', d: 'Hay dos botones deshacer, uno a cada lado de la pantalla, y los dos funcionan exactamente igual. Usa el que te quede más cómodo.\nSaca palabras de la zona de respuesta para corregir tu frase.\nSi colocas una palabra en el orden incorrecto, la ficha parpadea en rojo. Toca el botón deshacer para retirarla; la palabra regresa al banco de palabras y puedes volver a usarla.\nLas palabras se retiran de la última a la primera, una por cada toque.' },
+      { x: 72.4, y: 27.2, t: 'Zona de respuesta', d: 'La zona de respuesta es el recuadro claro donde se forma tu frase. Cada vez que tocas una ficha del banco de palabras, la ficha vuela hasta aquí y ocupa el siguiente lugar disponible, de izquierda a derecha.\nLas fichas aparecen en el orden en que las tocas, así que la frase se construye palabra por palabra. Si una palabra queda en el lugar equivocado, parpadea en rojo; usa el botón deshacer para retirarla y regresarla al banco de palabras.\nCuando todas las palabras están en el orden correcto, la frase se completa y aparecen los fuegos artificiales.' },
       { x: 71.2, y: 60, t: 'Banco de palabras', d: 'En el banco de palabras encontrarás todas las palabras que componen la frase, pero desordenadas. Cada palabra ocupa su propia ficha. Toca una ficha y volará hacia la zona de respuesta, donde ocupará el siguiente lugar disponible en la frase.\nUn detalle útil: la primera palabra de la frase aparece con mayúscula inicial en el banco de palabras, así que es fácil identificarla y empezar por ella.\nSi colocas una palabra o varias en el orden incorrecto, las fichas afectadas parpadearán en rojo. Para corregirlo, tendrás que retirarlas con el botón de deshacer; al hacerlo, cada ficha regresa al banco de palabras y podrás volver a usarla.' },
-      { x: 23.0, y: 61.0, t: 'Avatar', d: 'Antes de resolver la frase, toca el avatar para escuchar una pista sobre cómo ordenar las palabras. Una vez resuelta la frase, toca el avatar otra vez para escuchar la respuesta en inglés.\nCada vez que lo toques, volverás a escuchar la pista o la respuesta, según el momento. Escuchar la pista y la respuesta es opcional: puedes omitir ese paso si lo prefieres.' },
+      { x: 23.0, y: 61.0, t: 'Avatar', d: 'Antes de resolver la frase, toca el avatar para escuchar una pista sobre cómo ordenar las palabras. Una vez resuelta la frase, toca el avatar otra vez para escuchar la respuesta en inglés.\nCada vez que lo toques, volverás a escuchar la pista o la respuesta, según el momento. No es necesario escuchar la pista ni la respuesta si prefieres omitir ese paso.' },
       { x: 11.5, y: 93.8, t: 'Número de lección', d: 'El número gris debajo del avatar es la lección en la que estás.' }
       ] }
   ];
@@ -782,7 +782,7 @@
 <!-- VERSION CHECK — reloads once if a newer version is on the server -->
 <script>
 (function () {
-  var APP_VERSION = 48;   // bump this, version.txt, and your stamp together at every deploy
+  var APP_VERSION = 50;   // bump this, version.txt, and your stamp together at every deploy
   if (!navigator.onLine) return;
   fetch('version.txt?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.text() : ''; })
@@ -799,4 +799,4 @@
 })();
 </script>
 </body>
-</html>48
+</html>50

@@ -2695,13 +2695,15 @@ button, img, .word-tile {
 
 .instructions-title {
     font-family: Arial, sans-serif;
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
-    color: #1f2937;
+    color: #ffffff;
     text-align: center;
-    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    margin-top: 0;
+    margin-bottom: 10px;
 }
-
 .instructions-step {
     display: flex;
     align-items: flex-start;

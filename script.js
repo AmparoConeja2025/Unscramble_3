@@ -378,6 +378,7 @@ setTimeout(() => {
         }
     });
     showTranslationPanel(lesson);
+    updateCompletionDot();
 }, 1000);
 
     } else {
