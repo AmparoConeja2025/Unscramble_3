@@ -365,8 +365,8 @@
       { x: 38.1, y: 8.1, t: 'Favs', d: 'Tu lista de lecciones favoritas. Toca una para ir directamente a ella.' },
       { x: 44.0, y: 6.0, t: 'Corazón', d: 'Marca esta lección como favorita. Tócalo otra vez para quitarla.' },
       { x: 63, y: 7.0, t: 'Punto verde', d: 'El punto verde aparece cuando completas una lección. Lo verás un instante después de resolver la frase, junto con los fuegos artificiales y la traducción. También aparece cuando vuelves a una lección que ya completaste ese mismo día.\nToca el punto verde para ver cómo la app resuelve la frase automáticamente, con una animación y es una buena forma de repasar la respuesta. Después de resolver, podrás ver también la traducción y el botón de más ejemplos.\nEl punto verde se reinicia cada día. Mañana, para que aparezca otra vez en una lección, tendrás que volver a completarla.' },
-      { x: 81.4, y: 7.5, t: 'Previous', d: 'Lección anterior. Mantén presionado para avanzar rápido.' },
-      { x: 92.1, y: 7.5, t: 'Next', d: 'Lección siguiente. Mantén presionado para avanzar rápido.' },
+      { x: 81.4, y: 7.5, t: 'Previous', d: 'Lección anterior. Si mantienes presionado el botón, retrocedes rápidamente por la lista de lecciones.' },
+      { x: 92.1, y: 7.5, t: 'Next', d: 'Lección siguiente. Si mantienes presionado el botón, avanzas rápidamente por la lista de lecciones.' },
       { x: 13.8, y: 22.4, t: 'Deshacer', d: 'Hay dos botones deshacer, uno a cada lado de la pantalla, y los dos funcionan exactamente igual. Usa el que te quede más cómodo.\nSaca palabras de la zona de respuesta para corregir tu frase.\nSi colocas una palabra en el orden incorrecto, la ficha parpadea en rojo. Toca el botón deshacer para retirarla; la palabra regresa al banco de palabras y puedes volver a usarla.\nLas palabras se retiran de la última a la primera, una por cada toque.' },
       { x: 93.6, y: 22.4, t: 'Deshacer', d: 'Hay dos botones deshacer, uno a cada lado de la pantalla, y los dos funcionan exactamente igual. Usa el que te quede más cómodo.\nSaca palabras de la zona de respuesta para corregir tu frase.\nSi colocas una palabra en el orden incorrecto, la ficha parpadea en rojo. Toca el botón deshacer para retirarla; la palabra regresa al banco de palabras y puedes volver a usarla.\nLas palabras se retiran de la última a la primera, una por cada toque.' },
       { x: 72.4, y: 27.2, t: 'Zona de respuesta', d: 'La zona de respuesta es el recuadro claro donde se forma tu frase. Cada vez que tocas una ficha del banco de palabras, la ficha vuela hasta aquí y ocupa el siguiente lugar disponible, de izquierda a derecha.\nLas fichas aparecen en el orden en que las tocas, así que la frase se construye palabra por palabra. Si una palabra queda en el lugar equivocado, parpadea en rojo; usa el botón deshacer para retirarla y regresarla al banco de palabras.\nCuando todas las palabras están en el orden correcto, la frase se completa y aparecen los fuegos artificiales.' },
@@ -504,7 +504,7 @@
 <!-- VERSION CHECK — reloads once if a newer version is on the server -->
 <script>
 (function () {
-  var APP_VERSION = 54;   // bump this, version.txt, and your stamp together at every deploy
+  var APP_VERSION = 55;   // bump this, version.txt, and your stamp together at every deploy
   if (!navigator.onLine) return;
   fetch('version.txt?t=' + Date.now(), { cache: 'no-store' })
     .then(function (r) { return r.ok ? r.text() : ''; })
@@ -521,4 +521,4 @@
 })();
 </script>
 </body>
-</html>54
+</html>55
